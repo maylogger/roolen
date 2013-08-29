@@ -1,0 +1,23 @@
+body {
+  font-family: "HelveticaNeue-Light",
+               "Helvetica",
+               "Arial",
+               sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hide {
+  display: none;
+}
+
+#{headings()} {
+  @include reset-box-model;
+  font-weight: normal;
+}
+
+a {
+  @include link-colors(blue);
+  @include hover-link;
+}
