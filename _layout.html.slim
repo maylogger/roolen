@@ -1,19 +1,17 @@
 doctype 5
 html lang="zh-TW"
   head
-    meta charset="utf-8"
-    title untitled project
-    = stylesheet_link_tag "all"
-    /[if IE]
-      = stylesheet_link_tag "ie"
-    /[if lt IE 9]
-      = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js"
+    = render "/html-head"
 
-  body
-    = yield
-
-    = javascript_include_tag \
-      "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", \
-      "all"
-
-    = livereload_js unless ENV["RACK_ENV"] == "production"
+  body data-spy="scroll" data-target="#content" data-offset="50"
+    .header
+      .container
+        = render "/partials/header"
+    .content#content
+      .container#scroll-event
+        = yield
+    .footer
+      .container
+        = render "/partials/footer"
+    = render "/html-foot"
+    = render "/livereload-js"

@@ -1,0 +1,67 @@
+// 基本設定
+$total-columns  : 6;
+$column-width   : 5em;
+$gutter-width   : 1em;
+$grid-padding   : 0em;
+
+// add media
+$wide-mobile: 440px;
+
+// $pad-columns     : 8;
+// $pad-break       : 640px;
+// $pad: $pad-break $pad-columns;
+
+$desktop-columns  : 12;
+$desktop-break    : 768px;
+$desktop: $desktop-break $desktop-columns;
+
+// debug-grid
+// $grid-background-column-color: rgba(red,.03);
+// $grid-background-baseline-color: rgba(blue,.05);
+// body {
+//   @include baseline-grid-background;
+// }
+// .container {
+//   @include susy-grid-background;
+//   @include at-breakpoint($pad) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($desktop) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($wide-desktop) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($ex-wide-desktop) {
+//     @include susy-grid-background;
+//   }
+// }
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include container($total-columns, $desktop);
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 400px;
+  background-color: #eeeeed;
+  @include trailer(1);
+  border
+}
+
+.active {
+  background-color: #ffe;
+}
+
+.header, .footer {
+  min-height: 200px;
+  background-color: green;
+  color: #a00;
+}
+
