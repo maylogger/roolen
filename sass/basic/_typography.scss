@@ -1,0 +1,47 @@
+body {
+  font-family: "Helvetica-Neue",
+               "Helvetica",
+               "Arial",
+               sans-serif;
+  font-weight: normal;
+  -webkit-text-size-adjust: none;
+  // -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+
+#{headings()} {
+  @include reset-box-model;
+  font-weight: normal;
+}
+h1 {
+  @include adjust-font-size-to(32px);
+}
+h2 {
+  @include adjust-font-size-to(24px);
+}
+
+a {
+  @include link-colors(#4183c4);
+  @include hover-link;
+}
+
+ul, p {
+  @include reset-box-model;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+}
+
+p {
+  @include trailer(1);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  @include trailer(1);
+}
