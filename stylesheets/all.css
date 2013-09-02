@@ -1,90 +1,153 @@
-/*
-Syntax error: Invalid CSS after "  border": expected "{", was "}"
-        on line 56 of /Users/shengli/Dropbox/Projects/roolen/sass/_layout.scss
-        from line 13 of /Users/shengli/Dropbox/Projects/roolen/sass/all.scss
+* html { font-size: 100%; }
 
-Backtrace:
-/Users/shengli/Dropbox/Projects/roolen/sass/_layout.scss:56
-/Users/shengli/Dropbox/Projects/roolen/sass/all.scss:13
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:1147:in `expected'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:1084:in `expected'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:1079:in `tok!'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:534:in `block'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:529:in `ruleset'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:591:in `declaration_or_ruleset'
-org/jruby/RubyProc.java:270:in `call'
-org/jruby/RubyProc.java:220:in `call'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:554:in `block_child'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:546:in `block_contents'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:535:in `block'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:529:in `ruleset'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:553:in `block_child'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:546:in `block_contents'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:82:in `stylesheet'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/scss/parser.rb:27:in `parse'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/engine.rb:342:in `_to_tree'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/engine.rb:272:in `to_tree'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
-org/jruby/RubyKernel.java:2109:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-org/jruby/RubyArray.java:2339:in `collect'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:109:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-org/jruby/RubyKernel.java:2109:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:100:in `visit'
-org/jruby/RubyKernel.java:2109:in `send'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/engine.rb:315:in `_render'
-/Applications/Fire.app/Contents/Resources/lib/ruby/common/sass-3.2.8/lib/sass/engine.rb:262:in `render'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:113:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:112:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-file:/Applications/Fire.app/Contents/Resources/Java/fire-app.jar!/compass_patch.rb:111:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
-org/jruby/RubyArray.java:1620:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/compiler.rb:25:in `compile'
-org/jruby/RubyKernel.java:2105:in `send'
-(__FORWARDABLE__):3:in `compile'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/project_watcher.rb:97:in `sass_modified'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/project_watcher.rb:90:in `sass_callback'
-org/jruby/RubyMethod.java:133:in `call'
-org/jruby/RubyProc.java:270:in `call'
-org/jruby/RubyProc.java:220:in `call'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/watch.rb:17:in `run_callback'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/project_watcher.rb:82:in `listen_callback'
-org/jruby/RubyArray.java:1620:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/project_watcher.rb:77:in `listen_callback'
-org/jruby/RubyArray.java:1620:in `each'
-/Applications/Fire.app/Contents/Resources/lib/ruby/compass_0.12/backport_from_0.13/lib/compass/watcher/project_watcher.rb:76:in `listen_callback'
-org/jruby/RubyMethod.java:133:in `call'
-org/jruby/RubyProc.java:270:in `call'
-org/jruby/RubyProc.java:220:in `call'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/listen-0.7.3/lib/listen/listener.rb:221:in `initialize_adapter'
-org/jruby/RubyProc.java:270:in `call'
-org/jruby/RubyProc.java:220:in `call'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/Applications/Fire.app/Contents/Resources/lib/ruby/jruby/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `start'
-org/jruby/RubyProc.java:270:in `call'
-org/jruby/RubyProc.java:224:in `call'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"  border\": expected \"{\", was \"}\"\A         on line 56 of /Users/shengli/Dropbox/Projects/roolen/sass/_layout.scss\A         from line 13 of /Users/shengli/Dropbox/Projects/roolen/sass/all.scss"; }
+html { font-size: 16px; line-height: 24px; }
+
+body { margin: 0; padding: 0; }
+
+.container { max-width: 43em; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; overflow-x: hidden; }
+.container:after { content: ""; display: table; clear: both; }
+@media (min-width: 768px) { .container { max-width: 65em; } }
+
+.header { margin-bottom: 24px; border-bottom: 1px solid #ddd; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+.header:after { content: ""; display: table; clear: both; }
+@media (min-width: 768px) { .header { position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(255, 255, 255, 0.65); } }
+
+@media (min-width: 768px) { .content { padding-top: 73px; } }
+
+section { min-height: 400px; background-color: #eeeeed; margin-bottom: 24px; }
+
+.active { background-color: #ffe; }
+
+.footer { min-height: 200px; background-color: green; color: #a00; }
+
+body { font-family: "Helvetica-Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; -webkit-text-size-adjust: none; text-rendering: optimizeLegibility; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-weight: normal; }
+
+h1 { font-size: 32px; line-height: 48px; }
+
+h2 { font-size: 24px; line-height: 48px; }
+
+a { color: #4183c4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul, p { margin: 0; padding: 0; border: 0; }
+
+ul { list-style: none; list-style-position: inside; }
+
+p { margin-bottom: 24px; }
+
+img { display: block; max-width: 100%; margin-bottom: 24px; }
+
+.btn { color: #333333; background: #d8d8d8; text-align: center; display: inline-block; padding: 0 0.25em; font-size: 16px; line-height: 24px; border-radius: 3px; box-shadow: 0 2px 0 0 #b5b5b5; cursor: pointer; border: none; }
+.btn:hover { text-decoration: none; }
+.btn:active { position: relative; top: 2px; box-shadow: none; }
+
+.btn-group .btn { float: left; border-radius: 0; border-right: 1px solid #b5b5b5; }
+.btn-group .btn:first-child { border-radius: 3px 0 0 3px; }
+.btn-group .btn:last-child { border-radius: 0 3px 3px 0; border-right: 0; }
+
+.pagination { margin-top: 12px; text-align: center; }
+.pagination:after { content: ""; display: table; clear: both; }
+.pagination li { display: inline-block; margin: 0 0.125em; }
+.pagination li a { color: #333333; background: #d8d8d8; text-align: center; display: inline-block; padding: 0.25em 0.75em; font-size: 16px; line-height: 24px; border-radius: 3px; box-shadow: 0 2px 0 0 #b5b5b5; cursor: pointer; }
+.pagination li a:hover { text-decoration: none; background-color: #369; }
+.pagination li a:active { position: relative; top: 2px; box-shadow: none; }
+.pagination li .disable { cursor: default; background-color: #eee; }
+.pagination li .disable:hover { background-color: #eee; }
+.pagination li .more { padding: 0.25em 0.5em; }
+.pagination li .active { background-color: #69c; }
+
+/* alert */
+.alert, .alert-success, .alert-wran, .alert-wrong { width: 100%; }
+.alert .alert-message, .alert-success .alert-message, .alert-wran .alert-message, .alert-wrong .alert-message { float: left; font-size: 14px; line-height: 24px; }
+.alert .alert-message i, .alert-success .alert-message i, .alert-wran .alert-message i, .alert-wrong .alert-message i { margin-right: 6px; }
+.alert .close, .alert-success .close, .alert-wran .close, .alert-wrong .close { float: right; border: 0; background-color: transparent; }
+@media (min-width: 640px) { .alert, .alert-success, .alert-wran, .alert-wrong { line-height: 36px; }
+  .alert .alert-message, .alert-success .alert-message, .alert-wran .alert-message, .alert-wrong .alert-message { font-size: 16px; line-height: 36px; }
+  .alert .close, .alert-success .close, .alert-wran .close, .alert-wrong .close { float: right; padding: 9px 0; border: 0; background-color: transparent; color: #777; }
+  .alert .close:hover, .alert .close:active, .alert-success .close:hover, .alert-success .close:active, .alert-wran .close:hover, .alert-wran .close:active, .alert-wrong .close:hover, .alert-wrong .close:active { color: #444; } }
+
+.alert { background-color: rgba(0, 0, 0, 0.15); }
+
+.alert-success { color: green; background-color: rgba(0, 128, 0, 0.3); }
+
+.alert-wran { color: #e67e22; background-color: rgba(255, 165, 0, 0.3); }
+
+.alert-wrong { color: #e5412d; background-color: rgba(255, 0, 0, 0.3); }
+
+input { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 36px; }
+input:focus { outline: none; background: #ffe; }
+
+textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+textarea:focus { outline: none; background: #ffe; }
+
+select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dddddd; height: 36px; }
+
+.form-control { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #dddddd; padding: 5px; font-size: 16px; line-height: 24px; }
+.form-control:focus { outline: none; background: #ffe; }
+
+.form-horizontal .form-group:after { content: ""; display: table; clear: both; }
+.form-horizontal .form-group + .form-group { margin-top: 12px; }
+.form-horizontal label, .form-horizontal .form-label { display: block; font-size: 14px; line-height: 24px; }
+.form-horizontal .form-controls img { margin-bottom: 0; margin-right: 12px; float: left; }
+.form-horizontal .form-control { width: 100%; }
+.form-horizontal .form-description { margin-top: 6px; font-size: 12px; line-height: 16px; color: #aaa; }
+.form-horizontal .form-controuls-item { overflow: hidden; }
+@media (min-width: 640px) { .form-horizontal .form-group + .form-group { margin-top: 24px; }
+  .form-horizontal label, .form-horizontal .form-label { padding: 6px 0; margin-right: 1em; float: left; text-align: right; }
+  .form-horizontal .form-controls { overflow: hidden; } }
+
+.form-vertical .form-group:after { content: ""; display: table; clear: both; }
+.form-vertical .form-group + .form-group { margin-top: 12px; }
+.form-vertical label, .form-vertical .form-label { display: block; font-size: 14px; line-height: 24px; }
+.form-vertical textarea { min-height: 120px; }
+.form-vertical .form-controls img { margin-bottom: 0; margin-right: 12px; float: left; }
+.form-vertical .form-control { width: 100%; }
+.form-vertical .form-description { margin-top: 6px; font-size: 12px; line-height: 16px; color: #aaa; }
+.form-vertical .form-controuls-item { overflow: hidden; }
+
+.dropdown { display: block; position: relative; }
+.dropdown.open .dropdown-btn { background-color: #eeeeef; }
+.dropdown.open .dropdown-menu { background-color: #eeeeef; display: block; }
+
+.dropdown-btn { outline: none 0 !important; display: block; padding: 6px 1em; text-align: right; }
+.dropdown-btn:after { content: ""; display: table; clear: both; }
+.dropdown-btn img { float: left; margin-bottom: 0; margin-right: 6px; }
+.dropdown-btn .dropdown-title { float: left; margin-right: 6px; text-align: left; }
+.dropdown-btn .dropdown-title:after { content: ""; display: inline-block; vertical-align: middle; width: 0px; height: 0px; margin-left: 6px; border-style: solid; border-width: 6px 6px 0 6px; border-color: #ccc transparent transparent transparent; }
+
+.dropdown-menu { position: absolute; top: 100%; left: 0; z-index: 150; display: none; min-width: 120%; padding: 12px 0; float: left; }
+.dropdown-menu li { font-size: 14px; line-height: 24px; }
+.dropdown-menu li > a { display: block; padding: 6px 1em; white-space: nowrap; }
+.dropdown-menu li > a:hover { background-color: black; color: white; text-decoration: none; }
+.dropdown-menu li.dropdown-menu-list-divider { margin: 6px 0; height: 1px; background-color: black; }
+.dropdown-menu.pull-right { left: auto; right: 0; }
+
+.collapse { display: none; }
+.collapse.in { display: block; }
+
+.collapsing { position: relative; height: 0; overflow: hidden; -webkit-transition: 0.15s ease; -moz-transition: 0.15s ease; -o-transition: 0.15s ease; transition: 0.15s ease; }
+
+.tab-panel, .pill-panel { display: none; }
+
+.logo { float: left; }
+.logo a { color: #6BAEC9; }
+
+.nav-btn { display: block; float: right; margin: 0; padding: 0; border: 0; cursor: pointer; background-color: transparent; font-size: 16px; line-height: 48px; color: #999; }
+
+.nav { clear: both; }
+.nav li { border-top: 1px solid #eee; }
+.nav li > a { display: block; padding: 6px 0; color: #999; -webkit-transition: color 0.25s ease; -moz-transition: color 0.25s ease; -o-transition: color 0.25s ease; transition: color 0.25s ease; }
+.nav li > a:hover { text-decoration: none; color: #6BAEC9; }
+@media (min-width: 768px) { .nav { float: right; clear: none; height: auto !important; display: block; }
+  .nav li { float: left; border-top: 0; }
+  .nav li > a { padding: 12px 18px; } }
+
+.hide-mobile { display: none; }
+
+@media (min-width: 768px) { .hide-mobile { display: block; }
+  .hide-desktop { display: none; } }
+.open { display: block; }
+
+.active { display: block; }
