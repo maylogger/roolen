@@ -1,15 +1,15 @@
 // 基本設定
-$total-columns  : 6;
-$column-width   : 5em;
+$total-columns  : 8;
+$column-width   : 4.5em;
 $gutter-width   : 1em;
-$grid-padding   : 0em;
+$grid-padding   : 1em;
 
 // add media
 $wide-mobile: 440px;
 
-// $pad-columns     : 8;
-// $pad-break       : 640px;
-// $pad: $pad-break $pad-columns;
+$pad-columns     : 8;
+$pad-break       : 640px;
+$pad: $pad-break $pad-columns;
 
 $desktop-columns  : 12;
 $desktop-break    : 768px;
@@ -37,7 +37,6 @@ $desktop: $desktop-break $desktop-columns;
 //   }
 // }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -48,18 +47,37 @@ body {
   overflow-x: hidden;
 }
 
+.header {
+  @include pie-clearfix;
+  @include trailer(1);
+  border-bottom: 1px solid #ddd;
+  @include box-shadow( 0 0 5px rgba(black, 0.1) );
+  @include at-breakpoint($desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(white, 0.65);
+  }
+}
+
+.content {
+  @include at-breakpoint($desktop) {
+    padding-top: $base-line-height * 3 + 1;
+  }
+}
+
 section {
   min-height: 400px;
   background-color: #eeeeed;
   @include trailer(1);
-  border
 }
 
 .active {
   background-color: #ffe;
 }
 
-.header, .footer {
+.footer {
   min-height: 200px;
   background-color: green;
   color: #a00;

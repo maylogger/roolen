@@ -9,7 +9,31 @@ $grid-background-baseline-height: $base-line-height;
 
 @import "normalize";
 @include establish-baseline;
-
 @import "layout";
-@import "typography";
 @import "baseline";
+@import "basic/basic";
+
+@import "partials/header";
+
+
+// 隱藏/開啓工具
+.hide-mobile {
+  display: none;
+}
+
+@include at-breakpoint($desktop) {
+  .hide-mobile {
+    display: block;
+  }
+  .hide-desktop {
+    display: none;
+  }
+}
+
+.open {
+  display: block;
+}
+
+.active {
+  display: block;
+}
