@@ -3,12 +3,12 @@ html lang="zh-TW"
   head
     = render "/html-head"
 
-  body data-spy="scroll" data-target="#content" data-offset="50"
+  body
     .header
       .container
         = render "/partials/header"
-    .content#content
-      .container#scroll-event
+    .content#scrollspy
+      .container
         = yield
     .footer
       .container
