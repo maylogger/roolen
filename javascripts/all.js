@@ -4,3 +4,7 @@ $('body').scrollspy({
   target: '#scrollspy',
   offset: scrollOffset
 });
+
+$('#scrollspy').on('activate.bs.scrollspy', function () {
+  console.log("hello world");
+})
