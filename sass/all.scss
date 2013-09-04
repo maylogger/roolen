@@ -9,11 +9,17 @@ $grid-background-baseline-height: $base-line-height;
 
 @import "normalize";
 @include establish-baseline;
-@import "layout";
 @import "baseline";
+
+@import "color";
+
+@import "layout";
+
 @import "basic/basic";
 
+// partials
 @import "partials/header";
+@import "partials/block";
 
 
 // 隱藏/開啓工具

@@ -9,8 +9,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
-
 #{headings()} {
   @include reset-box-model;
   font-weight: normal;

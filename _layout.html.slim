@@ -5,13 +5,10 @@ html lang="zh-TW"
 
   body
     .header
-      .container
-        = render "/partials/header"
+      = render "/partials/header"
     .content#scrollspy
-      .container
-        = yield
+      = yield
     .footer
-      .container
-        = render "/partials/footer"
+      = render "/partials/footer"
     = render "/html-foot"
     = render "/livereload-js"

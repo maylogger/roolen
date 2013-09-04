@@ -1,7 +1,7 @@
 .logo {
   float: left;
   a {
-    color: #6BAEC9;
+    color: $logo-color;
   }
 }
 
@@ -9,25 +9,25 @@
   display: block;
   float: right;
   @include reset-box-model;
-  cursor: pointer;
   background-color: transparent;
   @include adjust-font-size-to(16px, 2);
-  color: #999;
+  color: $header-color;
+  cursor: pointer;
 }
 
 .nav {
   clear: both;
   li {
-    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
   }
   li > a {
     display: block;
     padding: 6px 0;
-    color: #999;
+    color: $header-color;
     @include transition( color .25s ease );
     &:hover {
       text-decoration: none;
-      color: #6BAEC9;
+      color: $logo-color;
     }
   }
 
@@ -38,10 +38,10 @@
     display: block;
     li {
       float: left;
-      border-top: 0;
+      border-bottom: 0;
     }
     li > a {
-      padding: 12px 18px;
+      padding: ($base-line-height / 2) $gutter-width;
     }
   }
 

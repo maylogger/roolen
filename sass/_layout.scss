@@ -44,7 +44,7 @@ body {
 
 .container {
   @include container($total-columns, $desktop);
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .header {
@@ -57,7 +57,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(white, 0.65);
+    background-color: rgba(white, 0.85);
   }
 }
 
@@ -67,14 +67,13 @@ body {
   }
 }
 
-section {
-  min-height: 400px;
+.scrollspy-target {
+  // min-height: 400px;
   background-color: #eeeeed;
   @include trailer(1);
-}
-
-.active {
-  background-color: #ffe;
+  &.active {
+    background-color: #ffe;
+  }
 }
 
 .footer {

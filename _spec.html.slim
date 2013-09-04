@@ -1,0 +1,7 @@
+.container
+  .block-content
+    h1.block-title= lorem_words( rand(2) + 2 )
+  = image_tag lorem_image("400x300&text=photo")
+  ul.spec-list
+    - 7.times do
+      li= lorem_sentence
