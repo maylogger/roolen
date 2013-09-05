@@ -1,6 +1,6 @@
 // 基本設定
 $total-columns  : 8;
-$column-width   : 4.5em;
+$column-width   : 4em;
 $gutter-width   : 1em;
 $grid-padding   : 1em;
 
@@ -64,15 +64,6 @@ body {
 .content {
   @include at-breakpoint($desktop) {
     padding-top: $base-line-height * 3 + 1;
-  }
-}
-
-.scrollspy-target {
-  // min-height: 400px;
-  background-color: #eeeeed;
-  @include trailer(1);
-  &.active {
-    background-color: #ffe;
   }
 }
 
