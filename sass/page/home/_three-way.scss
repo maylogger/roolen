@@ -1,0 +1,38 @@
+
+.three-way-demo {
+  @include pie-clearfix;
+
+  img {
+    max-width: 25%;
+    margin: 0 auto;
+  }
+  .mist {
+    max-width: 17.5%;
+  }
+
+  .indicators {
+    @include padding-leader(.5);
+    @include trailer(1);
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+    li > a {
+      display: block;
+      padding: 0 12px;
+      color: $color-gray;
+      font-weight: lighter;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .active > a {
+      color: $color-black;
+    }
+  }
+
+}
+
+.three-way-demo-text {
+
+}

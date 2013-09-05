@@ -1,10 +1,17 @@
 .tab-content
-  .tab-panel.active= image_tag lorem_image("1200x600&text=photo")
+  .tab-panel.active= image_tag "smart_blacktop.png"
   .tab-panel= image_tag lorem_image("1200x600&text=photo")
   .tab-panel= image_tag lorem_image("1200x600&text=photo")
 ul.nav-tabs
-  li: a href="" CLOUD
-  li: a href="" SUNNY
-  li: a href="" RAINY
+  li.active: a href=""
+    = image_tag "smart_cloudy.png", :class => "smart-icon"
+    |CLOUD
+
+  li: a href=""
+    = image_tag "smart_sunny.png", :class => "smart-icon"
+    |SUNNY
+  li: a href=""
+    = image_tag "smart_rainy.png", :class => "smart-icon"
+    |RAINY
 .container
-  .block-content= render "/block-content"
+  .block-content= render "/partials/block-content"

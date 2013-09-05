@@ -1,0 +1,14 @@
+.capacity {
+  img {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.capacity-count {
+  @include trailer(.75);
+  text-align: center;
+  @include adjust-font-size-to(32px, 1.25);
+  color: $logo-color;
+  font-weight: lighter;
+}

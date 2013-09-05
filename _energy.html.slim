@@ -1,8 +1,16 @@
 .container
-  = image_tag lorem_image("400x300&text=photo")
-  = render "/block-content"
+  = image_tag "auto_chart.jpg", :class => "chart"
+  = render "/partials/block-content"
   .energy-demo
     = image_tag lorem_image("60x60&text=photo")
-    ul
-      li average
-      li auto mode
+    ul.energy-list
+      li.average
+        .date.date-state Average
+        .date.date-graph
+        .date.date-count 6.15
+
+      li.auto-mode
+        .date.date-state Auto mode
+        .date.date-graph
+        .date.date-count 3.15
+

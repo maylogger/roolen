@@ -1,9 +1,10 @@
 .container
   .three-way-demo
-    h3 orange stand by
-    = image_tag lorem_image("400x300")
-    ul
-      li: a href="#" low
+    .three-way-demo-text.hide-mobile orange stand by
+    = image_tag "3way_mist_high.png", :class => "mist low"
+    = image_tag "3way_humidifier.png", :class => "humidifier"
+    ul.indicators
+      li.active: a href="#" low
       li: a href="#" high
       li: a href="#" auto
-  = render "/block-content"
+  = render "/partials/block-content"

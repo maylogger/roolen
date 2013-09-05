@@ -1,0 +1,51 @@
+.energy {
+  img {
+    margin: 0 auto;
+  }
+  .chart {
+    @include trailer(.75);
+  }
+}
+
+.energy-demo {
+  @include pie-clearfix;
+  @include leader(1);
+  img {
+    float: left;
+    width: 48px;
+    margin-right: .75em;
+    border-right: 3px solid #86be48;
+    padding-right: .75em;
+  }
+  ul {
+    overflow: hidden;
+  }
+  li {
+    @include pie-clearfix;
+    @include adjust-font-size-to(13px, 1);
+    color: #ababab;
+  }
+  .date {
+    float: left;
+  }
+  .date-state {
+    width: 6em;
+  }
+  .date-graph {
+    margin: 10px 6px 0 0;
+    width: 40%;
+    height: 4px;
+    background-color: #ababab;
+  }
+  .auto-mode {
+    .date-graph {
+      width: 20%;
+      background-color: #86be48;
+    }
+    .date-count {
+      color: #86be48;
+    }
+  }
+
+
+}

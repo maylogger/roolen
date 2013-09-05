@@ -1,0 +1,16 @@
+.hero {
+  text-align: center;
+  img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.hero-title {
+  @include adjust-font-size-to(32px, 1.5);
+}
+.hero-sub-title {
+  @include trailer(.5);
+  @include adjust-font-size-to(16px, 2/3);
+  color: $color-gray;
+  font-weight: lighter;
+}
