@@ -1,10 +1,15 @@
 .container
-  .three-way-demo
-    .three-way-demo-text.hide-mobile orange stand by
-    = image_tag "3way_mist_high.png", :class => "mist low"
-    = image_tag "3way_humidifier.png", :class => "humidifier"
-    ul.indicators
-      li.active: a href="#" low
-      li: a href="#" high
-      li: a href="#" auto
+  .three-way-demo.low
+    ul.nav-tabs.indicators
+      li.active: a href="#" data-toggle="tab" LOW
+      li: a href="#" data-toggle="tab" HIGH
+      li: a href="#" data-toggle="tab" AUTO
+    .tab-content
+      .tab-panel.active
+        .three-way-demo-text
+          .special Orange
+          |Stand by
+        .mist= image_tag "3way_mist_high.png"
+        .humidifier= image_tag "3way_humidifier.png"
+
   = render "/partials/block-content"

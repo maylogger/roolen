@@ -1,16 +1,18 @@
 .tab-content
-  .tab-panel.active= image_tag "smart_blacktop.png"
-  .tab-panel= image_tag lorem_image("1200x600&text=photo")
-  .tab-panel= image_tag lorem_image("1200x600&text=photo")
+  .tab-panel#cloud style=" background-color: #eee; "
+    = image_tag "smart_blacktop.png", :class => "humidifier"
+  .tab-panel#sunny.active style=" background-image: url(/images/smart-sunny-bg.jpg); "
+    = image_tag "smart_blacktop.png", :class => "humidifier"
+  .tab-panel#rainy style=" background-color: #eee; "
+    = image_tag "smart_blacktop.png", :class => "humidifier"
 ul.nav-tabs
-  li.active: a href=""
+  li: a href="#cloud" data-toggle="tab"
     = image_tag "smart_cloudy.png", :class => "smart-icon"
     |CLOUD
-
-  li: a href=""
+  li.active: a href="#sunny" data-toggle="tab"
     = image_tag "smart_sunny.png", :class => "smart-icon"
     |SUNNY
-  li: a href=""
+  li: a href="#rainy" data-toggle="tab"
     = image_tag "smart_rainy.png", :class => "smart-icon"
     |RAINY
 .container
