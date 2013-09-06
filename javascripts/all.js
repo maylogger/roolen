@@ -6,5 +6,9 @@ $('body').scrollspy({
 });
 
 $('#scrollspy').on('activate.bs.scrollspy', function () {
-  console.log("hello world");
+  $('#scrollspy-item').each(function(){
+    if $(this).scrollTop() == 0 {
+      $(this).addClass('active')
+    }
+  });
 })
