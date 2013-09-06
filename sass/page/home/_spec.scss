@@ -1,0 +1,22 @@
+.spec {
+  .block-content {
+    @include trailer(1);
+  }
+
+  .spec-list {
+    .name {
+      @include span-columns(4);
+      text-align: right;
+      font-family: "Helvetica",
+                   "Arial",
+                   sans-serif;
+    }
+    .value {
+      color: $color-gray;
+      @include span-columns(4 omega);
+      @extend %helvetica-ultralight;
+    }
+  }
+
+}
+

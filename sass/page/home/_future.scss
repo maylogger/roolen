@@ -1,0 +1,58 @@
+.future-demo {
+  @include trailer(1);
+  img {
+    margin: 0 auto;
+  }
+
+  .carousel-indicators {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 6px;
+      padding: 5px;
+      background-color: #999;
+      @include border-radius(15px);
+      cursor: pointer;
+      &.active {
+        background-color: $logo-color;
+      }
+    }
+  }
+
+  .carousel-slide {
+    position: relative;
+    @include trailer(0.5);
+  }
+  .carousel-inner {
+    .item {
+      width: 80%;
+      margin: 0 auto;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .carousel-control {
+    position: absolute;
+    top:50%;
+    margin-top: -36px;
+    color: #6a6a6a;
+    @include adjust-font-size-to(60px);
+    @extend %helvetica-ultralight;
+    @include at-breakpoint($desktop) {
+      margin-top: -60px;
+      @include adjust-font-size-to(100px);
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+
+}

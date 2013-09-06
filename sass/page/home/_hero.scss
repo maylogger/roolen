@@ -2,7 +2,8 @@
   @include leader(1.5);
   text-align: center;
   img {
-    max-width: 82.5%;
+    width: 82.5%;
+    max-width: 320px;
     margin: 0 auto;
   }
   @include at-breakpoint($desktop) {
@@ -16,12 +17,7 @@
 
 .hero-title {
   @include adjust-font-size-to(48px, 2);
-  font-family:
-              "HelveticaNeue-UltraLight",
-              "HelveticaNeue",
-              "Helvetica",
-              "Arial",
-              sans-serif;
+  @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(72px, 3);
   }
@@ -30,13 +26,7 @@
   @include trailer(.5);
   @include adjust-font-size-to(16px);
   color: $color-light-gray;
-  font-family:
-             "Avenir-Book",
-             "Avenir-Light",
-             "HelveticaNeue",
-             "Helvetica",
-             "Arial",
-             sans-serif;
+  @extend %avenir;
   @include at-breakpoint($desktop) {
     @include trailer(1);
     @include adjust-font-size-to(24px, 1);

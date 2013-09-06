@@ -1,17 +1,31 @@
 .smart {
 
-  img {
-    max-width: 35%;
-    margin: 0 auto;
+  .tab-panel {
+    padding-top: 35%;
+    @include background-size(cover);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    @include at-breakpoint($desktop) {
+      padding-top: 25%;
+    }
   }
 
-  .tab-content {
-    @include padding-leader(4);
+  .humidifier {
+    max-width: 25%;
+    margin: 0 auto;
+    @include at-breakpoint($desktop) {
+      width: 20%;
+      max-width: 300px;
+    }
   }
 
   .nav-tabs {
-    @include trailer(.75);
+    @include trailer(1.5);
     @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include trailer(3);
+    }
+
     li {
       float: left;
       width: (1/3) * 100%;
@@ -22,16 +36,14 @@
       padding: 12px 0;
       background-color: #bababa;
       color: white;
-      font-family:
-            "HelveticaNeue-UltraLight",
-            "HelveticaNeue-Light",
-            "HelveticaNeue",
-            "Helvetica",
-            "Arial",
-            sans-serif;
+      @extend %helvetica-ultralight;
       &:hover {
         text-decoration: none;
         background-color: rgba($logo-color, 0.65);
+      }
+      @include at-breakpoint($desktop) {
+        padding: 24px 0;
+        @include adjust-font-size-to(32px);
       }
     }
     .active > a {
@@ -40,8 +52,15 @@
         background-color: $logo-color;
       }
     }
-    .smart-icon {
-      height: 24px;
+  }
+  .smart-icon {
+    height: 24px;
+    margin: 0 auto;
+    @include at-breakpoint($desktop) {
+      display: inline-block;
+      height: 36px;
+      margin-right: 12px;
+      vertical-align: text-top;
     }
   }
 

@@ -3,6 +3,10 @@
   @include trailer(2);
   border-bottom: 1px solid #ddd;
   @include padding-trailer(2);
+  &:last-child {
+    @include reset-box-model;
+  }
+
   .container {
     max-width: 450px;
   }
@@ -23,14 +27,7 @@
 .block-title {
   @include trailer(0.125);
   @include adjust-font-size-to(24px, 1);
-  font-family:
-              "AvenirNext-Regular",
-              "Avenir-Light",
-              "Avenir",
-              "HelveticaNeue",
-              "Helvetica",
-              "Arial",
-              sans-serif;
+  @extend %avenir;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(36px,1.5);
     @include trailer(0.25);
@@ -41,13 +38,7 @@
   @include trailer(0.125);
   @include adjust-font-size-to(18px, 1);
   color: $color-gray;
-  font-family:
-              "HelveticaNeue-UltraLight",
-              "HelveticaNeue-Light",
-              "HelveticaNeue",
-              "Helvetica",
-              "Arial",
-              sans-serif;
+  @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(30px, 1.25);
     @include trailer(0.5);
@@ -57,12 +48,7 @@
 .block-text {
   @include adjust-font-size-to(14px, 3/4);
   color: $color-gray;
-  font-family:
-            "HelveticaNeue-Light",
-            "HelveticaNeue",
-            "Helvetica",
-            "Arial",
-            sans-serif;
+  @extend  %helvetica-light;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(18px);
   }
