@@ -3,6 +3,17 @@
   @include trailer(2);
   border-bottom: 1px solid #ddd;
   @include padding-trailer(2);
+  .container {
+    max-width: 450px;
+  }
+
+  @include at-breakpoint($desktop) {
+    @include trailer(3);
+    @include padding-trailer(3);
+    .container {
+      max-width: 620px;
+    }
+  }
 }
 
 .block-content {
@@ -20,6 +31,10 @@
               "Helvetica",
               "Arial",
               sans-serif;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(36px,1.5);
+    @include trailer(0.25);
+  }
 }
 
 .block-sub-title {
@@ -33,6 +48,10 @@
               "Helvetica",
               "Arial",
               sans-serif;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(30px, 1.25);
+    @include trailer(0.5);
+  }
 }
 
 .block-text {
@@ -44,4 +63,7 @@
             "Helvetica",
             "Arial",
             sans-serif;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(18px);
+  }
 }
