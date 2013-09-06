@@ -10,5 +10,11 @@
   text-align: center;
   @include adjust-font-size-to(32px, 1.25);
   color: $logo-color;
-  font-weight: lighter;
+  font-family:
+      "HelveticaNeue-UltraLight",
+      "HelveticaNeue-Light",
+      "HelveticaNeue",
+      "Helvetica",
+      "Arial",
+      sans-serif;
 }

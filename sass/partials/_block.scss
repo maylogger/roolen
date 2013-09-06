@@ -12,17 +12,36 @@
 .block-title {
   @include trailer(0.125);
   @include adjust-font-size-to(24px, 1);
+  font-family:
+              "AvenirNext-Regular",
+              "Avenir-Light",
+              "Avenir",
+              "HelveticaNeue",
+              "Helvetica",
+              "Arial",
+              sans-serif;
 }
 
 .block-sub-title {
   @include trailer(0.125);
   @include adjust-font-size-to(18px, 1);
-  font-weight: lighter;
   color: $color-gray;
+  font-family:
+              "HelveticaNeue-UltraLight",
+              "HelveticaNeue-Light",
+              "HelveticaNeue",
+              "Helvetica",
+              "Arial",
+              sans-serif;
 }
 
 .block-text {
   @include adjust-font-size-to(14px, 3/4);
-  font-weight: lighter;
   color: $color-gray;
+  font-family:
+            "HelveticaNeue-Light",
+            "HelveticaNeue",
+            "Helvetica",
+            "Arial",
+            sans-serif;
 }

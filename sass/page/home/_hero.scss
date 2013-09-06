@@ -7,10 +7,23 @@
 }
 .hero-title {
   @include adjust-font-size-to(32px, 1.5);
+  font-family:
+              "HelveticaNeue-UltraLight",
+              "HelveticaNeue",
+              "Helvetica",
+              "Arial",
+              sans-serif;
 }
 .hero-sub-title {
   @include trailer(.5);
   @include adjust-font-size-to(16px, 2/3);
   color: $color-gray;
   font-weight: lighter;
+  font-family:
+             "AvenirNext-Regular",
+             "Avenir-Light",
+             "HelveticaNeue",
+             "Helvetica",
+             "Arial",
+             sans-serif;
 }
