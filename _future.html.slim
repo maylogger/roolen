@@ -1,3 +1,20 @@
 .container
-  .future-demo
+  .future-demo#future-demo
+    .carousel-slide
+      .carousel-inner
+        .item.active= image_tag "future_pcboard.png"
+        .item= image_tag lorem_image("300")
+        .item= image_tag lorem_image("300")
+        .item= image_tag lorem_image("300")
+        .item= image_tag lorem_image("300")
+      a.carousel-control.left href="#future-demo" data-slide="prev" <
+      a.carousel-control.right href="#future-demo" data-slide="next" >
+    ul.carousel-indicators
+      li.active data-target="#future-demo" data-slide-to="0"
+      li data-target="#future-demo" data-slide-to="1"
+      li data-target="#future-demo" data-slide-to="2"
+      li data-target="#future-demo" data-slide-to="3"
+      li data-target="#future-demo" data-slide-to="4"
+
+
   = render "/partials/block-content"

@@ -1,5 +1,6 @@
 body {
-  font-family: "Helvetica Neue",
+  font-family: "HelveticaNeue-Light",
+               "HelveticaNeue",
                "Helvetica",
                "Arial",
                sans-serif;
@@ -43,3 +44,37 @@ img {
   max-width: 100%;
   @include trailer(1);
 }
+
+%avenir {
+   font-family:
+              "AvenirNext-Regular",
+              "Avenir-Light",
+              "Avenir",
+              "HelveticaNeue",
+              "Helvetica",
+              "Arial",
+              sans-serif;
+}
+
+
+ %helvetica-ultralight {
+  font-family:
+            "HelveticaNeue-UltraLight",
+            "HelveticaNeue-Light",
+            "HelveticaNeue",
+            "Helvetica",
+            "Arial",
+            sans-serif;
+  font-weight: 100;
+}
+
+%helvetica-light {
+  font-family:
+            "HelveticaNeue-Light",
+            "HelveticaNeue",
+            "Helvetica",
+            "Arial",
+            sans-serif;
+  font-weight: 300;
+}
+

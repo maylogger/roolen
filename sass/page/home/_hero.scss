@@ -1,16 +1,34 @@
 .hero {
+  @include leader(1.5);
   text-align: center;
   img {
-    max-width: 80%;
+    width: 82.5%;
+    max-width: 320px;
     margin: 0 auto;
   }
+  @include at-breakpoint($desktop) {
+    @include leader(3);
+    @include trailer(1);
+    img {
+      max-width: 400px;
+    }
+  }
 }
+
 .hero-title {
-  @include adjust-font-size-to(32px, 1.5);
+  @include adjust-font-size-to(48px, 2);
+  @extend %helvetica-ultralight;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(72px, 3);
+  }
 }
 .hero-sub-title {
   @include trailer(.5);
-  @include adjust-font-size-to(16px, 2/3);
-  color: $color-gray;
-  font-weight: lighter;
+  @include adjust-font-size-to(16px);
+  color: $color-light-gray;
+  @extend %avenir;
+  @include at-breakpoint($desktop) {
+    @include trailer(1);
+    @include adjust-font-size-to(24px, 1);
+  }
 }

@@ -1,7 +1,14 @@
 .logo {
   float: left;
   a {
-    color: $logo-color;
+      display: block;
+      margin: 8px auto;
+      @include link-colors(#444, rgba(black,.75));
+      @include unstyled-link;
+      @include replace-text-with-dimensions("logo.png");
+      background-image: none, image-url("logo.svg");
+      background-repeat: no-repeat;
+      @include background-size(contain);
   }
 }
 
