@@ -76,13 +76,13 @@
   .carousel-control {
     position: absolute;
     top:50%;
-    margin-top: -36px;
+    margin-top: -24px;
     color: #6a6a6a;
-    @include adjust-font-size-to(60px);
+    @include adjust-font-size-to(40px, 2);
     @extend %helvetica-ultralight;
     @include at-breakpoint($desktop) {
-      // margin-top: -60px;
-      // @include adjust-font-size-to(100px);
+      margin-top: -36px;
+      @include adjust-font-size-to(60px);
     }
     &:hover {
       text-decoration: none;

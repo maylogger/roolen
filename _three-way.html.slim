@@ -1,13 +1,25 @@
 .container
-  .three-way-demo.low
+  .three-way-demo
     ul.nav-tabs
-      li.active: a href="#" data-toggle="tab" LOW
-      li: a href="#" data-toggle="tab" HIGH
-      li: a href="#" data-toggle="tab" AUTO
+      li.active: a href="#low" data-toggle="tab" LOW
+      li: a href="#high" data-toggle="tab" HIGH
+      li: a href="#auto" data-toggle="tab" AUTO
     .tab-content
-      .tab-panel.active
+      .tab-panel.low#low.active
         .three-way-demo-text
           .special Orange
+          |Stand by
+        .mist= image_tag "3way_mist_high.png"
+        .humidifier= image_tag "3way_humidifier.png"
+      .tab-panel.high#high
+        .three-way-demo-text
+          .special Red
+          |Stand by
+        .mist= image_tag "3way_mist_high.png"
+        .humidifier= image_tag "3way_humidifier.png"
+      .tab-panel.auto#auto
+        .three-way-demo-text
+          .special Green
           |Stand by
         .mist= image_tag "3way_mist_high.png"
         .humidifier= image_tag "3way_humidifier.png"

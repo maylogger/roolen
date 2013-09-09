@@ -1,3 +1,7 @@
+$low-mode-color: #fca733;
+$high-mode-color: red;
+$auto-mode-color: green;
+
 
 .three-way-demo {
   @include trailer(1);
@@ -66,20 +70,53 @@
       }
     }
   }
-  // 不同狀態下，special 有不同的顏色
-  &.low .special {
-    color: #fca733;
-  }
 
   .mist {
     margin: 0 auto;
     max-width: 10%;
   }
   .humidifier {
+    $radius: 3px;
     margin: 0 auto;
     width: 20%;
     max-width: 100px;
     position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      margin-left: - $radius;
+      padding: $radius;
+      @include border-radius( $radius * 2);
+      background-color: #ccc;
+    }
   }
-}
 
+  // 不同狀態下，不同的顏色
+  .low {
+    .special {
+      color: $low-mode-color;
+    }
+    .humidifier:after {
+      background-color: $low-mode-color;
+    }
+  }
+  .high {
+    .special {
+      color: $high-mode-color;
+    }
+    .humidifier:after {
+      background-color: $high-mode-color;
+    }
+  }
+  .auto {
+    .special {
+      color: $auto-mode-color;
+    }
+    .humidifier:after {
+      background-color: $auto-mode-color;
+    }
+  }
+
+}
