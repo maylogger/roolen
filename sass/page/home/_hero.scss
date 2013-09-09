@@ -2,16 +2,19 @@
   @include leader(1.5);
   text-align: center;
   img {
-    width: 82.5%;
-    max-width: 320px;
     margin: 0 auto;
   }
   @include at-breakpoint($desktop) {
     @include leader(3);
     @include trailer(1);
-    img {
-      max-width: 400px;
-    }
+  }
+}
+
+.hero-container {
+  padding: 0 1em;
+  @include at-breakpoint($desktop) {
+    width: columns(8);
+    margin: 0 auto;
   }
 }
 

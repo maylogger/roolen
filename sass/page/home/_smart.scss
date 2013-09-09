@@ -11,12 +11,7 @@
   }
 
   .humidifier {
-    max-width: 25%;
     margin: 0 auto;
-    @include at-breakpoint($desktop) {
-      width: 20%;
-      max-width: 300px;
-    }
   }
 
   .nav-tabs {
