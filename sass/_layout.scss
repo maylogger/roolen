@@ -43,28 +43,19 @@ $wide-desktop: $wide-desktop-break $wide-desktop-columns;
 body {
   margin: 0;
   padding: 0;
+  @include transition( background-color 1s );
+  @include at-breakpoint($wide-desktop) {
+    background-color: #eeeeef;
+  }
 }
 
 .container {
+  overflow: hidden;
+  background: white;
   @include container($total-columns, $desktop);
+  transition: box-shadow 1s;
   @include at-breakpoint($wide-desktop) {
-    @include box-shadow( 0 0 5px rgba(black, 0.1) );
-  }
-}
-
-.header {
-  border-bottom: 1px solid #ddd;
-  background-color: rgba(white, 0.85);
-  @include at-breakpoint($desktop) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-  @include at-breakpoint($wide-desktop) {
-    border-bottom: 0;
-    background-color: transparent;
+    box-shadow: 0 0 5px rgba(black, .3);
   }
 }
 
