@@ -1,8 +1,57 @@
 .future-demo {
   @include trailer(1);
+  position: relative;
   img {
+    width: 100%;
     margin: 0 auto;
   }
+
+
+  .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    > .item {
+      display: none;
+      position: relative;
+      @include transition( left .6s );
+    }
+
+    > .active,
+    > .next,
+    > .prev { display: block; }
+    // carousel 圖片動畫 (按照 bootstrap)
+    > .active {
+      left: 0;
+    }
+
+    > .next,
+    > .prev {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    > .next {
+      left: 100%;
+    }
+    > .prev {
+      left: -100%;
+    }
+    > .next.left,
+    > .prev.right {
+      left: 0;
+    }
+
+    > .active.left {
+      left: -100%;
+    }
+    > .active.right {
+      left: 100%;
+    }
+  }
+
 
   .carousel-indicators {
     text-align: center;
@@ -23,16 +72,7 @@
     position: relative;
     @include trailer(0.5);
   }
-  .carousel-inner {
-    .item {
-      width: 80%;
-      margin: 0 auto;
-      display: none;
-      &.active {
-        display: block;
-      }
-    }
-  }
+
   .carousel-control {
     position: absolute;
     top:50%;
@@ -41,8 +81,8 @@
     @include adjust-font-size-to(60px);
     @extend %helvetica-ultralight;
     @include at-breakpoint($desktop) {
-      margin-top: -60px;
-      @include adjust-font-size-to(100px);
+      // margin-top: -60px;
+      // @include adjust-font-size-to(100px);
     }
     &:hover {
       text-decoration: none;

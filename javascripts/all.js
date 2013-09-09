@@ -6,3 +6,8 @@ $(window).load(function() {
     offset: scrollOffset
   });
 })
+
+
+$('#future-demo').carousel({
+  interval: false
+});
