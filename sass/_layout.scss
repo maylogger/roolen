@@ -1,8 +1,8 @@
 // 基本設定
 $total-columns  : 8;
-$column-width   : 4em;
-$gutter-width   : 1em;
-$grid-padding   : 1em;
+$column-width   : 4.5em;
+$gutter-width   : 1.5em;
+$grid-padding   : 1.5em;
 
 // add media
 $wide-mobile: 440px;
@@ -15,6 +15,9 @@ $desktop-columns  : 12;
 $desktop-break    : 768px;
 $desktop: $desktop-break $desktop-columns;
 
+$wide-desktop-columns  : 12;
+$wide-desktop-break    : 1280px;
+$wide-desktop: $wide-desktop-break $wide-desktop-columns;
 // debug-grid
 // $grid-background-column-color: rgba(red,.03);
 // $grid-background-baseline-color: rgba(blue,.05);
@@ -40,6 +43,15 @@ $desktop: $desktop-break $desktop-columns;
 body {
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  @include at-breakpoint($wide-desktop) {
+    max-width: 1200px;
+    margin: 0 auto;
+    // padding: 0 3em;
+    @include box-shadow( 0 0 5px rgba(black, 0.1) );
+  }
 }
 
 .container {

@@ -24,6 +24,7 @@
 
 .nav {
   clear: both;
+  text-align: center;
   li {
     border-bottom: 1px solid #eee;
   }
@@ -49,6 +50,9 @@
     }
     li > a {
       padding: ($base-line-height / 2) $gutter-width;
+    }
+    li:last-child a{
+      padding-right: 0;
     }
   }
 

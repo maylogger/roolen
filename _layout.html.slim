@@ -4,11 +4,12 @@ html lang="zh-TW"
     = render "/html-head"
 
   body
-    .header
-      = render "/partials/header"
-    .content#scrollspy
-      = yield
-    .footer
-      = render "/partials/footer"
+    .wrapper
+      .header
+        = render "/partials/header"
+      .content#scrollspy
+        = yield
+      .footer
+        = render "/partials/footer"
     = render "/html-foot"
     = render "/livereload-js"
