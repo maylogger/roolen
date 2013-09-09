@@ -1,3 +1,15 @@
+.header-container {
+  @include pie-clearfix;
+  @include box-sizing(border-box);
+  padding: 0 1em;
+  margin: 0 auto;
+  @include at-breakpoint($wide-desktop) {
+    max-width: ( $total-columns * $column-width ) + ( ($total-columns - 1) * $gutter-width );
+    border-bottom: 1px solid #ddd;
+    background-color: rgba(white, 0.85);
+  }
+}
+
 .logo {
   float: left;
   a {

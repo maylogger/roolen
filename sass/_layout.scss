@@ -2,7 +2,7 @@
 $total-columns  : 8;
 $column-width   : 4.5em;
 $gutter-width   : 1.5em;
-$grid-padding   : 1em;
+$grid-padding   : 0em;
 
 // add media
 $wide-mobile: 440px;
@@ -16,7 +16,7 @@ $desktop-break    : 768px;
 $desktop: $desktop-break $desktop-columns;
 
 $wide-desktop-columns  : 12;
-$wide-desktop-break    : 1280px;
+$wide-desktop-break    : 1200px;
 $wide-desktop: $wide-desktop-break $wide-desktop-columns;
 // debug-grid
 // $grid-background-column-color: rgba(red,.03);
@@ -45,31 +45,26 @@ body {
   padding: 0;
 }
 
-.wrapper {
+.container {
+  @include container($total-columns, $desktop);
   @include at-breakpoint($wide-desktop) {
-    max-width: 1200px;
-    margin: 0 auto;
-    // padding: 0 3em;
     @include box-shadow( 0 0 5px rgba(black, 0.1) );
   }
 }
 
-.container {
-  @include container($total-columns, $desktop);
-  // overflow-x: hidden;
-}
-
 .header {
-  @include pie-clearfix;
   border-bottom: 1px solid #ddd;
-  @include box-shadow( 0 0 5px rgba(black, 0.1) );
+  background-color: rgba(white, 0.85);
   @include at-breakpoint($desktop) {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 100;
-    width: 100%;
-    background-color: rgba(white, 0.85);
+  }
+  @include at-breakpoint($wide-desktop) {
+    border-bottom: 0;
+    background-color: transparent;
   }
 }
 
@@ -80,6 +75,7 @@ body {
 }
 
 .footer {
+  padding: 0 1em;
   min-height: 200px;
   background-color: #f2f2f2;
   color: #a00;
