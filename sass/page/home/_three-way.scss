@@ -18,8 +18,9 @@ $auto-mode-color: green;
     position: absolute;
     bottom: 0;
     left: 7.5%;
+    z-index: 3;
     @include at-breakpoint($desktop) {
-      left: 22.5%;
+      left: 30.5%;
     }
     li {
       position: relative;
@@ -59,9 +60,11 @@ $auto-mode-color: green;
     position: absolute;
     bottom: 0;
     right: 3.5%;
+    z-index: 3;
     @include adjust-font-size-to(24px, 1.25);
     @extend %helvetica-ultralight;
     @include at-breakpoint($desktop) {
+      width: 33.5%;
       @include adjust-font-size-to(48px, 2);
     }
     .special {

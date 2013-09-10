@@ -3,7 +3,12 @@
     @include trailer(1);
   }
 
+  .tech_humidifier {
+    @include trailer(1);
+  }
+
   .spec-list {
+    @include pie-clearfix;
     .name {
       @include span-columns(4);
       text-align: right;

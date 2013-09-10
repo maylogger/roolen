@@ -1,21 +1,21 @@
 .block-container
   .energy-line-chart
-    / = image_tag "energy_line_chart_bg.jpg", :class => "chart"
+    = image_tag "energy_chart.jpg", :class => "chart"
     / = image_tag "energy-bar-chart-average.jpg", :class => "chart-component"
-    = image_tag "energy-bar-chart-auto.jpg", :class => "chart-component"
+    / = image_tag "energy-bar-chart-auto.jpg", :class => "chart-component"
   .block-content
     h1.block-title Energy Efficiency
     h2.block-sub-title Longer operating hours, balanced performance.
     .block-text Balancing the humidity level with auto mode will extend operating time and save the trouble of keep refilling the water.It can also reduce energy waste once your room is humidity-balanced.
-  .energy-bar-chart
-    = image_tag "energy-bar-chart-icon.png"
-    ul.energy-bars
-      li.energy-bar.average
-        .date-state Average
-        .date-graph
-        .date-count 6.15
-      li.energy-bar.auto-mode
-        .date-state Auto mode
-        .date-graph
-        .date-count 3.15
+    .energy-bar-chart
+      = image_tag "energy-bar-chart-icon.png"
+      ul.energy-bars
+        li.energy-bar.average
+          .date-state Average
+          .date-graph
+          .date-count 6.15
+        li.energy-bar.auto-mode
+          .date-state Auto mode
+          .date-graph
+          .date-count 3.15
 
