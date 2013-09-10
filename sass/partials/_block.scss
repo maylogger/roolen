@@ -6,6 +6,9 @@
   &:last-child {
     @include reset-box-model;
   }
+  img {
+    margin: 0 auto;
+  }
   @include at-breakpoint($desktop) {
     @include trailer(3);
     @include padding-trailer(3);
@@ -14,14 +17,14 @@
 
 .block-container {
   padding: 0 1em;
-  @include at-breakpoint($desktop) {
-    width: columns(8);
-    margin: 0 auto;
-  }
 }
 
 .block-content {
   text-align: center;
+  @include at-breakpoint($desktop) {
+    width: columns(8);
+    margin: 0 auto;
+  }
 }
 
 .block-title {
