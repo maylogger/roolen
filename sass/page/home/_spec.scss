@@ -1,4 +1,7 @@
 .spec {
+  img {
+    margin: 0 auto;
+  }
   .block-content {
     @include trailer(1);
   }
