@@ -1,29 +1,47 @@
+$block-content-columns: 8;
+
 .block {
   @include pie-clearfix;
   @include trailer(2);
   border-bottom: 1px solid #ddd;
-  @include padding-trailer(2);
+  @include at-breakpoint($desktop) {
+    @include trailer(3);
+  }
   &:last-child {
     @include reset-box-model;
   }
   img {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
-  @include at-breakpoint($desktop) {
-    @include trailer(3);
-    @include padding-trailer(3);
+  .row {
+    @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include trailer(2);
+    }
   }
 }
 
 .block-container {
   padding: 0 1em;
+  @include trailer(2);
+  @include at-breakpoint($desktop) {
+    @include trailer(3);
+  }
 }
 
 .block-content {
   text-align: center;
   @include at-breakpoint($desktop) {
-    width: columns(8);
+    width: columns($block-content-columns);
     margin: 0 auto;
+  }
+  .col2 {
+    text-align: left;
+    @include at-breakpoint($desktop) {
+      @include span-columns( ( $block-content-columns / 2), $block-content-columns);
+      @include nth-omega(2n);
+    }
   }
 }
 

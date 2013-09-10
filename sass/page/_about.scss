@@ -1,0 +1,57 @@
+.about {
+  .block-container {
+    @include trailer(1);
+  }
+  img, p {
+    // margin-bottom: 0;
+  }
+
+  .members {
+    @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include span-columns( ($total_columns / 2), $total_columns );
+    }
+  }
+
+  .member {
+    @include trailer(1);
+    @include span-columns( ($total_columns / 2), $total_columns );
+    @include nth-omega(2n);
+    @include adjust-font-size-to(13px, 2/3);
+    text-align: center;
+    @include at-breakpoint($desktop) {
+      text-align: left;
+      margin-right: 0;
+      padding: 0 .5%;
+      width: 19%;
+      &:nth-child(2n) {
+        float: left;
+        width: 19%;
+      }
+    }
+    img {
+      margin-bottom: 6px;
+    }
+    .job {
+      color: #bbb;
+    }
+  }
+
+  .roolen-lead-team {
+    @include at-breakpoint($desktop) {
+      @include span-columns( ($total_columns / 2)omega, $total_columns );
+    }
+  }
+
+  .cooperate-with-us {
+    clear: both;
+    @include leader(1);
+    @include trailer(2);
+    text-align: center;
+    color: $color-light-gray;
+    @include adjust-font-size-to(18px, 1.5);
+    a {
+      display: block;
+    }
+  }
+}
