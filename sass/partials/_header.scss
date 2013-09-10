@@ -54,6 +54,9 @@
   clear: both;
   text-align: center;
   li {
+    border-top: 1px solid #eee;
+  }
+  li:last-child {
     border-bottom: 1px solid #eee;
   }
   li > a {
@@ -74,10 +77,13 @@
     display: block;
     li {
       float: left;
-      border-bottom: 0;
+      border-top: 0;
     }
     li > a {
       padding: 21px $gutter-width 3px;
+    }
+    li:last-child {
+      border-bottom: 0;
     }
     li:last-child a{
       padding-right: 0;

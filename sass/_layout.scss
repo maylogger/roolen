@@ -35,9 +35,6 @@ $wide-desktop: $wide-desktop-break $wide-desktop-columns;
 //   @include at-breakpoint($wide-desktop) {
 //     @include susy-grid-background;
 //   }
-//   @include at-breakpoint($ex-wide-desktop) {
-//     @include susy-grid-background;
-//   }
 // }
 
 body {
@@ -60,8 +57,9 @@ body {
 }
 
 .content {
+  @include padding-leader(1);
   @include at-breakpoint($desktop) {
-    padding-top: $base-line-height * 2 + 1;
+    padding-top: $base-line-height * 6 + 1;
   }
 }
 

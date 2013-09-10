@@ -1,11 +1,9 @@
 .hero {
-  @include leader(1.5);
   text-align: center;
   img {
     margin: 0 auto;
   }
   @include at-breakpoint($desktop) {
-    @include leader(3);
     @include trailer(1);
   }
 }
