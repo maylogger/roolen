@@ -17,6 +17,10 @@ $grid-background-baseline-height: $base-line-height;
 
 @import "basic/basic";
 
+
+// component
+@import "component/split-line";
+
 // partials
 @import "partials/header";
 @import "partials/footer";
