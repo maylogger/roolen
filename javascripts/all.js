@@ -11,3 +11,7 @@ $(window).load(function() {
 $('#future-demo').carousel({
   interval: false
 });
+
+
+jQuery(".block-title").fitText(1.6, { minFontSize: '24px', maxFontSize: '56px' });
+jQuery(".block-sub-title").fitText(2, { minFontSize: '18px', maxFontSize: '42px' });
