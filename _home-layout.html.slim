@@ -1,0 +1,15 @@
+doctype 5
+html lang="zh-TW"
+  head
+    = render "/html-head"
+
+  body
+    .container.home
+      .header
+        = render "/partials/header"
+      .content#scrollspy
+        = yield
+      .footer
+        = render "/partials/footer"
+    = render "/html-foot"
+    = render "/livereload-js"
