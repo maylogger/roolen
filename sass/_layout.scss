@@ -21,17 +21,17 @@ $sp: 768px $desktop-columns 1100px;
 $sp2: 768px $desktop-columns 1400px;
 
 // debug-grid
-$grid-background-column-color: rgba(red,.03);
-$grid-background-baseline-color: rgba(blue,.05);
-body {
-  @include baseline-grid-background;
-}
-.container {
-  @include susy-grid-background;
-  @include at-breakpoint($desktop) {
-    @include susy-grid-background;
-  }
-}
+// $grid-background-column-color: rgba(red,.03);
+// $grid-background-baseline-color: rgba(blue,.05);
+// body {
+//   @include baseline-grid-background;
+// }
+// .container {
+//   @include susy-grid-background;
+//   @include at-breakpoint($desktop) {
+//     @include susy-grid-background;
+//   }
+// }
 
 body {
   margin: 0;
@@ -44,7 +44,7 @@ body {
 
 .container {
   overflow: hidden;
-  // background: white;
+  background: white;
   @include container($total-columns, $desktop);
   transition: box-shadow 1s;
   @include at-breakpoint($container-border) {
