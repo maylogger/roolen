@@ -17,7 +17,7 @@
   margin: 0 auto;
   transition: box-shadow 1s;
   @include at-breakpoint($desktop) {
-    @include padding-leader(1);
+    padding: 0 4em;
     box-shadow: 0 7px 7px -5px rgba(black, .1);
     @include set-container-width();
     @include background(
@@ -29,14 +29,21 @@
 .logo {
   float: left;
   a {
-      display: block;
-      margin: 8px auto;
-      @include link-colors(#444, rgba(black,.75));
-      @include unstyled-link;
-      @include replace-text-with-dimensions("logo.png");
-      background-image: none, image-url("logo.svg");
-      background-repeat: no-repeat;
-      @include background-size(contain);
+    display: block;
+    margin: 8px auto;
+    @include link-colors(#444, rgba(black,.75));
+    @include unstyled-link;
+    @include replace-text-with-dimensions("logo.png");
+    background-image: none, image-url("logo.svg");
+    background-repeat: no-repeat;
+    @include background-size(contain);
+    @include at-breakpoint($desktop) {
+      margin: 21.5px auto;
+      color: #aaa;
+      background: none;
+      @include replace-text-with-dimensions("logo_big.png");
+      background-image: none, image-url("logo_big.svg");
+    }
   }
 }
 
@@ -80,7 +87,8 @@
       border-top: 0;
     }
     li > a {
-      padding: 21px $gutter-width 3px;
+      padding: 55px 24px 0;
+      @include adjust-font-size-to(22px, 1);
     }
     li:last-child {
       border-bottom: 0;
