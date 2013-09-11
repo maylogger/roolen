@@ -2,10 +2,6 @@
   .block-container {
     @include trailer(1);
   }
-  img, p {
-    // margin-bottom: 0;
-  }
-
   .members {
     @include pie-clearfix;
     @include at-breakpoint($desktop) {
@@ -38,8 +34,22 @@
   }
 
   .roolen-lead-team {
+    text-align: left;
     @include at-breakpoint($desktop) {
       @include span-columns( ($total_columns / 2)omega, $total_columns );
+    }
+  }
+  .roolen-lead-team-title {
+    @include adjust-font-size-to(20px);
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(30px, 1.5);
+    }
+  }
+  .roolen-lead-team-text {
+    @include adjust-font-size-to(14px, 3/4);
+    color: $color-gray;
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(24px, 1.5);
     }
   }
 

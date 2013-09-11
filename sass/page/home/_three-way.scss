@@ -20,7 +20,8 @@ $auto-mode-color: green;
     left: 7.5%;
     z-index: 3;
     @include at-breakpoint($desktop) {
-      left: 30.5%;
+      left: auto;
+      right: space(7);
     }
     li {
       position: relative;
@@ -33,7 +34,7 @@ $auto-mode-color: green;
     }
     li > a {
       display: block;
-      padding: 0px 16px;
+      padding: 0 0 0 16px;
       color: $color-gray;
       @include adjust-font-size-to(14px);
       &:hover {
@@ -41,7 +42,8 @@ $auto-mode-color: green;
         text-decoration: none;
       }
       @include at-breakpoint($desktop) {
-        @include adjust-font-size-to(16px);
+        padding: 0 0 0 36px;
+        @include adjust-font-size-to(22px);
       }
     }
     .active > a {
@@ -53,6 +55,9 @@ $auto-mode-color: green;
       top: 0;
       left: 0;
       @include adjust-font-size-to(12px);
+      @include at-breakpoint($desktop) {
+        @include adjust-font-size-to(22px);
+      }
     }
   }
 
@@ -64,13 +69,14 @@ $auto-mode-color: green;
     @include adjust-font-size-to(24px, 1.25);
     @extend %helvetica-ultralight;
     @include at-breakpoint($desktop) {
-      width: 33.5%;
-      @include adjust-font-size-to(48px, 2);
+      right: 0;
+      width: columns(5);
+      @include adjust-font-size-to(72px, 3);
     }
     .special {
       @include adjust-font-size-to(28px, 1.25);
       @include at-breakpoint($desktop) {
-        @include adjust-font-size-to(60px, 3);
+        @include adjust-font-size-to(84px, 4);
       }
     }
   }

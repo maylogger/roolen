@@ -3,9 +3,8 @@ $block-content-columns: 8;
 .block {
   @include pie-clearfix;
   @include trailer(2);
-  border-bottom: 1px solid #ddd;
   @include at-breakpoint($desktop) {
-    @include trailer(3);
+    @include trailer(5);
   }
   &:last-child {
     @include reset-box-model;
@@ -26,51 +25,68 @@ $block-content-columns: 8;
   padding: 0 1em;
   @include trailer(2);
   @include at-breakpoint($desktop) {
-    @include trailer(3);
+    @include trailer(5);
   }
 }
 
 .block-content {
   text-align: center;
+  width: columns(7);
+  margin: 0 auto;
   @include at-breakpoint($desktop) {
     width: columns($block-content-columns);
-    margin: 0 auto;
   }
-  .col2 {
-    text-align: left;
-    @include at-breakpoint($desktop) {
-      @include span-columns( ( $block-content-columns / 2), $block-content-columns);
-      @include nth-omega(2n);
+}
+
+.block-content-col2 {
+  text-align: left;
+  @include at-breakpoint($desktop) {
+    @include span-columns( ( $block-content-columns / 2), $block-content-columns);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($sp2) {
+    @include reset-columns;
+    &:nth-child(2n) {
+      @include reset-columns;
     }
   }
 }
 
 .block-title {
-  @include trailer(0.125);
-  @include adjust-font-size-to(24px, 1);
+  @include trailer(0.25);
+  font-size: 24px;
+  line-height: 1em;
   @extend %avenir;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(36px,1.5);
-    @include trailer(0.25);
+    font-size: 56px;
+    line-height: 1em;
+    @include trailer(0.5);
   }
 }
 
 .block-sub-title {
-  @include trailer(0.125);
-  @include adjust-font-size-to(18px, 1);
+  @include trailer(0.5);
+  font-size: 18px;
+  line-height: 1em;
   color: $color-gray;
   @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(30px, 1.25);
-    @include trailer(0.5);
+    @include adjust-font-size-to(42px);
+    font-size: 42px;
+    line-height: 1em;
+    @include trailer(.75);
   }
 }
 
 .block-text {
   @include adjust-font-size-to(14px, 3/4);
   color: $color-gray;
+  letter-spacing: 1px;
   @extend  %helvetica-light;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(18px);
+    @include adjust-font-size-to(24px, 1.5);
+  }
+  @include at-breakpoint($sp) {
+    @include adjust-font-size-to(20px, 1.25);
   }
 }

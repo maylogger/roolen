@@ -12,16 +12,23 @@
 
   .spec-list {
     @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(22px, 2);
+    }
+
     .name {
-      @include span-columns(4);
+      float: left;
+      width: 49%;
       text-align: right;
       font-family: "Helvetica",
                    "Arial",
                    sans-serif;
+      font-weight: lighter;
     }
     .value {
       color: $color-gray;
-      @include span-columns(4 omega);
+      float: right;
+      width: 49%;
       @extend %helvetica-ultralight;
     }
   }

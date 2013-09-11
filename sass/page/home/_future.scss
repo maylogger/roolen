@@ -7,11 +7,26 @@
   }
 
 
+  .carousel-slide {
+    position: relative;
+    margin: 0 auto;
+    @include trailer(0.5);
+    @include at-breakpoint($desktop) {
+      @include trailer(1.5);
+      min-width: 600px;
+      width: columns(8, $total_columns);
+    }
+  }
+
   .carousel-inner {
     position: relative;
     overflow: hidden;
     width: 80%;
     margin: 0 auto;
+
+    @include at-breakpoint($desktop) {
+      width: 72.5%;
+    }
     > .item {
       display: none;
       position: relative;
@@ -62,16 +77,17 @@
       background-color: #999;
       @include border-radius(15px);
       cursor: pointer;
+      @include at-breakpoint($desktop) {
+        margin: 12px;
+        padding: 8px;
+      }
       &.active {
         background-color: $logo-color;
       }
     }
   }
 
-  .carousel-slide {
-    position: relative;
-    @include trailer(0.5);
-  }
+
 
   .carousel-control {
     position: absolute;
@@ -81,8 +97,8 @@
     @include adjust-font-size-to(40px, 2);
     @extend %helvetica-ultralight;
     @include at-breakpoint($desktop) {
-      margin-top: -36px;
-      @include adjust-font-size-to(60px);
+      margin-top: -72px;
+      @include adjust-font-size-to(120px);
     }
     &:hover {
       text-decoration: none;

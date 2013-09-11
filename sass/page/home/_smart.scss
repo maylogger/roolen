@@ -1,26 +1,32 @@
 .smart {
-
   .tab-panel {
     padding-top: 35%;
     @include background-size(cover);
     background-position: center bottom;
     background-repeat: no-repeat;
     @include at-breakpoint($desktop) {
-      padding-top: 25%;
+      padding-top: 32.5%;
+    }
+    @include at-breakpoint($sp) {
+      padding-top: 35%;
     }
   }
 
   .humidifier {
     margin: 0 auto;
+    width: 35%;
+    @include at-breakpoint($desktop) {
+      max-width: 432px;
+    }
+
   }
 
   .nav-tabs {
     @include trailer(1.5);
     @include pie-clearfix;
     @include at-breakpoint($desktop) {
-      @include trailer(3);
+      @include trailer(5);
     }
-
     li {
       float: left;
       width: (1/3) * 100%;
@@ -38,7 +44,10 @@
       }
       @include at-breakpoint($desktop) {
         padding: 24px 0;
-        @include adjust-font-size-to(32px);
+        @include adjust-font-size-to(52px);
+      }
+      @include at-breakpoint($sp) {
+        @include adjust-font-size-to(36px);
       }
     }
     .active > a {
@@ -53,9 +62,13 @@
     margin: 0 auto;
     @include at-breakpoint($desktop) {
       display: inline-block;
-      height: 36px;
+      height: 52px;
       margin-right: 12px;
       vertical-align: text-top;
+    }
+    @include at-breakpoint($sp) {
+      margin-right: 8px;
+      height: 36px;
     }
   }
 

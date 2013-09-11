@@ -7,22 +7,26 @@
 .energy-line-chart {
   position: relative;
   @include trailer(.75);
-  .chart-component {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-  }
 }
 
 .energy-bar-chart {
   @include pie-clearfix;
   @include leader(1);
+  @include at-breakpoint($desktop) {
+    min-width: 500px;
+    width: columns(6, $total_columns);
+    margin-left: auto;
+    margin-right: auto;
+  }
   img {
     float: left;
     width: 48px;
-    margin-right: .75em;
-    border-right: 3px solid #86be48;
-    padding-right: .75em;
+    margin-right: 6px;
+    border-right: 1px solid #86be48;
+    padding-right: 6px;
+    @include at-breakpoint($desktop) {
+      width: 60px;
+    }
   }
   .energy-bars {
     overflow: hidden;
@@ -32,6 +36,9 @@
     @include pie-clearfix;
     @include adjust-font-size-to(13px, 1);
     color: #ababab;
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(18px, 1.25);
+    }
   }
   .date-state {
     position: relative;
@@ -48,6 +55,9 @@
     width: 100%;
     height: $bar-height;
     background-color: #bbb;
+    @include at-breakpoint($desktop) {
+      top: 13px;
+    }
   }
   .date-count {
     position: relative;
