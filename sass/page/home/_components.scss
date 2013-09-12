@@ -1,5 +1,10 @@
 .components {
   img {
     margin: 0 auto;
+    @include trailer(2);
+    @include at-breakpoint($desktop) {
+      @include trailer(5);
+    }
+
   }
 }
