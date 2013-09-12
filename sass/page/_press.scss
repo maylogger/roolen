@@ -1,0 +1,41 @@
+
+
+.timeline {
+  margin: 0 auto;
+  @include leader(2);
+  @include trailer(2);
+  text-align: left;
+  max-width: 800px;
+}
+
+.timeline-title {
+  @include trailer(.125);
+  @include adjust-font-size-to(16px, 1);
+  font-weight: 500;
+  @include at-breakpoint($desktop) {
+    @include trailer(.25);
+    @include adjust-font-size-to(20px, 1);
+  }
+}
+
+.timeline-item {
+  @include trailer(.75);
+  @include adjust-font-size-to(13px, 2/3);
+  @include at-breakpoint($desktop) {
+    @include trailer(1.5);
+    @include adjust-font-size-to(16px, 1);
+  }
+  .date {
+    color: $color-light-gray;
+    float: left;
+    &:after {
+      content: "—";
+      float: right;
+      margin: 0 .5em;;
+    }
+  }
+  .event {
+    overflow: hidden;
+    color: #777;
+  }
+}
