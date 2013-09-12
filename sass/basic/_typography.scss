@@ -1,8 +1,5 @@
 body {
-  font-family: "HelveticaNeue-Light",
-               "HelveticaNeue",
-               "Helvetica",
-               "Arial",
+  font-family: "Arial",
                sans-serif;
   font-weight: normal;
   -webkit-text-size-adjust: none;
@@ -45,18 +42,6 @@ img {
   @include trailer(1);
 }
 
-%avenir {
-   font-family:
-              "AvenirNext-Regular",
-              "Avenir-Light",
-              "Avenir",
-              "HelveticaNeue",
-              "Helvetica",
-              "Arial",
-              sans-serif;
-}
-
-
  %helvetica-ultralight {
   font-family:
             "HelveticaNeue-UltraLight",
@@ -68,13 +53,26 @@ img {
   font-weight: 100;
 }
 
-%helvetica-light {
-  font-family:
-            "HelveticaNeue-Light",
-            "HelveticaNeue",
-            "Helvetica",
-            "Arial",
-            sans-serif;
-  font-weight: 300;
-}
 
+.wf-active {
+  .hero-sub-title {
+    font-family: "proxima-nova-n1";
+  }
+  .block-title {
+    font-family: "proxima-nova-n6", "proxima-nova";
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .block-sub-title {
+    font-family: "proxima-nova-n1", "proxima-nova";
+    font-weight: 100;
+    @include trailer(.5);
+    @include at-breakpoint($desktop) {
+      @include trailer(1.5);
+    }
+  }
+  .block-text {
+    font-family: "proxima-nova-n1", "proxima-nova";
+    font-weight: 100;
+  }
+}
