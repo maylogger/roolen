@@ -2,7 +2,8 @@
   h1.logo: a href="/" roolen
   button.nav-btn.hide-desktop data-toggle="collapse" data-target="#nav-collapse" menu
   ul.nav#nav-collapse.collapse
-    li: a href="#" Breath
-    li: a href="/support" Support
-    li: a href="#" Press
-    li: a href="/about" About
+    = nav_link_to "Breath", "/"
+    = nav_link_to "Support", "/support"
+    = nav_link_to "Press", "/press"
+    = nav_link_to "About", "/about"
+
