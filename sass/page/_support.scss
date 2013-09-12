@@ -51,9 +51,13 @@
     @include trailer(0.5);
   }
   .text {
+    white-space: nowrap;
     @include adjust-font-size-to(13px, 2/3);
     @include at-breakpoint($desktop) {
       @include adjust-font-size-to(18px, 5/6);
+    }
+    @include at-breakpoint($sp) {
+      // @include adjust-font-size-to(16px, 3/4);
     }
   }
   &:hover .text {

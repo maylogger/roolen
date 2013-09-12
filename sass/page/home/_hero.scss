@@ -37,10 +37,10 @@
 .hero-sub-title {
   @include trailer(.5);
   @include adjust-font-size-to(16px);
-  color: $color-light-gray;
-  @extend %avenir;
+  color: #838383;
+  @extend %helvetica-light;
   @include at-breakpoint($desktop) {
     @include trailer(1.5);
-    @include adjust-font-size-to(33px, 1.5);
+    @include adjust-font-size-to(36px, 1.5);
   }
 }

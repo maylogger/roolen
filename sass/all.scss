@@ -50,3 +50,9 @@ $grid-background-baseline-height: $base-line-height;
 .active {
   display: block;
 }
+
+
+// 控制文字強制換行工具
+.no-wrap {
+  white-space: nowrap;
+}

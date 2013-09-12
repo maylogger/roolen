@@ -6,14 +6,16 @@
 
 .capacity-count {
   margin-top: -14px;
-  @include trailer(.5);
+  @include trailer(1);
   text-align: center;
   @include adjust-font-size-to(44px, 2);
+  font-size: 44px;
+  line-height: 1em;
   color: $logo-color;
   @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
     margin-top: -20px;
-    @include trailer(.75);
-    @include adjust-font-size-to(68px, 3);
+    @include trailer(2);
+    font-size: 68px;
   }
 }

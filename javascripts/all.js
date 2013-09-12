@@ -13,5 +13,8 @@ $('#future-demo').carousel({
 });
 
 
-jQuery(".block-title").fitText(1.6, { minFontSize: '24px', maxFontSize: '56px' });
-jQuery(".block-sub-title").fitText(2, { minFontSize: '18px', maxFontSize: '42px' });
+jQuery(".block-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
+jQuery(".block-sub-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
+jQuery(".capacity-count").fitText(1, { minFontSize: '44px', maxFontSize: '110px' });
+
+

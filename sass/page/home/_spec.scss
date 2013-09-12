@@ -12,24 +12,31 @@
 
   .spec-list {
     @include pie-clearfix;
+    // white-space: nowrap;
+    font-size: 13px;
+    line-height: $base-line-height - 8px;
     @include at-breakpoint($desktop) {
       @include adjust-font-size-to(22px, 2);
     }
-
+    li {
+      @include pie-clearfix;
+      padding: 4px 0;
+      @include at-breakpoint($desktop) {
+        padding: 0;
+      }
+    }
     .name {
       float: left;
       width: 49%;
       text-align: right;
-      font-family: "Helvetica",
-                   "Arial",
-                   sans-serif;
-      font-weight: lighter;
+      font-weight: 400;
     }
     .value {
       color: $color-gray;
       float: right;
       width: 49%;
-      @extend %helvetica-ultralight;
+      font-weight: 200;
+      // @extend %helvetica-ultralight;
     }
   }
 

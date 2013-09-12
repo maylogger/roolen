@@ -22,7 +22,7 @@ $block-content-columns: 8;
 }
 
 .block-container {
-  padding: 0 1em;
+  padding: 0 .5em;
   @include trailer(2);
   @include at-breakpoint($desktop) {
     @include trailer(5);
@@ -34,7 +34,11 @@ $block-content-columns: 8;
   width: columns(7);
   margin: 0 auto;
   @include at-breakpoint($desktop) {
+    max-width: 980px;
     width: columns($block-content-columns);
+  }
+  @include at-breakpoint($sp) {
+    width: columns(10);
   }
 }
 
@@ -53,40 +57,42 @@ $block-content-columns: 8;
 }
 
 .block-title {
-  @include trailer(0.25);
+  @include trailer(0.5);
   font-size: 24px;
   line-height: 1em;
-  @extend %avenir;
   @include at-breakpoint($desktop) {
-    font-size: 56px;
+    font-weight: 600;
+    font-size: 50px;
     line-height: 1em;
-    @include trailer(0.5);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  span {
+    white-space: nowrap;
   }
 }
 
 .block-sub-title {
-  @include trailer(0.5);
+  @include trailer(1);
   font-size: 18px;
-  line-height: 1em;
-  color: $color-gray;
-  @extend %helvetica-ultralight;
+  line-height: 1.2em;
+  color: $color-black;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(42px);
     font-size: 42px;
     line-height: 1em;
-    @include trailer(.75);
+    font-weight: 200;
+    @include trailer(1.5);
+    letter-spacing: -1px;
   }
 }
 
 .block-text {
-  @include adjust-font-size-to(14px, 3/4);
-  color: $color-gray;
+  @include adjust-font-size-to(16px);
+  color: #7a7a7a;
   letter-spacing: 1px;
-  @extend  %helvetica-light;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(24px, 1.5);
-  }
-  @include at-breakpoint($sp) {
-    @include adjust-font-size-to(20px, 1.25);
+    font-weight: 100;
+    @include adjust-font-size-to(26px, 1.75);
   }
 }
