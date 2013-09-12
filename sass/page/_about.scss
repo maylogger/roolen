@@ -2,66 +2,85 @@
   .block-container {
     @include trailer(1);
   }
+}
+
+// mobile 下，特殊排版。
+@include with-grid-settings(6, 4em, 1.5em, 0em) {
   .members {
-    @include pie-clearfix;
-    @include at-breakpoint($desktop) {
-      @include span-columns( ($total_columns / 2), $total_columns );
-    }
+    @include container;
   }
-
   .member {
-    @include trailer(1);
-    @include span-columns( ($total_columns / 2), $total_columns );
-    @include nth-omega(2n);
-    @include adjust-font-size-to(13px, 2/3);
-    text-align: center;
-    @include at-breakpoint($desktop) {
-      text-align: left;
-      margin-right: 0;
-      padding: 0 .5%;
-      width: 19%;
-      &:nth-child(2n) {
-        float: left;
-        width: 19%;
-      }
-    }
-    img {
-      margin-bottom: 6px;
-    }
-    .job {
-      color: #bbb;
-    }
+    @include span-columns(2);
+    @include nth-omega(3n);
   }
+}
 
-  .roolen-lead-team {
+.members {
+  @include pie-clearfix;
+  @include at-breakpoint($desktop) {
     text-align: left;
-    @include at-breakpoint($desktop) {
-      @include span-columns( ($total_columns / 2)omega, $total_columns );
+    @include span-columns( ($total_columns / 2), $total_columns );
+  }
+  @include at-breakpoint($sp) {
+    @include reset-columns;
+  }
+}
+.member {
+  @include trailer(1);
+  @include adjust-font-size-to(13px, 2/3);
+  @include at-breakpoint($desktop) {
+    margin-right: 0;
+    padding: 0 .5%;
+    width: 19%;
+    &:nth-child(2n) {
+      float: left;
+      width: 19%;
     }
   }
-  .roolen-lead-team-title {
-    @include adjust-font-size-to(20px);
-    @include at-breakpoint($desktop) {
-      @include adjust-font-size-to(30px, 1.5);
-    }
+  .name {
+    white-space: nowrap;
+    color: #586b84;
   }
-  .roolen-lead-team-text {
-    @include adjust-font-size-to(14px, 3/4);
-    color: $color-gray;
-    @include at-breakpoint($desktop) {
-      @include adjust-font-size-to(24px, 1.5);
-    }
+  .avatar img {
+    border: 1px solid #777;
+    margin-bottom: 6px;
   }
+  .job {
+    color: #bbb;
+  }
+}
 
-  .cooperate-with-us {
-    clear: both;
-    @include leader(1);
-    @include trailer(2);
-    text-align: center;
-    color: $color-light-gray;
-    @include adjust-font-size-to(18px, 1.5);
-    a {
-      display: block;
-    }
+.roolen-lead-team {
+  text-align: left;
+  @include at-breakpoint($desktop) {
+    @include span-columns( ($total_columns / 2)omega, $total_columns );
+  }
+  @include at-breakpoint($sp) {
+    @include reset-columns;
+  }
+}
+.roolen-lead-team-title {
+  @include adjust-font-size-to(20px);
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(30px, 1.5);
+  }
+}
+.roolen-lead-team-text {
+  @include adjust-font-size-to(14px, 3/4);
+  color: $color-gray;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(24px, 1.5);
+  }
+}
+
+.cooperate-with-us {
+  clear: both;
+  @include leader(1);
+  @include trailer(2);
+  text-align: center;
+  color: $color-light-gray;
+  @include adjust-font-size-to(18px, 1.5);
+  a {
+    display: block;
   }
 }
