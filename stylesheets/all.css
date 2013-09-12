@@ -16,7 +16,7 @@ body { margin: 0; padding: 0; -webkit-transition: background-color 1s; -moz-tran
 
 .footer { padding: 0 1em; min-height: 200px; background-color: #f2f2f2; color: #a00; }
 
-body { font-family: "Arial", sans-serif; font-weight: normal; -webkit-text-size-adjust: none; text-rendering: optimizeLegibility; }
+body { font-family: "Arial", sans-serif; font-weight: normal; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-weight: normal; }
 
@@ -41,7 +41,7 @@ img { display: block; max-width: 100%; margin-bottom: 24px; }
 .wf-active .block-title { font-family: "proxima-nova-n6", "proxima-nova"; font-weight: 600; margin-bottom: 6px; }
 .wf-active .block-sub-title { font-family: "proxima-nova-n1", "proxima-nova"; font-weight: 100; margin-bottom: 12px; }
 @media (min-width: 768px) { .wf-active .block-sub-title { margin-bottom: 36px; } }
-.wf-active .block-text { font-family: "proxima-nova-n1", "proxima-nova"; font-weight: 100; }
+.wf-active .block-text { font-family: "proxima-nova-n3", "proxima-nova"; font-weight: 300; }
 
 .btn { color: #333333; background: #d8d8d8; text-align: center; display: inline-block; padding: 0 0.25em; font-size: 16px; line-height: 24px; border-radius: 3px; box-shadow: 0 2px 0 0 #b5b5b5; cursor: pointer; border: none; }
 .btn:hover { text-decoration: none; }
@@ -191,7 +191,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .block-sub-title { margin-bottom: 24px; font-size: 18px; line-height: 1.2em; color: #333333; }
 @media (min-width: 768px) { .block-sub-title { font-size: 42px; line-height: 48px; font-size: 42px; line-height: 1em; font-weight: 200; margin-bottom: 36px; letter-spacing: -1px; } }
 
-.block-text { font-size: 16px; line-height: 24px; color: #7a7a7a; letter-spacing: 1px; }
+.block-text { font-size: 16px; line-height: 24px; color: #7a7a7a; }
 @media (min-width: 768px) { .block-text { font-weight: 100; font-size: 26px; line-height: 42px; } }
 
 .hero { padding: 10% 0; text-align: center; }

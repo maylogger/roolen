@@ -3,7 +3,7 @@ body {
                sans-serif;
   font-weight: normal;
   -webkit-text-size-adjust: none;
-  // -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -73,7 +73,7 @@ img {
     }
   }
   .block-text {
-    font-family: "proxima-nova-n1", "proxima-nova";
-    font-weight: 100;
+    font-family: "proxima-nova-n3", "proxima-nova";
+    font-weight: 300;
   }
 }
