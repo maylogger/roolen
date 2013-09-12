@@ -37,7 +37,7 @@ img { display: block; max-width: 100%; margin-bottom: 24px; }
 
 .hero-title, .smart .nav-tabs li > a, .capacity-count, .three-way-demo .three-way-demo-text, .future-demo .carousel-control { font-family: "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "Arial", sans-serif; font-weight: 100; }
 
-.wf-active .hero-sub-title { font-family: "proxima-nova-n1"; }
+.wf-active .hero-sub-title { font-family: "proxima-nova-n1", "proxima-nova"; font-weight: 300; }
 .wf-active .block-title { font-family: "proxima-nova-n6", "proxima-nova"; font-weight: 600; margin-bottom: 6px; }
 .wf-active .block-sub-title { font-family: "proxima-nova-n1", "proxima-nova"; font-weight: 100; margin-bottom: 12px; }
 @media (min-width: 768px) { .wf-active .block-sub-title { margin-bottom: 36px; } }
