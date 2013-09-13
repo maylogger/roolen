@@ -54,6 +54,7 @@
   background-color: transparent;
   @include adjust-font-size-to(16px, 2);
   font-weight: 300;
+  @extend %proxima-nava-4;
   color: $header-color;
   cursor: pointer;
 }
@@ -68,10 +69,11 @@
     border-bottom: 1px solid #eee;
   }
   li > a {
-    font-weight: 300;
     display: block;
     padding: 6px 0;
+    font-weight: 300;
     color: $header-color;
+    @extend %proxima-nava-4;
     @include transition( color .25s ease );
     &:hover {
       text-decoration: none;
