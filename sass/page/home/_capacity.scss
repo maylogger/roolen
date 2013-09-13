@@ -1,21 +1,23 @@
 .capacity {
   img {
     margin: 0 auto;
+    max-width: 50%;
+    @include at-breakpoint($desktop) {
+      max-width: none;
+      margin-bottom: -20px;
+    }
   }
 }
 
 .capacity-count {
-  margin-top: -14px;
   @include trailer(1);
   text-align: center;
-  @include adjust-font-size-to(44px, 2);
-  font-size: 44px;
-  line-height: 1em;
+  @include adjust-font-size-to(70px, 2);
   color: $logo-color;
   @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
-    margin-top: -20px;
-    @include trailer(4);
-    font-size: 68px;
+    @include adjust-font-size-to(96px, 4);
+    @include trailer(1);
+
   }
 }

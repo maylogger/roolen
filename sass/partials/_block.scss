@@ -33,6 +33,7 @@ $block-content-columns: 8;
   }
   @include at-breakpoint($sp2) {
     width: 100%;
+    max-width: 800px;
     // width: columns(10);
   }
 }
@@ -53,27 +54,41 @@ $block-content-columns: 8;
 
 
 %block-title-font {
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.2em;
   @include at-breakpoint($desktop) {
-    font-size: 50px;
-    line-height: 1.125em;
-    letter-spacing: -1px;
+    font-size: 46px;
+    line-height: .9em;
+    .wf-active & { letter-spacing: -1px; }
   }
 }
+
+%block-sub-title-font {
+  font-size: 24px;
+  @include at-breakpoint($desktop) {
+    font-size: 38px;
+    line-height: 1.125em;
+  }
+}
+
+
+
 
 .block-title {
   font-weight: 600;
   @extend %block-title-font;
   @extend %proxima-nava-6;
+  margin-bottom: .125em;
 }
 
 .block-sub-title {
   margin-bottom: .8em;
   @extend %block-title-font;
+  @extend %block-sub-title-font;
   @extend %proxima-nava-1;
   @include at-breakpoint($desktop) {
-    margin-bottom: .6em;
+    // margin-bottom: .6em;
+    @include trailer(1.5);
   }
 }
 
@@ -82,10 +97,9 @@ $block-content-columns: 8;
   color: $color-black;
   @extend %proxima-nava-4;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(26px, 1.75);
-    .wf-active & {
-      font-weight: 300;
-    }
+    @include adjust-font-size-to(24px, 1 + 2/3);
+    font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", sans-serif;;
+    font-weight: 300;
   }
 }
 

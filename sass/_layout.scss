@@ -44,7 +44,7 @@ body {
 
 .container {
   overflow: hidden;
-  background: white;
+  background: #fcfcfc;
   @include container($total-columns, $desktop);
   transition: box-shadow 1s;
   @include at-breakpoint($container-border) {
