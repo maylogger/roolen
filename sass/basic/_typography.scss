@@ -53,27 +53,24 @@ img {
   font-weight: 100;
 }
 
-
 .wf-active {
-  .hero-sub-title {
-    font-family: "proxima-nova-n1", "proxima-nova";
-    font-weight: 300;
-  }
-  .block-title {
-    font-family: "proxima-nova-n6", "proxima-nova";
+  %proxima-nava-6 {
+    font-family: "proxima-nova-n6", "proxima-nova", sans-serif;;
     font-weight: 600;
-    margin-bottom: 6px;
   }
-  .block-sub-title {
-    font-family: "proxima-nova-n1", "proxima-nova";
-    font-weight: 100;
-    @include trailer(.5);
-    @include at-breakpoint($desktop) {
-      @include trailer(1.5);
-    }
+
+  %proxima-nava-4 {
+    font-family: "proxima-nova-n4", "proxima-nova", sans-serif;;
+    font-weight: 400;
   }
-  .block-text {
-    font-family: "proxima-nova-n3", "proxima-nova";
+
+  %proxima-nava-3 {
+    font-family: "proxima-nova-n3", "proxima-nova", sans-serif;;
     font-weight: 300;
+  }
+
+  %proxima-nava-1 {
+    font-family: "proxima-nova-n1", "proxima-nova", sans-serif;;
+    font-weight: 100;
   }
 }
