@@ -2,6 +2,19 @@
   .block-container {
     @include trailer(1);
   }
+  .row {
+    @include pie-clearfix;
+    @include at-breakpoint($desktop) {
+      @include trailer(2);
+    }
+  }
+}
+
+.about_roolen-pic {
+  @include at-breakpoint($desktop) {
+    // @include trailer(4)
+  }
+
 }
 
 // mobile 下，特殊排版。
@@ -14,6 +27,7 @@
     @include nth-omega(3n);
   }
 }
+// 特殊排版結束
 
 .members {
   @include pie-clearfix;
@@ -27,7 +41,8 @@
 }
 .member {
   @include trailer(1);
-  @include adjust-font-size-to(13px, 2/3);
+  @include adjust-font-size-to(14px, 2/3);
+  @extend %proxima-nava-5;
   @include at-breakpoint($desktop) {
     margin-right: 0;
     padding: 0 .5%;
@@ -60,26 +75,31 @@
   }
 }
 .roolen-lead-team-title {
-  @include adjust-font-size-to(20px);
+  @include adjust-font-size-to(22px, 1);
+  font-weight: 600;
+  @extend %proxima-nava-6;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(30px, 1.5);
   }
 }
 .roolen-lead-team-text {
-  @include adjust-font-size-to(14px, 3/4);
-  color: $color-gray;
-  @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(24px, 1.5);
-  }
+  color: $color-black;
+  @include adjust-font-size-to(16px);
+  @extend %proxima-nava-4;
 }
+
 
 .cooperate-with-us {
   clear: both;
   @include leader(1);
   @include trailer(2);
   text-align: center;
-  color: $color-light-gray;
-  @include adjust-font-size-to(18px, 1.5);
+  color: $color-gray;
+  @include adjust-font-size-to(18px, 1);
+  @extend %proxima-nava-6;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(22px, 1.25);
+  }
   a {
     display: block;
   }
