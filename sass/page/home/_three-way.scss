@@ -8,7 +8,7 @@ $auto-mode-color: green;
   @include pie-clearfix;
   position: relative;
   @include at-breakpoint($desktop) {
-    @include trailer(2);
+    @include trailer(4.5);
   }
   img {
     margin-bottom: 0;

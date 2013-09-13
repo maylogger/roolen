@@ -15,7 +15,7 @@
   @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
     margin-top: -20px;
-    @include trailer(2);
+    @include trailer(4);
     font-size: 68px;
   }
 }

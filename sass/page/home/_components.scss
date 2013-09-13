@@ -3,7 +3,7 @@
     margin: 0 auto;
     @include trailer(2);
     @include at-breakpoint($desktop) {
-      @include trailer(5);
+      @include trailer(4.5);
     }
 
   }

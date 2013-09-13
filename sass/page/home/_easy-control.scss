@@ -2,4 +2,10 @@
   img {
     margin: 0 auto $base-line-height;
   }
+  .humidifier {
+    @include trailer(1);
+    @include at-breakpoint($desktop) {
+      @include trailer(2.5);
+    }
+  }
 }

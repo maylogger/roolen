@@ -1,44 +1,45 @@
 .spec {
+  margin-bottom: 0;
   img {
     margin: 0 auto;
   }
-  .block-content {
-    @include trailer(1);
-  }
-
   .tech_humidifier {
+    @include leader(1);
     @include trailer(1);
-  }
-
-  .spec-list {
-    @include pie-clearfix;
-    // white-space: nowrap;
-    font-size: 13px;
-    line-height: $base-line-height - 8px;
     @include at-breakpoint($desktop) {
-      @include adjust-font-size-to(22px, 2);
-    }
-    li {
-      @include pie-clearfix;
-      padding: 4px 0;
-      @include at-breakpoint($desktop) {
-        padding: 0;
-      }
-    }
-    .name {
-      float: left;
-      width: 49%;
-      text-align: right;
-      font-weight: 400;
-    }
-    .value {
-      color: $color-gray;
-      float: right;
-      width: 49%;
-      font-weight: 200;
-      // @extend %helvetica-ultralight;
+      @include leader(2.5);
+      @include trailer(2.5);
     }
   }
+}
 
+.spec-list {
+  @include pie-clearfix;
+  font-size: 13px;
+  line-height: $base-line-height - 8px;
+  @extend %proxima-nava-4;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(22px, 1);
+    .wf-active &{
+      font-weight: 300;
+    }
+  }
+  li {
+    @include pie-clearfix;
+    padding: 4px 0;
+    @include at-breakpoint($desktop) {
+      padding: 6px 0;
+    }
+  }
+  .name {
+    float: left;
+    width: 49%;
+    text-align: right;
+  }
+  .value {
+    color: $color-gray;
+    float: right;
+    width: 49%;
+  }
 }
 

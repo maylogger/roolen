@@ -14,9 +14,12 @@
 
   .humidifier {
     margin: 0 auto;
-    width: 35%;
+    width: 30%;
     @include at-breakpoint($desktop) {
       max-width: 432px;
+    }
+    @include at-breakpoint($sp2) {
+      width: 27.5%;
     }
 
   }
@@ -38,7 +41,7 @@
       padding: 12px 0;
       background-color: #bababa;
       color: white;
-      @extend %helvetica-ultralight;
+      font-weight: 100;
       &:hover {
         text-decoration: none;
         background-color: rgba($logo-color, 0.65);
@@ -50,6 +53,7 @@
       @include at-breakpoint($sp) {
         @include adjust-font-size-to(36px);
       }
+      @extend %proxima-nava-3;
     }
     .active > a {
       background-color: $logo-color;

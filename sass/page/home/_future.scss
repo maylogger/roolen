@@ -1,6 +1,9 @@
 .future-demo {
   @include trailer(1);
   position: relative;
+  @include at-breakpoint($desktop) {
+    @include trailer(2.5);
+  }
   img {
     width: 100%;
     margin: 0 auto;

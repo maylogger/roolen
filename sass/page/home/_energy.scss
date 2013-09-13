@@ -6,7 +6,10 @@
 
 .energy-line-chart {
   position: relative;
-  @include trailer(.75);
+  @include trailer(1);
+  @include at-breakpoint($desktop) {
+    @include trailer(3.5);
+  }
 }
 
 .energy-bar-chart {

@@ -38,7 +38,7 @@
   @include trailer(.5);
   @include adjust-font-size-to(16px);
   color: #838383;
-  @extend %helvetica-light;
+  @extend %proxima-nava-3;
   @include at-breakpoint($desktop) {
     @include trailer(1.5);
     @include adjust-font-size-to(36px, 1.5);
