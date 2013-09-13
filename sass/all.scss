@@ -54,5 +54,7 @@ $grid-background-baseline-height: $base-line-height;
 
 // 控制文字強制換行工具
 .no-wrap {
-  white-space: nowrap;
+  @include at-breakpoint($desktop) {
+    white-space: nowrap;
+  }
 }

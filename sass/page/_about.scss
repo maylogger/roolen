@@ -18,18 +18,28 @@
 }
 
 // mobile 下，特殊排版。
-@include with-grid-settings(6, 4em, 1.5em, 0em) {
-  .members {
-    @include container;
-  }
-  .member {
-    @include span-columns(2);
-    @include nth-omega(3n);
-  }
-}
+// @include with-grid-settings(5, 4em, 1.5em, 0em) {
+//   .member-group {
+//     @include container;
+//   }
+// }
+// @include with-grid-settings(5, 4em, .5em, 0em) {
+//   .member {
+//     @include span-columns(2);
+//     @include nth-omega(3n);
+//     @include at-breakpoint($desktop) {
+//       @include remove-nth-omega(3n, child, 5);
+//       @include span-columns(1, 5);
+//       @include nth-omega();
+//     }
+//   }
+// }
+
+
+
 // 特殊排版結束
 
-.members {
+.roolen-members {
   @include pie-clearfix;
   @include at-breakpoint($desktop) {
     text-align: left;
@@ -39,18 +49,38 @@
     @include reset-columns;
   }
 }
+
+.member-group {
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+  @include at-breakpoint($desktop) {
+    max-width: none;
+    margin: 0 -40px;
+    position: relative;
+    left: -25px;
+  }
+  @include at-breakpoint($sp) {
+    left: 0;
+  }
+}
+
 .member {
   @include trailer(1);
   @include adjust-font-size-to(14px, 2/3);
   @extend %proxima-nava-5;
+  @include span-columns(4);
+  @include nth-omega(2n);
   @include at-breakpoint($desktop) {
-    margin-right: 0;
-    padding: 0 .5%;
-    width: 19%;
     &:nth-child(2n) {
-      float: left;
-      width: 19%;
+      float: none;
+      margin: 0;
+      display: inline-block;
     }
+    float: none;
+    display: inline-block;
+    width: 18.5%;
+    margin: 0 2px;
   }
   .name {
     white-space: nowrap;
