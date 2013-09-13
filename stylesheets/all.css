@@ -61,7 +61,7 @@ img { display: block; max-width: 100%; margin-bottom: 24px; }
 .pagination li .more { padding: 0.25em 0.5em; }
 .pagination li .active { background-color: #69c; }
 
-/* alert */
+/*! alert */
 .alert, .alert-success, .alert-wran, .alert-wrong { width: 100%; }
 .alert .alert-message, .alert-success .alert-message, .alert-wran .alert-message, .alert-wrong .alert-message { float: left; font-size: 14px; line-height: 24px; }
 .alert .alert-message i, .alert-success .alert-message i, .alert-wran .alert-message i, .alert-wrong .alert-message i { margin-right: 6px; }
@@ -143,10 +143,10 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .header-container { padding: 0 4em; box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.1); max-width: 99em; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0.85))); background: -webkit-linear-gradient(#ffffff, rgba(255, 255, 255, 0.85)); background: -moz-linear-gradient(#ffffff, rgba(255, 255, 255, 0.85)); background: -o-linear-gradient(#ffffff, rgba(255, 255, 255, 0.85)); background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.85)); } }
 
 .logo { float: left; }
-.logo a { display: block; margin: 8px auto; color: #444444; color: inherit; text-decoration: inherit; cursor: inherit; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1378783356'); background-repeat: no-repeat; background-position: 50% 50%; width: 110px; height: 32px; background-image: none, url('/images/logo.svg?1378783360'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.logo a { display: block; margin: 8px auto; color: #444444; color: inherit; text-decoration: inherit; cursor: inherit; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1378472338'); background-repeat: no-repeat; background-position: 50% 50%; width: 110px; height: 32px; background-image: none, url('/images/logo.svg?1378472338'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .logo a:hover { color: rgba(0, 0, 0, 0.75); }
 .logo a:active, .logo a:focus { outline: none; }
-@media (min-width: 768px) { .logo a { margin: 21.5px auto; color: #aaa; background: none; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo_big.png?1378889718'); background-repeat: no-repeat; background-position: 50% 50%; width: 187px; height: 53px; background-image: none, url('/images/logo_big.svg?1378890059'); } }
+@media (min-width: 768px) { .logo a { margin: 21.5px auto; color: #aaa; background: none; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo_big.png?1379058739'); background-repeat: no-repeat; background-position: 50% 50%; width: 187px; height: 53px; background-image: none, url('/images/logo_big.svg?1379058739'); } }
 
 .nav-btn { display: block; float: right; margin: 0; padding: 0; border: 0; background-color: transparent; font-size: 16px; line-height: 48px; font-weight: 300; color: #999999; cursor: pointer; }
 
@@ -207,7 +207,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .hero-sub-title { margin-bottom: 12px; font-size: 16px; line-height: 24px; color: #838383; }
 @media (min-width: 768px) { .hero-sub-title { margin-bottom: 36px; font-size: 36px; line-height: 36px; } }
 
-.smart .tab-panel { padding-top: 35%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center bottom; background-repeat: no-repeat; }
+.smart .tab-panel { padding-top: 35%; margin-bottom: -1px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-color: #bababa; background-position: center top; background-repeat: no-repeat; }
 @media (min-width: 768px) { .smart .tab-panel { padding-top: 32.5%; } }
 @media (min-width: 768px) and (max-width: 1100px) { .smart .tab-panel { padding-top: 35%; } }
 .smart .humidifier { margin: 0 auto; width: 30%; }

@@ -1,8 +1,10 @@
 .smart {
   .tab-panel {
     padding-top: 35%;
+    margin-bottom: - 1px;
     @include background-size(cover);
-    background-position: center bottom;
+    background-color: #bababa;
+    background-position: center top;
     background-repeat: no-repeat;
     @include at-breakpoint($desktop) {
       padding-top: 32.5%;
