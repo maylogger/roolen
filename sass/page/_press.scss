@@ -42,6 +42,7 @@
   .date {
     color: $color-light-gray;
     float: left;
+    width: 7.5em;
     &:after {
       content: "—";
       float: right;
