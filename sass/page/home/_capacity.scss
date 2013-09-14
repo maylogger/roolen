@@ -10,6 +10,7 @@
 }
 
 .capacity-count {
+  @include transition( opacity .3s);
   @include trailer(1);
   text-align: center;
   @include adjust-font-size-to(70px, 2);
