@@ -6,11 +6,34 @@
 
 .energy-line-chart {
   position: relative;
+  max-width: 768px;
+  margin: 0 auto;
   @include trailer(1);
   @include at-breakpoint($desktop) {
     @include trailer(3.5);
   }
+  .chart-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    background-position: left top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    @include transition(width .5s ease-out .15s);
+    .active & {
+      width: 100%;
+    }
+  }
+  .chart-line-top {
+    z-index: 2;
+    @include transition(width .5s ease-out .35s);
+  }
 }
+
 
 .energy-bar-chart {
   @include pie-clearfix;
