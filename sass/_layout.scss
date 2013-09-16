@@ -54,6 +54,7 @@ body {
 
 .content {
   @include padding-leader(1);
+  min-height: 600px;
   @include at-breakpoint($desktop) {
     padding-top: $base-line-height * 9 + 1;
   }
@@ -65,10 +66,4 @@ body {
   }
 }
 
-.footer {
-  padding: 0 1em;
-  min-height: 200px;
-  background-color: #f2f2f2;
-  color: #a00;
-}
 

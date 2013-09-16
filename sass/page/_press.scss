@@ -2,8 +2,8 @@
 .press-carousel {
   margin: 0 auto 36px;
   @include at-breakpoint($desktop) {
-    max-width: 980px;
-    @include trailer(2.5);
+    max-width: 800px;
+    @include trailer(5);
   }
   .carousel-slide {
     margin: 0 1em;
@@ -17,16 +17,16 @@
     }
   }
   .item-title {
-    @include trailer(.5);
+    @include trailer(.25);
     text-align: center;
     color: black;
-    @include adjust-font-size-to(16px);
-    @extend %proxima-nava-6;
+    font-weight: 300;
+    @extend %block-title-font;
+    @extend %proxima-nava-3;
     @include at-breakpoint($desktop) {
-      @include trailer(2);
-      @include adjust-font-size-to(24px, 1);
+      font-weight: 100;
+      @include trailer(1.5);
     }
-
   }
 
 }
@@ -38,12 +38,15 @@
   }
 }
 
-// .press-releases-title {
-//   text-align: left;
-//   @include at-breakpoint($desktop) {
-//     text-align: center;
-//   }
-// }
+.press-releases-title {
+  text-align: left;
+  font-weight: 300;
+  @extend %proxima-nava-3;
+  @include at-breakpoint($desktop) {
+    text-align: center;
+    font-weight: 100;
+  }
+}
 
 .timeline {
   margin: 0 auto;
