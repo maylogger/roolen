@@ -48,24 +48,23 @@
       text-align: center;
     }
     li > a {
-      font-weight: 200;
       display: block;
       padding: 12px 0;
       background-color: #bababa;
       color: white;
-      font-weight: 100;
-      &:hover {
-        text-decoration: none;
-        background-color: rgba($logo-color, 0.65);
-      }
+      @extend %proxima-nava-3;
       @include at-breakpoint($desktop) {
         padding: 24px 0;
         @include adjust-font-size-to(52px);
+        font-weight: 100;
       }
       @include at-breakpoint($sp) {
         @include adjust-font-size-to(36px);
       }
-      @extend %proxima-nava-3;
+      &:hover {
+        text-decoration: none;
+        background-color: rgba($logo-color, 0.65);
+      }
     }
     .active > a {
       background-color: $logo-color;
