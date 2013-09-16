@@ -2,116 +2,21 @@
   @include trailer(1);
   position: relative;
   @include at-breakpoint($desktop) {
-    @include trailer(2.5);
+    @include trailer(1.5);
   }
-  img {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-
   .carousel-slide {
     position: relative;
-    margin: 0 auto;
     @include trailer(0.5);
     @include at-breakpoint($desktop) {
-      @include trailer(1.5);
       min-width: 600px;
       width: columns(8, $total_columns);
     }
   }
 
   .carousel-inner {
-    position: relative;
-    overflow: hidden;
     width: 80%;
-    margin: 0 auto;
-
     @include at-breakpoint($desktop) {
       width: 72.5%;
     }
-    > .item {
-      display: none;
-      position: relative;
-      @include transition( left .6s );
-    }
-
-    > .active,
-    > .next,
-    > .prev { display: block; }
-    // carousel 圖片動畫 (按照 bootstrap)
-    > .active {
-      left: 0;
-    }
-
-    > .next,
-    > .prev {
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-    > .next {
-      left: 100%;
-    }
-    > .prev {
-      left: -100%;
-    }
-    > .next.left,
-    > .prev.right {
-      left: 0;
-    }
-
-    > .active.left {
-      left: -100%;
-    }
-    > .active.right {
-      left: 100%;
-    }
   }
-
-
-  .carousel-indicators {
-    text-align: center;
-    li {
-      display: inline-block;
-      margin: 6px;
-      padding: 5px;
-      background-color: #999;
-      @include border-radius(15px);
-      cursor: pointer;
-      @include at-breakpoint($desktop) {
-        margin: 12px;
-        padding: 8px;
-      }
-      &.active {
-        background-color: $logo-color;
-      }
-    }
-  }
-
-
-
-  .carousel-control {
-    position: absolute;
-    top:50%;
-    margin-top: -24px;
-    color: #6a6a6a;
-    @include adjust-font-size-to(40px, 2);
-    @extend %helvetica-ultralight;
-    @include at-breakpoint($desktop) {
-      margin-top: -72px;
-      @include adjust-font-size-to(120px);
-    }
-    &:hover {
-      text-decoration: none;
-    }
-    &.left {
-      left: 0;
-    }
-    &.right {
-      right: 0;
-    }
-  }
-
 }
