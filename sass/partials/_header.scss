@@ -18,7 +18,7 @@
   transition: box-shadow 1s;
   @include at-breakpoint($desktop) {
     padding: 0 4em;
-    // box-shadow: 0 7px 7px -5px rgba(black, .1);
+    box-shadow: 0 7px 7px -5px rgba(black, .1);
     @include set-container-width();
     @include background(
       linear-gradient( rgba(#fcfcfc,1), rgba(#fcfcfc,.85) )
