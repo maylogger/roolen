@@ -1,0 +1,92 @@
+.carousel-slide {
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  > .item {
+    display: none;
+    position: relative;
+    @include transition( left .6s );
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev { display: block; }
+  // carousel 圖片動畫 (按照 bootstrap)
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+}
+
+.carousel-indicators {
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 6px;
+    padding: 5px;
+    background-color: #999;
+    @include border-radius(15px);
+    cursor: pointer;
+    @include at-breakpoint($desktop) {
+      margin: 12px;
+      padding: 8px;
+    }
+    &.active {
+      background-color: $logo-color;
+    }
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top:50%;
+  margin-top: -24px;
+  color: #6a6a6a;
+  @include adjust-font-size-to(40px, 2);
+  @extend %helvetica-ultralight;
+  @include at-breakpoint($desktop) {
+    margin-top: -72px;
+    @include adjust-font-size-to(120px);
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &.left {
+    left: 0;
+  }
+  &.right {
+    right: 0;
+  }
+}
