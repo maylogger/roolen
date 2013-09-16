@@ -1,0 +1,50 @@
+.footer {
+  position: relative;
+  text-align: center;
+}
+
+.footer-container {
+  padding: 3em 1em;
+  background-color: #f2f2f2;
+  @include background-image(
+    linear-gradient( rgba(#444, .175), rgba(#444, 0) )
+  );
+}
+
+.home-link {
+  display: block;
+  @include trailer(.75);
+  @include at-breakpoint($desktop) {
+    @include trailer(.5);
+  }
+  img {
+    margin: 0 auto;
+  }
+}
+
+.social-link-group {
+  display: inline-block;
+  @include trailer(.5);
+  @include at-breakpoint($desktop) {
+    position: absolute;
+    top: 50%;
+    right: 4em;
+    margin-top: -36px;
+  }
+  li {
+    display: inline-block;
+    margin: 0 .5em;
+    width: 48px;
+    @include at-breakpoint($desktop) {
+      width: auto;
+    }
+  }
+  img {
+    margin: 0 auto;
+  }
+}
+
+.copyright {
+  @include adjust-font-size-to(14px);
+  color: $color-gray;
+}
