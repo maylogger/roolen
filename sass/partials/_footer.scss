@@ -13,7 +13,9 @@
 
 .home-link {
   display: block;
+  margin: 0 auto;
   @include trailer(.75);
+  width: 120px;
   @include at-breakpoint($desktop) {
     @include trailer(.5);
   }
@@ -46,5 +48,6 @@
 
 .copyright {
   @include adjust-font-size-to(14px);
-  color: $color-gray;
+  color: #999;
+  @extend %proxima-nava-3;
 }

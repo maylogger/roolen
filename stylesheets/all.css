@@ -39,7 +39,7 @@ img { display: block; max-width: 100%; margin-bottom: 24px; }
 
 .nav-btn, .nav li > a, .block-text, .spec-list, .resource .text, .contact-roolen .text, .contact-roolen .mail-to, .timeline-item { font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", sans-serif; font-weight: 400; }
 
-.hero-sub-title, .smart .nav-tabs li > a, .press-carousel .item-title, .press-releases-title { font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", sans-serif; font-weight: 300; }
+.copyright, .hero-sub-title, .smart .nav-tabs li > a, .press-carousel .item-title, .press-releases-title { font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", sans-serif; font-weight: 300; }
 
 .block-sub-title { font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", sans-serif; font-weight: 100; }
 
@@ -167,7 +167,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 .footer-container { padding: 3em 1em; background-color: #f2f2f2; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(68, 68, 68, 0.1)), color-stop(100%, rgba(68, 68, 68, 0))); background-image: -webkit-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: -moz-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: -o-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); }
 
-.home-link { display: block; margin-bottom: 18px; }
+.home-link { display: block; margin: 0 auto; margin-bottom: 18px; width: 120px; }
 @media (min-width: 768px) { .home-link { margin-bottom: 12px; } }
 .home-link img { margin: 0 auto; }
 
@@ -177,7 +177,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .social-link-group li { width: auto; } }
 .social-link-group img { margin: 0 auto; }
 
-.copyright { font-size: 14px; line-height: 24px; color: #aaaaaa; }
+.copyright { font-size: 14px; line-height: 24px; color: #999; }
 
 .block { margin-bottom: 48px; }
 .block:after { content: ""; display: table; clear: both; }
