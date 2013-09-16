@@ -1,13 +1,49 @@
-.press-slide {
-  margin: 0 auto 48px;
+
+.press-carousel {
+  margin: 0 auto 36px;
   @include at-breakpoint($desktop) {
     max-width: 980px;
-    @include trailer(5);
+    @include trailer(2.5);
   }
-  img {
-    margin: 0 auto;
+  .carousel-slide {
+    margin: 0 1em;
+  }
+  .item {
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      margin: 0 auto;
+    }
+  }
+  .item-title {
+    @include trailer(.5);
+    text-align: center;
+    color: black;
+    @include adjust-font-size-to(16px);
+    @extend %proxima-nava-6;
+    @include at-breakpoint($desktop) {
+      @include trailer(2);
+      @include adjust-font-size-to(24px, 1);
+    }
+
+  }
+
+}
+
+.press_jp {
+  max-width: 50%;
+  @include at-breakpoint($desktop) {
+    max-width: 100%;
   }
 }
+
+// .press-releases-title {
+//   text-align: left;
+//   @include at-breakpoint($desktop) {
+//     text-align: center;
+//   }
+// }
 
 .timeline {
   margin: 0 auto;

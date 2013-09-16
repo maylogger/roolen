@@ -56,3 +56,7 @@ function countUp() {
   setTimeout(countUp, 25);
 }
 
+
+$('.press-carousel-lightbox').magnificPopup({
+  type: 'image'
+});
