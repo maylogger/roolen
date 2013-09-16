@@ -1,29 +1,39 @@
 .smart {
   .tab-panel {
-    padding-top: 35%;
+    position: relative;
+    // padding-top: 35%;
     margin-bottom: - 1px;
     @include background-size(cover);
     background-color: #bababa;
     background-position: center top;
     background-repeat: no-repeat;
     @include at-breakpoint($desktop) {
-      padding-top: 32.5%;
+      // padding-top: 32.5%;
     }
     @include at-breakpoint($sp) {
-      padding-top: 35%;
+      // padding-top: 35%;
     }
   }
-
-  .humidifier {
+  .smart-image {
     margin: 0 auto;
     width: 30%;
     @include at-breakpoint($desktop) {
-      max-width: 432px;
+      max-width: 430px;
     }
     @include at-breakpoint($sp2) {
       width: 27.5%;
     }
+  }
 
+  .mist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
   }
 
   .nav-tabs {

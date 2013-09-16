@@ -20,6 +20,23 @@ jQuery(".block-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' }
 jQuery(".block-sub-title").fitText(2, { minFontSize: '24px', maxFontSize: '50px' });
 
 
+// mist-animation
+var pic_num = 0;
+$('.smart').on('activate.bs.scrollspy', function () {
+  pic_num = 0;
+  chImg();
+});
+
+function chImg(){
+    // $('#sunny .mist').css("background-image", "url(../images/mist/high_mode_0000"+pic_num+".png)");
+    // $('#sunny .mist').css("background-position-y":"");
+    pic_num++;
+    // console.log(pic_num);
+    if (pic_num >= 14) pic_num = 0;
+    setTimeout("chImg()",25);
+}
+
+
 // capacity-count
 var capacity_count = $("#capacity-count .count");
 var count;
