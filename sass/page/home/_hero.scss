@@ -2,9 +2,9 @@
   padding: 10% 0;
   text-align: center;
   @include at-breakpoint($desktop) {
-    @include padding-leader(5);
-    padding-bottom: 0;
-    @include trailer(2);
+    @include padding-leader(4);
+    // padding-bottom: 0;
+    @include padding-trailer(3);
   }
 
   img {

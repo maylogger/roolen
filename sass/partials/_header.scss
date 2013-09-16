@@ -1,12 +1,12 @@
 .header {
   @include at-breakpoint($desktop) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    padding-bottom: 5px;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 100;
+    // width: 100%;
+    // padding-bottom: 5px;
   }
 }
 
@@ -18,7 +18,7 @@
   transition: box-shadow 1s;
   @include at-breakpoint($desktop) {
     padding: 0 4em;
-    box-shadow: 0 7px 7px -5px rgba(black, .1);
+    // box-shadow: 0 7px 7px -5px rgba(black, .1);
     @include set-container-width();
     @include background(
       linear-gradient( rgba(#fcfcfc,1), rgba(#fcfcfc,.85) )
@@ -45,6 +45,9 @@
       background-image: none, image-url("logo_big.svg");
     }
   }
+  @include at-breakpoint($desktop) {
+    margin-left: -10px;
+  }
 }
 
 .nav-btn {
@@ -57,9 +60,11 @@
   @extend %proxima-nava-4;
   color: $header-color;
   cursor: pointer;
+  outline: none;
 }
 
 .nav {
+  margin: 0 -20px;
   clear: both;
   text-align: center;
   li {
@@ -71,7 +76,6 @@
   li > a {
     display: block;
     padding: 6px 0;
-    font-weight: 300;
     color: $header-color;
     @extend %proxima-nava-4;
     @include transition( color .25s ease );
@@ -81,10 +85,16 @@
     }
   }
   li.active > a {
-    color: $logo-color;
+    background: $logo-color;
+    color: white;
+    @include at-breakpoint($desktop) {
+      color: $logo-color;
+      background: white;
+    }
   }
 
   @include at-breakpoint($desktop) {
+    margin: 0;
     float: right;
     clear: none;
     height: auto !important;

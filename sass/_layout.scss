@@ -37,6 +37,7 @@ body {
   margin: 0;
   padding: 0;
   @include transition( background-color 1s );
+  background: #fcfcfc;
   @include at-breakpoint($container-border) {
     background-color: #eeeeef;
   }
@@ -50,17 +51,21 @@ body {
   @include at-breakpoint($container-border) {
     box-shadow: 0 0 5px rgba(black, .3);
   }
+  @include at-breakpoint($desktop) {
+    @include padding-leader(1);
+  }
 }
 
 .content {
-  @include padding-leader(1);
   min-height: 600px;
   @include at-breakpoint($desktop) {
-    padding-top: $base-line-height * 9 + 1;
+    // padding-top: $base-line-height * 9 + 1;
+    @include padding-leader(3);
   }
   .home & {
     @include at-breakpoint($desktop) {
-      padding-top: $base-line-height * 4 + 1;
+      // padding-top: $base-line-height * 4 + 1;
+      @include padding-leader(0);
     }
 
   }
