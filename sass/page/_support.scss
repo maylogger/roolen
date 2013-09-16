@@ -4,17 +4,24 @@
   }
 }
 
+.support-carousel {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
 .resources {
   @include pie-clearfix;
+  margin: 0 auto;
   @include trailer(2);
+  max-width: 360px;
   @include at-breakpoint($desktop) {
+    max-width: none;
     @include trailer(3);
   }
-
   li {
     @include span-columns(4, $total_columns);
     @include nth-omega(2n);
-    margin-bottom: gutter($total_columns);
+    @include trailer(1);
     @include at-breakpoint($desktop) {
       @include span-columns(2, $block-content-columns);
       @include remove-nth-omega(2n, child, $block-content-columns);
@@ -52,7 +59,7 @@
     text-decoration: none;
   }
   .title {
-    @include trailer(0.5);
+    @include trailer(0.25);
     @extend %support-title;
   }
   img {

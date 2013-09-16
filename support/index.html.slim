@@ -1,37 +1,43 @@
 .support
   .block
-    .block-content
-      = image_tag lorem_image("570x280&text=photo"), :class => "support-image support-humidifier"
+    .support-carousel#support-carousel
+      .carousel-slide
+        .carousel-inner
+          .item.active
+            = image_tag "support/support_product.png", :class => "support-image support-humidifier"
+        a.carousel-control.left href="#support-carousel" data-slide="prev" <
+        a.carousel-control.right href="#support-carousel" data-slide="next" >
     .split-line
   .block
-    .block-content
-      ul.resources
-        li: a.resource href="#"
-          h3.title Video
-          = image_tag lorem_image("96")
-          .text Watch videos to <br> learn how to use.
+    .block-container
+      .block-content
+        ul.resources
+          li: a.resource href="#"
+            h3.title Video
+            = image_tag "support/support_video.png"
+            .text Watch videos to <br> learn how to use.
 
-        li: a.resource href="#"
-          h3.title Manual
-          = image_tag lorem_image("96")
-          .text Learn product to use <br> and how to set up.
+          li: a.resource href="#"
+            h3.title Manual
+            = image_tag "support/support_manual.png"
+            .text Learn product to use <br> and how to set up.
 
-        li: a.resource href="#"
-          h3.title Spec
-          = image_tag lorem_image("96")
-          .text See product <br> specifications.
+          li: a.resource href="#"
+            h3.title Spec
+            = image_tag "support/support_spec.png"
+            .text See product <br> specifications.
 
-        li: a.resource href="#"
-          h3.title Download
-          = image_tag lorem_image("96")
-          .text Get wallpapper or <br> some free for you.
+          li: a.resource href="#"
+            h3.title Download
+            = image_tag "support/support_download.png"
+            .text Get wallpapper or <br> some free for you.
     .split-line
   .block
     .block-content
       .contact-roolen
         .title Contact Roolen Support
-        = image_tag lorem_image("96")
+        = image_tag "support/support_contact.png"
         .text If your product has any Question <br> Contact local agent service
         a.mail-to href="#" service@roolen.co
-      = image_tag lorem_image("430x250"), :class => "two-people"
+      = image_tag "support/support_staff.png", :class => "two-people"
 

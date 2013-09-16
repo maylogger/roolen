@@ -18,6 +18,7 @@ $('#future-demo').carousel({
 // fittext
 jQuery(".block-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
 jQuery(".block-sub-title").fitText(2, { minFontSize: '24px', maxFontSize: '50px' });
+jQuery(".item-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
 
 
 // mist-animation
