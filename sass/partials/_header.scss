@@ -1,13 +1,13 @@
 .header {
   @include at-breakpoint($desktop) {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // z-index: 100;
-    // width: 100%;
-    // padding-bottom: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
   }
+  // outline: 1px dashed red;
 }
 
 .header-container {
@@ -18,7 +18,7 @@
   transition: box-shadow 1s;
   @include at-breakpoint($desktop) {
     padding: 0 4em;
-    // box-shadow: 0 7px 7px -5px rgba(black, .1);
+    // box-shadow: 0 7px 7px -5px rgba(black, 0);
     @include set-container-width();
     @include background(
       linear-gradient( rgba(#fcfcfc,1), rgba(#fcfcfc,.85) )
@@ -43,6 +43,9 @@
       background: none;
       @include replace-text-with-dimensions("logo_big.png");
       background-image: none, image-url("logo_big.svg");
+      @include background-size(contain);
+      // 給 affix 的漸變
+      @include transition( width .35s, height .35s, margin .35s );
     }
   }
   @include at-breakpoint($desktop) {
@@ -77,6 +80,7 @@
     display: block;
     padding: 6px 0;
     color: $header-color;
+    text-shadow: 0 0 10px white;
     @extend %proxima-nava-4;
     @include transition( color .25s ease );
     &:hover {
@@ -89,7 +93,7 @@
     color: white;
     @include at-breakpoint($desktop) {
       color: $logo-color;
-      background: white;
+      background: transparent;
     }
   }
 
@@ -104,6 +108,8 @@
       border-top: 0;
     }
     li > a {
+      // 給 affix 的漸變
+      @include transition( padding .35s);
       padding: 55px 24px 0;
       @include adjust-font-size-to(22px, 1);
     }
@@ -118,3 +124,27 @@
 }
 
 
+// affix effect
+@include at-breakpoint($desktop) {
+  .header.affix {
+    // 出陰影
+    .header-container {
+      box-shadow: 0 7px 7px -5px rgba(black, .05);
+      // affix 漸變
+      @include transition( box-shadow 1s .35s );
+    }
+    // 讓logo小一半
+    h1.logo {
+      @include adjust-font-size-to(12px);
+    }
+    h1.logo a {
+      width: 187 / 2 * 1px;
+      height: 53 / 2 * 1px;
+      margin: 12px 0 12px -20px;
+    }
+    // 讓右邊連結矮一點
+    .nav li > a {
+      padding-top: 16px;
+    }
+  }
+}

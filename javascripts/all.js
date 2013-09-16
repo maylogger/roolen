@@ -8,6 +8,13 @@ $(window).load(function() {
   });
 })
 
+// header affix
+$('.header').affix({
+  offset: {
+    top: 50
+  }
+});
+
 
 // carousel
 $('#future-demo').carousel({
