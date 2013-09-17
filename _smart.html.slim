@@ -1,18 +1,16 @@
 .tab-content
-  .tab-panel#cloud style=" background-image: url(/images/room_cloudy.png); "
+  .tab-panel#cloudy style=" background-image: url(/images/room_cloudy.png); "
     .mist
-      = image_tag "mist/high_mode_00000.png", :class => "smart-image"
+      = image_tag "mist/low_mode_00000.png", :class => "smart-image cloudy-mist"
     = image_tag "smart_black.png", :class => "smart-image humidifier"
   .tab-panel#sunny.active style=" background-image: url(/images/room_sunny.png); "
     .mist style=" background-image: url(/images/mist/high_mode_00000.png); "
       / = image_tag "mist/high_mode_00000.png", :class => "smart-image"
     = image_tag "smart_black.png", :class => "smart-image humidifier"
   .tab-panel#rainy style=" background-image: url(/images/room_rainy.png); "
-    .mist
-      = image_tag "mist/high_mode_00000.png", :class => "smart-image"
     = image_tag "smart_black.png", :class => "smart-image humidifier"
 ul.nav-tabs
-  li: a href="#cloud" data-toggle="tab"
+  li: a href="#cloudy" data-toggle="tab"
     = image_tag "smart_cloudy.png", :class => "smart-icon"
     |CLOUDY
   li.active: a href="#sunny" data-toggle="tab"
