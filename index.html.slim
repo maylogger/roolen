@@ -1,51 +1,52 @@
-header.hero.scrollspy-target id="scrollspy-buffer1"
-  a.block-link href="#scrollspy-buffer1"
+header.hero id="scrollspy-buffer1"
   .hero-container
     h1.hero-title BREATH
     h2.hero-sub-title Smart Ultrsonic Humidifier
     .hero-photo= image_tag "top_twins.png"
 
-section.block.smart.scrollspy-target id="scrollspy-target0"
-  a.block-link href="#scrollspy-target0"
+section.block.smart id="scrollspy-target0"
   = render "/smart"
   .split-line
 
-section.block.capacity.scrollspy-target id="scrollspy-target1"
-  a.block-link href="#scrollspy-target1"
+section.block.capacity id="scrollspy-target1"
   = render "/capacity"
   .split-line
 
-section.block.three-way.scrollspy-target id="scrollspy-target2"
-  a.block-link href="#scrollspy-target2"
+section.block.three-way id="scrollspy-target2"
   = render "/three-way"
   .split-line
 
-section.block.energy.scrollspy-target id="scrollspy-target3"
-  a.block-link href="#scrollspy-target3"
+section.block.energy id="scrollspy-target3"
   = render "/energy"
   .split-line
 
-section.block.easy-control.scrollspy-target id="scrollspy-target4"
-  a.block-link href="#scrollspy-target4"
+section.block.easy-control id="scrollspy-target4"
   = render "/easy-control"
   .split-line
 
-section.block.components.scrollspy-target id="scrollspy-target5"
-  a.block-link href="#scrollspy-target5"
+section.block.components id="scrollspy-target5"
   = render "/components"
   .split-line
 
-section.block.future.scrollspy-target id="scrollspy-target6"
-  a.block-link href="#scrollspy-target6"
+section.block.future id="scrollspy-target6"
   = render "/future"
   .split-line
 
-section.block.spec.scrollspy-target id="scrollspy-target7"
-  a.block-link href="#scrollspy-target7"
+section.block.spec id="scrollspy-target7"
   = render "/spec"
 
-section.block.other.scrollspy-target id="scrollspy-buffer2"
-  a.block-link href="#scrollspy-buffer2"
+section.block.other id="scrollspy-buffer2"
   = image_tag "bottom_twin.png"
 
 
+.nav.scrollspy-nav
+  li: a.block-link href="#scrollspy-buffer1"
+  li: a.block-link href="#scrollspy-target0"
+  li.capacity-scrollspy: a.block-link href="#scrollspy-target1"
+  li: a.block-link href="#scrollspy-target2"
+  li.energy-scroollspy: a.block-link href="#scrollspy-target3"
+  li: a.block-link href="#scrollspy-target4"
+  li: a.block-link href="#scrollspy-target5"
+  li: a.block-link href="#scrollspy-target6"
+  li: a.block-link href="#scrollspy-target7"
+  li: a.block-link href="#scrollspy-buffer2"
