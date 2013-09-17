@@ -4,20 +4,6 @@
   }
 }
 
-.support-carousel {
-  margin: 0 auto;
-  max-width: 980px;
-  .carousel-slide {
-    margin: 0 1em;
-  }
-  .carousel-inner {
-    width: 80%;
-    @include at-breakpoint($desktop) {
-      width: auto;
-    }
-  }
-}
-
 .resources {
   @include pie-clearfix;
   margin: 0 auto;

@@ -1,12 +1,7 @@
-
 .press-carousel {
-  margin: 0 auto 36px;
+  @include trailer(1.5);
   @include at-breakpoint($desktop) {
-    max-width: 800px;
     @include trailer(5);
-  }
-  .carousel-slide {
-    margin: 0 1em;
   }
   .item {
     &:hover {
@@ -28,11 +23,10 @@
       @include trailer(1.5);
     }
   }
-
 }
 
 .press_jp {
-  max-width: 50%;
+  max-width: 75%;
   @include at-breakpoint($desktop) {
     max-width: 100%;
   }

@@ -1,22 +1,9 @@
-.future-demo {
+.future-carousel {
   @include trailer(1);
-  position: relative;
   @include at-breakpoint($desktop) {
     @include trailer(1.5);
   }
   .carousel-slide {
-    position: relative;
     @include trailer(0.5);
-    @include at-breakpoint($desktop) {
-      min-width: 600px;
-      width: columns(8, $total_columns);
-    }
-  }
-
-  .carousel-inner {
-    width: 80%;
-    @include at-breakpoint($desktop) {
-      width: 72.5%;
-    }
   }
 }
