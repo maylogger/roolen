@@ -101,11 +101,13 @@
   }
 }
 
-.two-people {
-  margin: 0 auto;
+.staff {
   @include trailer(2);
   @include at-breakpoint($desktop) {
     @include trailer(5);
     @include span-columns( $total_columns / 2 omega, $total_columns );
+  }
+  img {
+    margin: 0 auto;
   }
 }
