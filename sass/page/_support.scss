@@ -7,6 +7,15 @@
 .support-carousel {
   margin: 0 auto;
   max-width: 980px;
+  .carousel-slide {
+    margin: 0 1em;
+  }
+  .carousel-inner {
+    width: 80%;
+    @include at-breakpoint($desktop) {
+      width: auto;
+    }
+  }
 }
 
 .resources {
@@ -101,11 +110,13 @@
   }
 }
 
-.two-people {
-  margin: 0 auto;
+.support-staff {
   @include trailer(2);
   @include at-breakpoint($desktop) {
     @include trailer(5);
     @include span-columns( $total_columns / 2 omega, $total_columns );
+  }
+  img {
+    margin: 0 auto;
   }
 }
