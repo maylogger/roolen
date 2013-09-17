@@ -35,9 +35,10 @@
   }
   li {
     display: inline-block;
-    margin: 0 .5em;
+    margin: 0 .25em;
     width: 48px;
     @include at-breakpoint($desktop) {
+      margin: 0 .25em;
       width: auto;
     }
   }

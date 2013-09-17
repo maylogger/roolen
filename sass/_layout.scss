@@ -58,16 +58,17 @@ body {
 
 .content {
   min-height: 600px;
+  @include padding-leader(1);
   @include at-breakpoint($desktop) {
     // padding-top: $base-line-height * 9 + 1;
     @include padding-leader(3);
   }
   .home & {
+    @include padding-leader(0);
     @include at-breakpoint($desktop) {
       // padding-top: $base-line-height * 4 + 1;
       @include padding-leader(0);
     }
-
   }
 }
 
