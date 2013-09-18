@@ -15,7 +15,10 @@
   display: block;
   margin: 0 auto;
   @include trailer(.75);
-  width: 120px;
+  @include replace-text-with-dimensions("footer/bottom_logo.png");
+  background-image: none, image-url("footer/bottom_logo.svg");
+  background-repeat: no-repeat;
+  @include background-size(contain);
   @include at-breakpoint($desktop) {
     @include trailer(.5);
   }

@@ -42,7 +42,7 @@
   text-align: center;
   color: $color-gray;
   @include adjust-font-size-to(18px, 1);
-  @extend %proxima-nava-6;
+  @extend %proxima-nava-4;
   @include at-breakpoint($desktop) {
     @include leader(3);
     @include trailer(3);

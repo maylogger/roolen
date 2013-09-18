@@ -75,11 +75,12 @@
   .date {
     color: $color-light-gray;
     float: left;
-    width: 7.5em;
+    width: 8em;
     &:after {
       content: "—";
+      display: block;
       float: right;
-      margin: 0 .75em;
+      margin: 0 1em 0 0;
       color: $color-black;
     }
   }
