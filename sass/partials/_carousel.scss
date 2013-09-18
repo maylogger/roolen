@@ -22,6 +22,8 @@
     @include transition( left .6s );
     img {
       margin: 0 auto;
+      width: auto;
+      height: auto;
     }
   }
 
@@ -81,6 +83,7 @@
 .carousel-control {
   position: absolute;
   top:50%;
+  z-index: 2;
   margin-top: -24px;
   color: #6a6a6a;
   @include adjust-font-size-to(40px, 2);

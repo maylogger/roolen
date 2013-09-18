@@ -14,9 +14,32 @@
       // padding-top: 35%;
     }
   }
+  #cloudy {
+    background-image: url('/images/room_cloudy.png');
+  }
+  #sunny {
+    background-image: url('/images/room_sunny.png');
+  }
+  #rainy {
+    background-image: url('/images/room_rainy.png');
+  }
+  // retina-background-image
+  @media all and (-webkit-min-device-pixel-ratio: 2) {
+    #cloudy {
+      background-image: url('/images/room_cloudy@2x.png');
+    }
+    #sunny {
+      background-image: url('/images/room_sunny@2x.png');
+    }
+    #rainy {
+      background-image: url('/images/room_rainy@2x.png');
+    }
+  }
+
   .smart-image {
     margin: 0 auto;
     width: 30%;
+    height: auto;
     @include at-breakpoint($desktop) {
       max-width: 430px;
     }
@@ -46,6 +69,11 @@
       float: left;
       width: (1/3) * 100%;
       text-align: center;
+      // 解決在 mobile 上，因為無法整除而出現的白邊。
+      &:last-child a {
+        margin-right: -3px;
+        padding-right: 3px;
+      }
     }
     li > a {
       display: block;
@@ -89,3 +117,6 @@
   }
 
 }
+
+
+
