@@ -39,14 +39,6 @@ section.block.other id="scrollspy-buffer2"
   = image_tag "bottom_twin.png"
 
 
-.nav.scrollspy-nav
-  li: a.block-link href="#scrollspy-buffer1"
-  li: a.block-link href="#scrollspy-target0"
-  li.capacity-scrollspy: a.block-link href="#scrollspy-target1"
-  li: a.block-link href="#scrollspy-target2"
-  li.energy-scroollspy: a.block-link href="#scrollspy-target3"
-  li: a.block-link href="#scrollspy-target4"
-  li: a.block-link href="#scrollspy-target5"
-  li: a.block-link href="#scrollspy-target6"
-  li: a.block-link href="#scrollspy-target7"
-  li: a.block-link href="#scrollspy-buffer2"
+ul.nav.scrollspy-nav
+  = render "/scrollspy-nav"
+

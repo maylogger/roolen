@@ -44,7 +44,7 @@ function chImg(){
     pic_num++;
     console.log(pic_num);
     if (pic_num >= 14) pic_num = 0;
-    setTimeout("chImg()",50);
+    setTimeout("chImg()",100);
 }
 
 
@@ -85,3 +85,7 @@ $('.energy-scroollspy').on('activate.bs.scrollspy', function () {
 $('.press-carousel-lightbox').magnificPopup({
   type: 'image'
 });
+
+
+// localscroll
+$('.scrollspy-nav').localScroll();
