@@ -1,9 +1,11 @@
 .tab-content
   .tab-panel#cloudy
+    .mist
+      = image_tag "mist/low_mode_merge.png", :class => "smart-image mist-anime"
     = image_tag "smart_black.png", :class => "smart-image humidifier"
-  .tab-panel#sunny.active
-    .mist style=" background-image: url(/images/mist/high_mode_00000.png); "
-      / = image_tag "mist/high_mode_00000.png", :class => "smart-image"
+  .tab-panel.active#sunny
+    .mist
+      = image_tag "mist/high_mode_merge.png", :class => "smart-image mist-anime"
     = image_tag "smart_black.png", :class => "smart-image humidifier"
   .tab-panel#rainy
     = image_tag "smart_black.png", :class => "smart-image humidifier"

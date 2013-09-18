@@ -1,18 +1,12 @@
 .smart {
   .tab-panel {
     position: relative;
-    // padding-top: 35%;
+    overflow: hidden;
     margin-bottom: - 1px;
     @include background-size(cover);
     background-color: #bababa;
     background-position: center top;
     background-repeat: no-repeat;
-    @include at-breakpoint($desktop) {
-      // padding-top: 32.5%;
-    }
-    @include at-breakpoint($sp) {
-      // padding-top: 35%;
-    }
   }
   #cloudy {
     background-image: url('/images/room_cloudy.png');
@@ -47,17 +41,19 @@
       width: 27.5%;
     }
   }
-
   .mist {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: contain;
   }
+  .mist-anime {
+    position: relative;
+    z-index: 3;
+  }
+
+
 
   .nav-tabs {
     @include trailer(1.5);
