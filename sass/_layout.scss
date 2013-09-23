@@ -53,6 +53,7 @@ body {
   }
   @include at-breakpoint($desktop) {
     @include padding-leader(3);
+    position: relative;
   }
 }
 
