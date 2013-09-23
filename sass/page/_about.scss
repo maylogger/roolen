@@ -2,6 +2,7 @@
   .block-container {
     @include trailer(1);
   }
+
   .row {
     @include pie-clearfix;
     @include at-breakpoint($desktop) {
@@ -11,6 +12,20 @@
     }
     @include at-breakpoint($sp2) {
       max-width: 800px;
+    }
+  }
+}
+
+.col2 {
+  text-align: left;
+  @include at-breakpoint($desktop) {
+    @include span-columns( ( $total-columns / 2), $total-columns);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($sp2) {
+    @include reset-columns;
+    &:nth-child(2n) {
+      @include reset-columns;
     }
   }
 }
