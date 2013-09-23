@@ -7,24 +7,21 @@
 .resources {
   @include pie-clearfix;
   margin: 0 auto;
-  @include trailer(2);
   max-width: 360px;
   @include at-breakpoint($desktop) {
     max-width: none;
-    @include trailer(3);
   }
   li {
-    @include span-columns(4, $total_columns);
+    @include span-columns(4, $total-columns);
     @include nth-omega(2n);
     @include trailer(1);
     @include at-breakpoint($desktop) {
-      @include span-columns(2, $block-content-columns);
-      @include remove-nth-omega(2n, child, $block-content-columns);
+      @include span-columns( $total-columns / 4, $total-columns );
+      @include remove-nth-omega(2n, child, $total-columns);
       @include nth-omega(4n);
       margin-bottom: 0;
     }
   }
-
 }
 
 %support-title {

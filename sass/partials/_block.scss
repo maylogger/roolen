@@ -1,12 +1,10 @@
-$block-content-columns: 8;
-
 .block {
   @include pie-clearfix;
-  @include trailer(2);
+  @include padding-leader(2);
   @include at-breakpoint($desktop) {
-    @include trailer(5);
+    @include padding-leader(5);
   }
-  &:last-child {
+  &:first-child {
     @include reset-box-model;
   }
   img {
@@ -29,28 +27,13 @@ $block-content-columns: 8;
   margin: 0 auto;
   @include at-breakpoint($desktop) {
     max-width: 980px;
-    width: columns($block-content-columns);
   }
   @include at-breakpoint($sp2) {
-    width: 100%;
     max-width: 800px;
-    // width: columns(10);
   }
 }
 
-.block-content-col2 {
-  text-align: left;
-  @include at-breakpoint($desktop) {
-    @include span-columns( ( $block-content-columns / 2), $block-content-columns);
-    @include nth-omega(2n);
-  }
-  @include at-breakpoint($sp2) {
-    @include reset-columns;
-    &:nth-child(2n) {
-      @include reset-columns;
-    }
-  }
-}
+
 
 
 %block-title-font {
