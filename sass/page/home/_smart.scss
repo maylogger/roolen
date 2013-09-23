@@ -45,13 +45,19 @@
   .mist {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .mist-anime {
-    position: relative;
-    z-index: 3;
+    width: 30%;
+    padding-top: 35%;
+    left: 50%;
+    margin-left: - 13.57%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 100% auto;
+    @include at-breakpoint($desktop) {
+      max-width: 430px;
+    }
+    @include at-breakpoint($sp2) {
+      width: 27.5%;
+    }
   }
 
 
