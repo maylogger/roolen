@@ -266,7 +266,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
   .smart #sunny { background-image: url("/images/room_sunny@2x.png"); }
   .smart #rainy { background-image: url("/images/room_rainy@2x.png"); } }
 .smart .humidifier { position: absolute; left: 50%; bottom: 0; z-index: 2; margin-left: -14%; width: 28%; }
-.smart .humidifier img { margin: 0 auto; width: 100%; }
+.smart .humidifier img { margin: 0 auto; width: 100%; height: auto; }
 .smart .mist { overflow: hidden; position: absolute; top: -3.5%; left: 50%; z-index: 3; margin-left: -14%; padding-top: 36.13953%; width: 28%; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; background-position-x: 50%; }
 .smart .nav-tabs { margin-bottom: 36px; }
 .smart .nav-tabs:after { content: ""; display: table; clear: both; }
