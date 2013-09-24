@@ -1,23 +1,14 @@
-.tab-content
-  .tab-panel#cloudy.active
-    .mist style="background-image: url('/images/mist/high_mode_merge_0924.png');"
-    .humidifier= image_tag "smart_black.png", :class => "smart-image"
-  .tab-panel#sunny
-    .mist style="background-image: url('/images/mist/high_mode_merge_0924.png');"
-    .humidifier= image_tag "smart_black.png", :class => "smart-image"
-  .tab-panel#rainy
-    .humidifier= image_tag "smart_black.png", :class => "smart-image"
-
-ul.nav-tabs
-  li.active: a href="#cloudy" data-toggle="tab"
-    = image_tag "smart_cloudy.png", :class => "smart-icon"
-    |CLOUDY
-  li: a href="#sunny" data-toggle="tab"
-    = image_tag "smart_sunny.png", :class => "smart-icon"
-    |SUNNY
-  li: a href="#rainy" data-toggle="tab"
-    = image_tag "smart_rainy.png", :class => "smart-icon"
-    |RAINY
+.smart-demo
+  .tab-content
+    .tab-panel#White-humidifier.active
+      .mist style="background-image: url('/images/mist/high_mode_merge_0924.png');"
+      .humidifier= image_tag "smart_black.png", :class => "smart-image"
+    .tab-panel#black-humidifier
+      .mist style="background-image: url('/images/mist/high_mode_merge_0924.png');"
+      .humidifier= image_tag "smart_black.png", :class => "smart-image"
+  ul.nav-tabs
+    li.active: a href="#white-humidifier" data-toggle="tab" White
+    li: a href="#black-humidifier" data-toggle="tab" Black
 
 .block-container
   .block-content
