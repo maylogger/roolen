@@ -1,97 +1,67 @@
-$low-mode-color: #fca733;
-$high-mode-color: red;
-$auto-mode-color: green;
+$low-mode-color: #29fd2e;
+$high-mode-color: #fafaff;
+$auto-mode-color: #1fcb5f;
 
 
 .three-way-demo {
-  @include trailer(1);
   @include pie-clearfix;
   position: relative;
-  @include at-breakpoint($desktop) {
-    @include trailer(4.5);
-  }
   img {
     margin-bottom: 0;
     margin: 0 auto;
   }
+  .tab-content {
+    @include trailer(1);
+    @include at-breakpoint($desktop) {
+      @include trailer(1.5);
+    }
+  }
   .nav-tabs {
-    position: absolute;
-    bottom: 0;
-    left: 7.5%;
-    z-index: 3;
+    @include trailer(2);
     @include at-breakpoint($desktop) {
-      left: auto;
-      right: space(7);
+      @include trailer(4.5);
     }
+    text-align: center;
     li {
-      position: relative;
+      display: inline-block;
     }
-    li + li {
-      margin-top: 6px;
-      @include at-breakpoint($desktop) {
-        margin-top: 12px;
-      }
-    }
-    li > a {
+    a {
       display: block;
-      padding: 0 0 0 16px;
-      color: $color-gray;
-      @include adjust-font-size-to(14px);
-      &:hover {
-        color: black;
-        text-decoration: none;
-      }
-      @include at-breakpoint($desktop) {
-        padding: 0 0 0 36px;
-        @include adjust-font-size-to(22px);
-      }
-    }
-    .active > a {
+      border: 2px solid transparent;
+      padding: 3px 12px;
+      @include border-radius(24px);
       color: $color-black;
-    }
-    .active > a:before {
-      content: "▶";
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include adjust-font-size-to(12px);
+      @include adjust-font-size-to(18px);
+      @extend %proxima-nava-4;
       @include at-breakpoint($desktop) {
-        @include adjust-font-size-to(22px);
+        padding: 3px 24px;
+        @include border-radius(36px);
+        @include adjust-font-size-to(30px);
       }
     }
-  }
-
-  .three-way-demo-text {
-    position: absolute;
-    bottom: 0;
-    right: 3.5%;
-    z-index: 3;
-    @include adjust-font-size-to(24px, 1.25);
-    @extend %helvetica-ultralight;
-    @include at-breakpoint($desktop) {
-      right: 0;
-      width: columns(5);
-      @include adjust-font-size-to(72px, 3);
+    a:hover {
+      text-decoration: none;
     }
-    .special {
-      @include adjust-font-size-to(28px, 1.25);
-      @include at-breakpoint($desktop) {
-        @include adjust-font-size-to(84px, 4);
-      }
+    .active a {
+      border: 2px solid $logo-color;
     }
   }
-
+  .mist {
+    @include transition(.3s);
+  }
   .humidifier {
-    $radius: 3px;
+    $radius: 5px;
     margin: 0 auto;
+    @include leader(.5);
     position: relative;
     &:after {
       content: "";
       position: absolute;
-      top: 80%;
+      top: 77.5%;
       left: 50%;
       margin-left: - $radius;
-      padding: $radius;
+      width: $radius * 2;
+      height: $radius * 2;
       @include border-radius( $radius * 2);
       background-color: #ccc;
     }
@@ -99,24 +69,24 @@ $auto-mode-color: green;
 
   // 不同狀態下，不同的顏色
   .low {
-    .special {
-      color: $low-mode-color;
+    .mist {
+      @include transform-origin( 50%, 100% );
+      @include transform(scale(.5));
     }
     .humidifier:after {
       background-color: $low-mode-color;
     }
   }
   .high {
-    .special {
-      color: $high-mode-color;
+    .mist {
     }
     .humidifier:after {
       background-color: $high-mode-color;
     }
   }
   .auto {
-    .special {
-      color: $auto-mode-color;
+    .mist {
+
     }
     .humidifier:after {
       background-color: $auto-mode-color;
