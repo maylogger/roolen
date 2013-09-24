@@ -1,6 +1,7 @@
 .smart {
   padding-top: 0;
   .tab-panel {
+    padding-top: 50.5%;
     position: relative;
     overflow: hidden;
     margin-bottom: - 1px;
@@ -30,28 +31,29 @@
       background-image: url('/images/room_rainy@2x.png');
     }
   }
-
-  .smart-image {
-    margin: 0 auto;
-    width: 30%;
-    height: auto;
-    @include at-breakpoint($desktop) {
-      max-width: 430px;
-    }
-    @include at-breakpoint($sp2) {
-      width: 27.5%;
+  .humidifier {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    margin-left: -14%;
+    width: 28%;
+    img {
+      margin: 0 auto;
+      width: 100%;
     }
   }
   .mist {
+    overflow: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .mist-anime {
-    position: relative;
+    top: -3.5%;
+    left: 50%;
     z-index: 3;
+    margin-left: -14%;
+    padding-top: (560 / 430) * 27.75%;
+    width: 28%;
+    @include background-size( 100% auto );
+    background-position-x: 50%;
   }
 
 

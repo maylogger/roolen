@@ -1,6 +1,16 @@
 .block-container
   .components-demo
-    = image_tag "high_efficiency.png"
+    .flow-side
+      .flow-side-fan
+        = image_tag "flow/flow_side_fan.png"
+      .flow-side-fancover
+        = image_tag "flow/flow_side_fancover.png"
+      .flow-side-anime style="background-image: url('/images/flow/flow_side_merge.png');"
+      = image_tag "flow/flow_side_tank.png"
+    .flow-angle
+      .flow-angle-anime style="background-image: url('/images/flow/flow_angle_merge.png');"
+      .flow_angle_cap= image_tag "flow/flow_angle_cap.png"
+      = image_tag "flow/flow_angle_tank.png"
   .block-content
     h1.block-title High quality of components
     h2.block-sub-title Fine engineering,<span class="no-wrap"> better mist out put efficiency <span>
