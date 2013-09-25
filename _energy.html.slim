@@ -1,8 +1,10 @@
 .block-container
   .energy-line-chart
-    = image_tag "energy_chart.png", :class => "chart-bg"
-    / .chart-line style="background-image: url(/images/energy_chart_mid.png);"
-    / .chart-line.chart-line-top style="background-image: url(/images/energy_chart_top.png);"
+    .chart-group
+      .chart.chart-bottom style="background-image: url(/images/chart/chart_bottom.png);"
+      .chart.chart-blue style="background-image: url(/images/chart/chart_blue.png);"
+      .chart.chart-gray style="background-image: url(/images/chart/chart_grey.png);"
+      .chart.chart-green style="background-image: url(/images/chart/chart_green.png);"
 
   .block-content
     h1.block-title Energy Efficiency
