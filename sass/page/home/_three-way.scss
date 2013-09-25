@@ -11,15 +11,15 @@ $auto-mode-color: #1fcb5f;
     margin: 0 auto;
   }
   .tab-content {
-    @include trailer(1);
+    @include trailer(.5);
     @include at-breakpoint($desktop) {
       @include trailer(1.5);
     }
   }
   .nav-tabs {
-    @include trailer(2);
+    @include trailer(1);
     @include at-breakpoint($desktop) {
-      @include trailer(4.5);
+      @include trailer(2);
     }
     text-align: center;
     li {
@@ -51,9 +51,9 @@ $auto-mode-color: #1fcb5f;
   }
   .humidifier {
     $radius: 5px;
+    position: relative;
     margin: 0 auto;
     @include leader(.5);
-    position: relative;
     &:after {
       content: "";
       position: absolute;
@@ -70,8 +70,8 @@ $auto-mode-color: #1fcb5f;
   // 不同狀態下，不同的顏色
   .low {
     .mist {
-      @include transform-origin( 50%, 100% );
-      @include transform(scale(.5));
+      // @include transform-origin( 50%, 100% );
+      // @include transform(scale(.5));
     }
     .humidifier:after {
       background-color: $low-mode-color;
@@ -92,5 +92,4 @@ $auto-mode-color: #1fcb5f;
       background-color: $auto-mode-color;
     }
   }
-
 }
