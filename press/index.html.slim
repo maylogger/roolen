@@ -1,35 +1,28 @@
 .press
   .press-carousel.carousel.slide#press-carousel
+    = image_tag "press/press_star.png", :class => "star"
+    h2.press-title Selected Stories
     .carousel-slide
       .carousel-inner
         a.item.press-carousel-lightbox.active href="/images/press/press_0913jp.png"
           h3.item-title Breath humidifier launch in japan
-          = image_tag "press/press_jp.png", :class => "press_jp"
-      a.carousel-control.left href="#press-carousel" data-slide="prev" <
-      a.carousel-control.right href="#press-carousel" data-slide="next" >
+          = image_tag "press/20130913press_jp.png", :class => "press_jp"
+      a.carousel-control.left href="#future-carousel" data-slide="prev"= image_tag "arrow_left.png"
+      a.carousel-control.right href="#future-carousel" data-slide="next"= image_tag "arrow_right.png"
     .split-line
-  .block
-    .block-container
-      .block-content
-        h2.block-title.press-releases-title Press Releases
-        ul.timeline
-          li.timeline-title 2013 September
-          li.timeline-item
-            .date 09/13/2013
-            .event Breath humidifier launch japan press release.
 
-          / li.timeline-title July 2013
-          / li.timeline-item
-          /   .date= lorem_date("%m/%d/%Y")
-          /   .event= lorem_sentences(2)
-          / li.timeline-item
-          /   .date= lorem_date("%m/%d/%Y")
-          /   .event= lorem_sentences(2)
+  .press-releases
+    h2.press-title Press Releases
+    ul.timeline
+      li.timeline-title 2013 September
+      li.timeline-item
+        .date 09/13/2013
+        .event Breath humidifier launch japan press release.
 
-          / li.timeline-title July 2013
-          / li.timeline-item
-          /   .date= lorem_date("%m/%d/%Y")
-          /   .event= lorem_sentences(2)
-          / li.timeline-item
-          /   .date= lorem_date("%m/%d/%Y")
-          /   .event= lorem_sentences(2)
+      li.timeline-title 2013 August
+      - 5.times do
+        li.timeline-item
+          .date= lorem_date("%m/%d/%Y")
+          .event= lorem_sentences(2)
+
+
