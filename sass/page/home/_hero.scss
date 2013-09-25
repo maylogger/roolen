@@ -4,7 +4,7 @@
   @include at-breakpoint($desktop) {
     @include padding-leader(4);
     // padding-bottom: 0;
-    @include padding-trailer(3);
+    @include padding-trailer(5);
   }
 
   img {
@@ -43,4 +43,39 @@
     @include trailer(1.5);
     @include adjust-font-size-to(36px, 1.5);
   }
+}
+
+.hero-photo {
+  @include at-breakpoint($desktop) {
+    @include trailer(2);
+  }
+}
+
+.hero-action {
+
+  .playing-video {
+    display: inline-block;
+    @include adjust-font-size-to(18px);
+    color: $logo-color;
+    @extend %proxima-nava-4;
+    @include at-breakpoint($desktop) {
+      @include adjust-font-size-to(32px);
+    }
+    .wf-active & {
+      letter-spacing: -1px;
+    }
+    &:hover {
+      text-decoration: none;
+      opacity: .85;
+    }
+    img {
+      max-width: 60px;
+      @include trailer(.25);
+      @include at-breakpoint($desktop) {
+        max-width: none;
+        @include trailer(.5);
+      }
+    }
+  }
+
 }
