@@ -5,7 +5,7 @@
     text-align: center;
   }
   .tab-panel {
-    padding-top: 50.5%;
+    padding-top: 52%;
     position: relative;
     overflow: hidden;
     margin-bottom: - 1px;
@@ -32,11 +32,11 @@
   .mist {
     overflow: hidden;
     position: absolute;
-    top: -3.5%;
+    top: 0;
     left: 50%;
     z-index: 3;
     margin-left: -14%;
-    padding-top: (560 / 430) * 27.75%;
+    padding-top: (603 / 430) * 27.75%;
     width: 28%;
     @include background-size( 100% auto );
     background-position-x: 50%;
@@ -57,8 +57,8 @@
     li {
       float: left;
       display: inline-block;
-      border: 2px solid #ccc;
-      background-color: white;
+      border: 2px solid rgba(black, 0.25);
+      background-color: rgba(white, 0.95);
     }
     li:first-child {
       border-right: none;
@@ -82,7 +82,7 @@
       }
     }
     .active {
-      background-color: #e6e6e6;
+      background-color: rgba(#e6e6e6, 0.95);
       a {
         color: $color-black;
       }
