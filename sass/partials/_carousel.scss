@@ -66,13 +66,15 @@
   li {
     display: inline-block;
     margin: 6px;
-    padding: 5px;
+    width: 10px;
+    height: 10px;
     background-color: #999;
     @include border-radius(15px);
     cursor: pointer;
     @include at-breakpoint($desktop) {
       margin: 12px;
-      padding: 8px;
+      width: 16px;
+      height: 16px;
     }
     &.active {
       background-color: $logo-color;
@@ -82,15 +84,15 @@
 
 .carousel-control {
   position: absolute;
-  top:50%;
+  top:37.5%;
   z-index: 2;
-  margin-top: -24px;
+  width: 7.5%;
+  // max-width: 67px;
   color: #6a6a6a;
-  @include adjust-font-size-to(40px, 2);
-  @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
-    margin-top: -72px;
-    @include adjust-font-size-to(120px);
+  }
+  img {
+    margin: 0 auto;
   }
   &:hover {
     text-decoration: none;
