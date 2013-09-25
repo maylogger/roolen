@@ -25,7 +25,8 @@ $('#future-demo').carousel({
 // fittext
 jQuery(".block-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
 jQuery(".block-sub-title").fitText(2, { minFontSize: '24px', maxFontSize: '50px' });
-jQuery(".item-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
+jQuery(".press-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
+jQuery(".item-title").fitText(2, { minFontSize: '14px', maxFontSize: '26px' });
 
 
 // mist-animation
@@ -36,31 +37,33 @@ jQuery(".item-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' })
 
 //demo mist
 mistAnime();
-flowAngleAnime();
 flowSideAnime();
+flowAngleAnime();
 var pic_num = 0;
 var pic_num1 = 0;
 var pic_num2 = 0;
 function mistAnime(){
   var target_height = (100/(15-1));
   var target_background_potition = (target_height * pic_num)+'%';
-  $('.mist').css("background-position-y",  target_background_potition );
+  $('.mist').css("background-position", "50% "+target_background_potition);
   pic_num++;
   if (pic_num >= 15) pic_num = 0;
-  setTimeout("mistAnime()",150);
+  setTimeout("mistAnime()",67);
 }
 function flowSideAnime(){
-  var target_height = $(".flow-side").height();
-  $('.flow-side-anime').css("background-position-y",  (-target_height) * pic_num1);
+  var target_height = (100/(15-1));
+  var target_background_potition = (target_height * pic_num1)+'%';
+  $('.flow-side-anime').css("background-position", "50% "+target_background_potition);
   pic_num1++;
-  if (pic_num1 >= 14) pic_num1 = 0;
+  if (pic_num1 >= 15) pic_num1 = 0;
   setTimeout("flowSideAnime()",100);
 }
 function flowAngleAnime(){
-  var target_height = $(".flow-angle").height();
-  $('.flow-angle-anime').css("background-position-y",  (-target_height) * pic_num2);
+  var target_height = (100/(20-1));
+  var target_background_potition = (target_height * pic_num2)+'%';
+  $('.flow-angle-anime').css("background-position", "50% "+target_background_potition);
   pic_num2++;
-  if (pic_num2 >= 19) pic_num2 = 0;
+  if (pic_num2 >= 20) pic_num2 = 0;
   setTimeout("flowAngleAnime()",100);
 }
 
@@ -72,24 +75,11 @@ $('.scrollspy-nav li').on('activate.bs.scrollspy', function () {
 
 
 // capacity-count
-var capacity_count = $("#capacity-count .count");
-var count;
-
+$('#stepper').zero();
 $('.capacity-scrollspy').on('activate.bs.scrollspy', function () {
   $(".capacity").addClass("active");
-  count = 0;
-  countUp();
+  $('#stepper').play();
 });
-
-function countUp() {
-  capacity_count.text(count.toFixed(2));
-  count = count + 0.125;
-  if (count > 3) {
-    capacity_count.text(3.15);
-    return false;
-  }
-  setTimeout(countUp, 25);
-}
 
 
 // energy-chart-anime
