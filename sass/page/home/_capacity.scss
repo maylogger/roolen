@@ -10,28 +10,23 @@
 }
 
 .capacity-count {
-  @include trailer(1);
+  @include trailer(.5);
   text-align: center;
   color: $logo-color;
-  @extend %proxima-nava-1;
+  @extend %helvetica-ultralight;
   @include at-breakpoint($desktop) {
     @include trailer(1);
   }
-  .wf-active &{
-    letter-spacing: 3px;
-    @include at-breakpoint($desktop) {
-      letter-spacing: 5px;
-    }
-  }
   .count {
     @include adjust-font-size-to(70px, 2);
+    letter-spacing: -2px;
     @include at-breakpoint($desktop) {
       @include adjust-font-size-to(110px, 4);
     }
   }
   .unit {
+    margin-left: 5px;
     @include adjust-font-size-to(46px, 2);
-    @extend %proxima-nava-3;
     @include at-breakpoint($desktop) {
       @include adjust-font-size-to(66px, 4);
     }
