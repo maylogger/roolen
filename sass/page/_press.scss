@@ -76,12 +76,12 @@
 }
 
 .timeline-title {
-  @include trailer(.125);
+  @include trailer(.25);
   @include adjust-font-size-to(16px, 1);
   font-weight: 600;
   @extend %proxima-nava-6;
   @include at-breakpoint($desktop) {
-    @include trailer(.25);
+    @include trailer(.5);
     @include adjust-font-size-to(20px, 1);
   }
 }

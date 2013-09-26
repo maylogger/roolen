@@ -4,6 +4,12 @@
     position: relative;
     text-align: center;
   }
+  .tab-content {
+    @include trailer(1.5);
+    @include at-breakpoint($desktop) {
+      @include trailer(3);
+    }
+  }
   .tab-panel {
     padding-top: 52%;
     position: relative;
@@ -47,18 +53,16 @@
     position: relative;
     z-index: 4;
     display: inline-block;
-    margin-top: -14px;
     @include trailer(1.5);
     text-align: center;
     @include at-breakpoint($desktop) {
-      margin-top: -26px;
-      @include trailer(5);
+      @include trailer(3.5);
     }
     li {
       float: left;
       display: inline-block;
-      border: 2px solid rgba(black, 0.25);
-      background-color: rgba(white, 0.95);
+      border: 2px solid rgba(#ccc, 0.75);
+      background-color: rgba(white, 0.9);
     }
     li:first-child {
       border-right: none;
@@ -74,8 +78,8 @@
       color: $color-gray;
       @extend %proxima-nava-4;
       @include at-breakpoint($desktop) {
-        padding: 0px 24px;
-        @include adjust-font-size-to(28px);
+        padding: 3px 24px;
+        @include adjust-font-size-to(32px);
       }
       &:hover {
         text-decoration: none;

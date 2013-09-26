@@ -7,7 +7,7 @@
 .energy-line-chart {
   margin: 0 auto;
   max-width: 699px;
-  @include trailer(2);
+  @include trailer(1.5);
   @include at-breakpoint($desktop) {
     @include trailer(5);
   }
@@ -29,11 +29,33 @@
     width: 100%;
     height: 100%;
   }
+  .chart-auto {
+    left: 155 / 699 * 100%;
+    bottom: 0;
+    width: 129 / 699 * 100%;
+    height: 37 / 246 * 100%;
+    opacity: 0;
+    @include transition(opacity 1s);
+    .active & {
+      opacity: 1;
+    }
+  }
+  .chart-continually {
+    left: 460 / 699 * 100%;
+    bottom: 0;
+    width: 129 / 699 * 100%;
+    height: 37 / 246 * 100%;
+    opacity: 0;
+    @include transition(opacity 1s);
+    .active & {
+      opacity: 1;
+    }
+  }
   .chart-blue {
     left: 63 / 699 * 100%;
     bottom: 56 / 246 * 100%;
     width: 0;
-    height: 128 / 246 * 100%;
+    height: 130 / 246 * 100%;
     opacity: 0;
     @include transition( width .5s, opacity .5s);
     .active & {
@@ -42,10 +64,10 @@
     }
   }
   .chart-gray {
-    left: 374 / 699 * 100%;
+    left: 373 / 699 * 100%;
     bottom: 56 / 246 * 100%;
     width: 0;
-    height: 160 / 246 * 100%;
+    height: 162 / 246 * 100%;
     opacity: 0;
     @include transition( width .5s, opacity .5s);
     .active & {
@@ -58,9 +80,9 @@
     bottom: 117 / 246 * 100%;
     z-index: 2;
     width: 0;
-    height: 68 / 246 * 100%;
+    height: 72 / 246 * 100%;
     opacity: 0;
-    @include transition( width 1s .5s, opacity 1s .5s);
+    @include transition( width .5s .35s, opacity .5s .35s);
     .active & {
       width: 619 / 699 * 100%;
       opacity: 1;
@@ -95,17 +117,18 @@
     position: relative;
     @include pie-clearfix;
     @include adjust-font-size-to(13px, 1);
-    color: #ababab;
+    color: rgba(black, 0.8);
     @include at-breakpoint($desktop) {
       @include adjust-font-size-to(18px, 1.25);
     }
   }
   .date-state {
+    @extend %proxima-nava-3;
     position: relative;
     z-index: 3;
     float: left;
     width: 6em;
-    background-color: white;
+    background-color: #fcfcfc;
   }
   .date-graph {
     $bar-height: 4px;
