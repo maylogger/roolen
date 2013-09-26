@@ -1,77 +1,101 @@
-$low-mode-color: #29fd2e;
-$high-mode-color: #fafaff;
-$auto-mode-color: #1fcb5f;
+$low-mode-color: #1fcb5f;
+$high-mode-color: #29fd2e;
+$auto-mode-color: #fafaff;
 
 
 .three-way-demo {
   @include pie-clearfix;
   position: relative;
   img {
-    margin-bottom: 0;
     margin: 0 auto;
   }
-  .tab-content {
-    @include trailer(.5);
-    @include at-breakpoint($desktop) {
-      @include trailer(1.5);
-    }
-  }
-  .nav-tabs {
+  .pills {
     @include trailer(1);
-    @include at-breakpoint($desktop) {
-      @include trailer(2);
-    }
     text-align: center;
+    @include at-breakpoint($desktop) {
+      @include trailer(2.5);
+    }
+
     li {
       display: inline-block;
     }
+
     a {
       display: block;
       border: 2px solid transparent;
-      padding: 3px 12px;
+      padding: 0px 12px 3px;
       @include border-radius(24px);
       color: $color-black;
       @include adjust-font-size-to(18px);
-      @extend %proxima-nava-4;
+      @extend %proxima-nava-3;
       @include at-breakpoint($desktop) {
-        padding: 3px 24px;
+        margin: 0 12px;
+        padding: 6px 24px 12px;
         @include border-radius(36px);
-        @include adjust-font-size-to(30px);
+        @include adjust-font-size-to(48px, 2);
+        font-weight: 100;
       }
-    }
-    a:hover {
-      text-decoration: none;
+      .wf-active & {
+        padding-bottom: 0px;
+        @include at-breakpoint($desktop) {
+          letter-spacing: -2px;
+          padding-bottom: 6px;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
     .active a {
       border: 2px solid $logo-color;
     }
   }
+
   .mist {
+    margin: 0 auto;
+    @include trailer(.25);
+    width: 10%;
     @include transition(.3s);
+    @include transform-origin( 50%, 100% );
+    @include at-breakpoint($desktop) {
+      @include trailer(.5);
+      width: auto;
+    }
   }
+
   .humidifier {
     $radius: 5px;
     position: relative;
     margin: 0 auto;
-    @include leader(.5);
+    width: 14%;
+    @include trailer(.5);
+    @include at-breakpoint($desktop) {
+      @include trailer(2);
+      width: auto;
+    }
     &:after {
       content: "";
       position: absolute;
       top: 77.5%;
       left: 50%;
       margin-left: - $radius;
-      width: $radius * 2;
-      height: $radius * 2;
-      @include border-radius( $radius * 2);
+      width: $radius;
+      height: $radius;
+      @include border-radius($radius);
       background-color: #ccc;
+      @include at-breakpoint($desktop) {
+        width: $radius * 2;
+        height: $radius * 2;
+        @include border-radius( $radius * 2);
+
+      }
     }
   }
 
-  // 不同狀態下，不同的顏色
+  // 不同模式下的 mist & humidifier
   .low {
     .mist {
-      // @include transform-origin( 50%, 100% );
-      // @include transform(scale(.5));
+      @include transform(scale(.5));
     }
     .humidifier:after {
       background-color: $low-mode-color;
@@ -79,6 +103,7 @@ $auto-mode-color: #1fcb5f;
   }
   .high {
     .mist {
+      @include transform(scale(1));
     }
     .humidifier:after {
       background-color: $high-mode-color;
@@ -86,10 +111,50 @@ $auto-mode-color: #1fcb5f;
   }
   .auto {
     .mist {
-
+      -webkit-animation-name: autoMode;
+      -webkit-animation-duration: 1s;/*动画持续时间*/
+      -webkit-animation-delay: 0s;/*动画延迟时间*/
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-name: autoMode;
+      animation-duration: 1s;/*动画持续时间*/
+      animation-delay: 0s;/*动画延迟时间*/
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
     .humidifier:after {
       background-color: $auto-mode-color;
     }
   }
 }
+
+@-webkit-keyframes autoMode {
+  0% {
+    -webkit-transform:scale(0.25);
+    opacity: 0;
+  }
+  45% {
+   -webkit-transform:scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform:scale(.9) translateY(-40px);
+    opacity: 0;
+  }
+}
+
+@keyframes autoMode {
+  0% {
+    transform:scale(0.25);
+    opacity: 0;
+  }
+  45% {
+    transform:scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform:scale(.9) translateY(-40px);
+    opacity: 0;
+  }
+}
+

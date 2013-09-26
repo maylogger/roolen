@@ -1,19 +1,12 @@
 .block-container
   .three-way-demo
-    .tab-content
-      .tab-panel.low#low
-        = image_tag "3way_mist_high.png", :class => "mist"
-        .humidifier= image_tag "3way_humidifier.png"
-      .tab-panel.high#high.active
-        = image_tag "3way_mist_high.png", :class => "mist"
-        .humidifier= image_tag "3way_humidifier.png"
-      .tab-panel.auto#auto
-        = image_tag "3way_mist_high.png", :class => "mist"
-        .humidifier= image_tag "3way_humidifier.png"
-    ul.nav-tabs
-      li: a href="#low" data-toggle="tab" LOW
-      li.active: a href="#high" data-toggle="tab" HIGH
-      li: a href="#auto" data-toggle="tab" AUTO
+    #three-way-demo-mode.high
+      .mist= image_tag "3way_mist_high.png"
+      .humidifier= image_tag "3way_humidifier.png"
+      ul.pills
+        li#low: a href="#" data-toggle="tab" low
+        li#high.active: a href="#" data-toggle="tab" high
+        li#auto: a href="#" data-toggle="tab" auto
 
   .block-content
     h1.block-title 3 Way Touch Variation
