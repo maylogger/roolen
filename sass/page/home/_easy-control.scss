@@ -1,11 +1,28 @@
-.easy-control {
+.easy-control-demo {
+  margin: 0 auto;
+  max-width: 1045px;
+  position: relative;
   img {
-    margin: 0 auto $base-line-height;
+    margin: 0 auto;
+  }
+  .hand {
+    position: absolute;
+    top: 5.5%;
+    left: -12px;
+    width: 528 / 1045 * 100%;
+    opacity: 0;
+    @include transition( opacity .45s, left .75s ease-out);
+    .active & {
+      opacity: 1;
+      left: 3px;
+    }
   }
   .humidifier {
-    @include trailer(1);
+    margin: 0 auto;
+    @include trailer(.5);
+    width: 477 / 1045 * 100%;
     @include at-breakpoint($desktop) {
-      @include trailer(2.5);
+      @include trailer(2);
     }
   }
 }
