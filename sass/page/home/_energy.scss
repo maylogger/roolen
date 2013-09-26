@@ -57,7 +57,7 @@
     width: 0;
     height: 130 / 246 * 100%;
     opacity: 0;
-    @include transition( width .5s, opacity .5s);
+    @include transition( width 1s, opacity 1s);
     .active & {
       width: 310 / 699 * 100%;
       opacity: 1;
@@ -69,7 +69,7 @@
     width: 0;
     height: 162 / 246 * 100%;
     opacity: 0;
-    @include transition( width .5s, opacity .5s);
+    @include transition( width 1s, opacity 1s);
     .active & {
       width: 310 / 699 * 100%;
       opacity: 1;
@@ -82,8 +82,9 @@
     width: 0;
     height: 72 / 246 * 100%;
     opacity: 0;
-    @include transition( width .5s .35s, opacity .5s .35s);
+    @include transition( width .1s .1s, opacity .1s .1s);
     .active & {
+      @include transition( width 1s 1s, opacity 1s 1s);
       width: 619 / 699 * 100%;
       opacity: 1;
     }
