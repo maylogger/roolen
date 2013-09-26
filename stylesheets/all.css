@@ -308,26 +308,35 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .wf-active .three-way-demo .pills a { letter-spacing: -2px; padding-bottom: 6px; } }
 .three-way-demo .pills a:hover { text-decoration: none; }
 .three-way-demo .pills .active a { border: 2px solid #6baec9; }
-.three-way-demo .mist { margin: 0 auto; margin-bottom: 6px; width: 10%; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transform-origin: 50% 100%; -moz-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; -o-transform-origin: 50% 100%; transform-origin: 50% 100%; }
-@media (min-width: 768px) { .three-way-demo .mist { margin-bottom: 12px; width: auto; } }
+.three-way-demo .water { margin: 0 auto; margin-bottom: 6px; width: 10%; -webkit-transform-origin: 50% 100%; -moz-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; -o-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+@media (min-width: 768px) { .three-way-demo .water { margin-bottom: 12px; width: auto; } }
 .three-way-demo .humidifier { position: relative; margin: 0 auto; width: 14%; margin-bottom: 12px; }
 @media (min-width: 768px) { .three-way-demo .humidifier { margin-bottom: 48px; width: auto; } }
-.three-way-demo .humidifier:after { content: ""; position: absolute; top: 77.5%; left: 50%; margin-left: -5px; width: 5px; height: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #ccc; }
+.three-way-demo .humidifier:after { -webkit-transition: background-color 0.5s; -moz-transition: background-color 0.5s; -o-transition: background-color 0.5s; transition: background-color 0.5s; content: ""; position: absolute; top: 77.5%; left: 50%; margin-left: -5px; width: 5px; height: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #ccc; }
 @media (min-width: 768px) { .three-way-demo .humidifier:after { width: 10px; height: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; } }
-.three-way-demo .low .mist { -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); -o-transform: scale(0.5); transform: scale(0.5); }
+.three-way-demo .low .water { -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transform: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); -o-transform: scale(0.5); transform: scale(0.5); }
 .three-way-demo .low .humidifier:after { background-color: #1fcb5f; }
-.three-way-demo .high .mist { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+.three-way-demo .high .water { -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 .three-way-demo .high .humidifier:after { background-color: #29fd2e; }
-.three-way-demo .auto .mist { -webkit-animation-name: autoMode; -webkit-animation-duration: 1s; /*动画持续时间*/ -webkit-animation-delay: 0s; /*动画延迟时间*/ -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; animation-name: autoMode; animation-duration: 1s; /*动画持续时间*/ animation-delay: 0s; /*动画延迟时间*/ animation-iteration-count: infinite; animation-timing-function: linear; }
+.three-way-demo .auto .water { -webkit-animation-name: autoModeMobile; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s; -webkit-animation-iteration-count: infinite; animation-name: autoModeMobile; animation-duration: 1s; animation-delay: 0s; animation-iteration-count: infinite; }
+@media (min-width: 768px) { .three-way-demo .auto .water { -webkit-animation-name: autoMode; animation-name: autoMode; } }
 .three-way-demo .auto .humidifier:after { background-color: #fafaff; }
 
 @-webkit-keyframes autoMode { 0% { -webkit-transform: scale(0.25); opacity: 0; }
-  45% { -webkit-transform: scale(1); opacity: 1; }
-  100% { -webkit-transform: scale(0.9) translateY(-40px); opacity: 0; } }
+  50% { -webkit-animation-timing-function: ease-in; -webkit-transform: scale(1); opacity: 1; }
+  100% { -webkit-animation-timing-function: ease-out; -webkit-transform: translateY(-140px) scale(0.2); opacity: 0; } }
 
 @keyframes autoMode { 0% { transform: scale(0.25); opacity: 0; }
-  45% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(0.9) translateY(-40px); opacity: 0; } }
+  50% { animation-timing-function: ease-in; transform: scale(1); opacity: 1; }
+  100% { -webkit-animation-timing-function: ease-out; transform: translateY(-140px) scale(0.2); opacity: 0; } }
+
+@-webkit-keyframes autoModeMobile { 0% { -webkit-transform: scale(0.25); opacity: 0; }
+  50% { -webkit-animation-timing-function: ease-in; -webkit-transform: scale(1); opacity: 1; }
+  100% { -webkit-animation-timing-function: ease-out; -webkit-transform: translateY(-80px) scale(0.2); opacity: 0; } }
+
+@keyframes autoModeMobile { 0% { transform: scale(0.25); opacity: 0; }
+  50% { animation-timing-function: ease-in; transform: scale(1); opacity: 1; }
+  100% { -webkit-animation-timing-function: ease-out; transform: translateY(-80px) scale(0.2); opacity: 0; } }
 
 .energy img { margin: 0 auto; }
 
@@ -340,12 +349,12 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .active .energy-line-chart .chart-auto { opacity: 1; }
 .energy-line-chart .chart-continually { left: 65.8083%; bottom: 0; width: 18.45494%; height: 15.04065%; opacity: 0; -webkit-transition: opacity 1s; -moz-transition: opacity 1s; -o-transition: opacity 1s; transition: opacity 1s; }
 .active .energy-line-chart .chart-continually { opacity: 1; }
-.energy-line-chart .chart-blue { left: 9.01288%; bottom: 22.76423%; width: 0; height: 52.84553%; opacity: 0; -webkit-transition: width 0.5s, opacity 0.5s; -moz-transition: width 0.5s, opacity 0.5s; -o-transition: width 0.5s, opacity 0.5s; transition: width 0.5s, opacity 0.5s; }
+.energy-line-chart .chart-blue { left: 9.01288%; bottom: 22.76423%; width: 0; height: 52.84553%; opacity: 0; -webkit-transition: width 1s, opacity 1s; -moz-transition: width 1s, opacity 1s; -o-transition: width 1s, opacity 1s; transition: width 1s, opacity 1s; }
 .active .energy-line-chart .chart-blue { width: 44.34907%; opacity: 1; }
-.energy-line-chart .chart-gray { left: 53.36195%; bottom: 22.76423%; width: 0; height: 65.85366%; opacity: 0; -webkit-transition: width 0.5s, opacity 0.5s; -moz-transition: width 0.5s, opacity 0.5s; -o-transition: width 0.5s, opacity 0.5s; transition: width 0.5s, opacity 0.5s; }
+.energy-line-chart .chart-gray { left: 53.36195%; bottom: 22.76423%; width: 0; height: 65.85366%; opacity: 0; -webkit-transition: width 1s, opacity 1s; -moz-transition: width 1s, opacity 1s; -o-transition: width 1s, opacity 1s; transition: width 1s, opacity 1s; }
 .active .energy-line-chart .chart-gray { width: 44.34907%; opacity: 1; }
-.energy-line-chart .chart-green { left: 9.15594%; bottom: 47.56098%; z-index: 2; width: 0; height: 29.26829%; opacity: 0; -webkit-transition: width 0.5s, opacity 0.5s; -webkit-transition-delay: 0.35s, 0.35s; -moz-transition: width 0.5s 0.35s, opacity 0.5s 0.35s; -o-transition: width 0.5s 0.35s, opacity 0.5s 0.35s; transition: width 0.5s 0.35s, opacity 0.5s 0.35s; }
-.active .energy-line-chart .chart-green { width: 88.55508%; opacity: 1; }
+.energy-line-chart .chart-green { left: 9.15594%; bottom: 47.56098%; z-index: 2; width: 0; height: 29.26829%; opacity: 0; -webkit-transition: width 0.1s, opacity 0.1s; -webkit-transition-delay: 0.1s, 0.1s; -moz-transition: width 0.1s 0.1s, opacity 0.1s 0.1s; -o-transition: width 0.1s 0.1s, opacity 0.1s 0.1s; transition: width 0.1s 0.1s, opacity 0.1s 0.1s; }
+.active .energy-line-chart .chart-green { -webkit-transition: width 1s, opacity 1s; -webkit-transition-delay: 1s, 1s; -moz-transition: width 1s 1s, opacity 1s 1s; -o-transition: width 1s 1s, opacity 1s 1s; transition: width 1s 1s, opacity 1s 1s; width: 88.55508%; opacity: 1; }
 
 .energy-bar-chart { margin-top: 24px; }
 .energy-bar-chart:after { content: ""; display: table; clear: both; }
