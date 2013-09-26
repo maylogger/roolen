@@ -1,7 +1,7 @@
 .block-container
   .three-way-demo
     #three-way-demo-mode.high
-      .mist= image_tag "3way_mist_high.png"
+      = image_tag "3way_mist_high.png", :class => "water"
       .humidifier= image_tag "3way_humidifier.png"
       ul.pills
         li#low: a href="#" data-toggle="tab" low

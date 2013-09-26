@@ -51,11 +51,10 @@ $auto-mode-color: #fafaff;
     }
   }
 
-  .mist {
+  .water {
     margin: 0 auto;
     @include trailer(.25);
     width: 10%;
-    @include transition(.3s);
     @include transform-origin( 50%, 100% );
     @include at-breakpoint($desktop) {
       @include trailer(.5);
@@ -74,6 +73,7 @@ $auto-mode-color: #fafaff;
       width: auto;
     }
     &:after {
+      @include transition(background-color .5s);
       content: "";
       position: absolute;
       top: 77.5%;
@@ -92,9 +92,10 @@ $auto-mode-color: #fafaff;
     }
   }
 
-  // 不同模式下的 mist & humidifier
+  // 不同模式下的 water & humidifier
   .low {
-    .mist {
+    .water {
+      @include transition(.3s);
       @include transform(scale(.5));
     }
     .humidifier:after {
@@ -102,7 +103,8 @@ $auto-mode-color: #fafaff;
     }
   }
   .high {
-    .mist {
+    .water {
+      @include transition(.3s);
       @include transform(scale(1));
     }
     .humidifier:after {
@@ -110,17 +112,20 @@ $auto-mode-color: #fafaff;
     }
   }
   .auto {
-    .mist {
-      -webkit-animation-name: autoMode;
-      -webkit-animation-duration: 1s;/*动画持续时间*/
-      -webkit-animation-delay: 0s;/*动画延迟时间*/
+    .water {
+      -webkit-animation-name: autoModeMobile;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-delay: 0s;
       -webkit-animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-      animation-name: autoMode;
-      animation-duration: 1s;/*动画持续时间*/
-      animation-delay: 0s;/*动画延迟时间*/
+      animation-name: autoModeMobile;
+      animation-duration: 1s;
+      animation-delay: 0s;
       animation-iteration-count: infinite;
-      animation-timing-function: linear;
+      @include at-breakpoint($desktop) {
+        -webkit-animation-name: autoMode;
+        animation-name: autoMode;
+      }
+
     }
     .humidifier:after {
       background-color: $auto-mode-color;
@@ -130,31 +135,68 @@ $auto-mode-color: #fafaff;
 
 @-webkit-keyframes autoMode {
   0% {
-    -webkit-transform:scale(0.25);
+    -webkit-transform: scale(0.25);
     opacity: 0;
   }
-  45% {
-   -webkit-transform:scale(1);
+  50% {
+    -webkit-animation-timing-function: ease-in;
+    -webkit-transform: scale(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform:scale(.9) translateY(-40px);
+    -webkit-animation-timing-function: ease-out;
+    -webkit-transform: translateY(-140px) scale(.2);
     opacity: 0;
   }
 }
 
 @keyframes autoMode {
   0% {
-    transform:scale(0.25);
+    transform: scale(0.25);
     opacity: 0;
   }
-  45% {
-    transform:scale(1);
+  50% {
+    animation-timing-function: ease-in;
+    transform: scale(1);
     opacity: 1;
   }
   100% {
-    transform:scale(.9) translateY(-40px);
+    -webkit-animation-timing-function: ease-out;
+    transform: translateY(-140px) scale(.2);
     opacity: 0;
   }
 }
 
+@-webkit-keyframes autoModeMobile {
+  0% {
+    -webkit-transform: scale(0.25);
+    opacity: 0;
+  }
+  50% {
+    -webkit-animation-timing-function: ease-in;
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-animation-timing-function: ease-out;
+    -webkit-transform: translateY(-80px) scale(.2);
+    opacity: 0;
+  }
+}
+
+@keyframes autoModeMobile {
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-animation-timing-function: ease-out;
+    transform: translateY(-80px) scale(.2);
+    opacity: 0;
+  }
+}
