@@ -5,34 +5,17 @@
     text-align: center;
   }
   .tab-content {
-    @include trailer(1.5);
-    @include at-breakpoint($desktop) {
-      @include trailer(3);
-    }
-  }
-  .tab-panel {
-    padding-top: 52%;
     position: relative;
     overflow: hidden;
-    margin-bottom: - 1px;
+    @include trailer(1.5);
+    padding-top: 52%;
     background-image: url('/images/smart_bg.jpg');
     @include background-size(cover);
     background-color: #bababa;
     background-position: center top;
     background-repeat: no-repeat;
-  }
-
-  .humidifier {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    z-index: 2;
-    margin-left: -14%;
-    width: 28%;
-    img {
-      margin: 0 auto;
-      width: 100%;
-      height: auto;
+    @include at-breakpoint($desktop) {
+      @include trailer(3);
     }
   }
   .mist {
@@ -42,41 +25,62 @@
     left: 50%;
     z-index: 3;
     margin-left: -14%;
-    padding-top: (603 / 430) * 27.75%;
+    padding-top: (602 / 430) * 27.95%;
     width: 28%;
     @include background-size( 100% auto );
     background-position-x: 50%;
   }
+  .humidifier {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    margin-left: -14%;
+    width: 28%;
+    &#black-humidifier {
+      opacity: 0;
+      @include transition(opacity 1s ease-out);
+    }
+    img {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+    &#black-humidifier.active {
+      opacity: 1;
+    }
+  }
+
 
   .nav-tabs {
     @include pie-clearfix;
-    position: relative;
-    z-index: 4;
     display: inline-block;
     @include trailer(1.5);
     text-align: center;
+    border: 2px solid #666;
+    background-color: #666;
+    @include border-radius(29px);
     @include at-breakpoint($desktop) {
       @include trailer(3.5);
     }
     li {
       float: left;
-      display: inline-block;
-      border: 2px solid rgba(#ccc, 0.75);
-      background-color: rgba(white, 0.9);
     }
-    li:first-child {
-      border-right: none;
-      @include border-radius(100px 0 0 100px);
+    li:first-child a {
+      padding-left: 30px;
+      @include border-radius(29px 0 0 29px);
     }
-    li:last-child {
-      border-left: none;
-      @include border-radius( 0 100px 100px 0 );
+    li:last-child a {
+      padding-right: 30px;
+      @include border-radius( 0 29px 29px 0 );
     }
     li > a {
       display: block;
       padding: 3px 20px;
       color: $color-gray;
       @extend %proxima-nava-4;
+      background-color: white;
       @include at-breakpoint($desktop) {
         padding: 3px 24px;
         @include adjust-font-size-to(32px);
@@ -85,9 +89,10 @@
         text-decoration: none;
       }
     }
-    .active {
-      background-color: rgba(#e6e6e6, 0.95);
+    li.active {
       a {
+        background-color: rgba(#e6e6e6, 0.95);
+        @include box-shadow(inset 2px 2px 5px rgba(black, .4) );
         color: $color-black;
       }
     }

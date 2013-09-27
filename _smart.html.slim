@@ -1,18 +1,15 @@
 .smart-demo
   .tab-content
-    .tab-panel#white-humidifier.active
-      .mist style="background-image: url('/images/mist/mist_merge.png');"
-      .humidifier= image_tag "smart_whitetop.png", :class => "smart-image"
-    .tab-panel#black-humidifier
-      .mist style="background-image: url('/images/mist/mist_merge.png');"
-      .humidifier= image_tag "smart_blacktop.png", :class => "smart-image"
+    .mist style="background-image: url('/images/mist_merge.png');"
+    .tab-panel.humidifier#white-humidifier.active= image_tag "smart_whitetop.png", :class => "smart-image"
+    .tab-panel.humidifier#black-humidifier= image_tag "smart_blacktop.png", :class => "smart-image"
   ul.nav-tabs
     li.active: a href="#white-humidifier" data-toggle="tab" White
     li: a href="#black-humidifier" data-toggle="tab" Black
 
 .block-container
   .block-content
-    h1.block-title Intelligent Auto Mode
+    h1.block-title.background-line <span> Intelligent Auto Mode </span>
     h2.block-sub-title Smart, Delicate,<span class="no-wrap"> Energy saving and more </span>
     p.block-text When you select the automatic mode, Breath will detect the humidity level and adjust itself to give you the perfect humidity balance in the room. You will save energy and keep comfortable all the time. BREATH combines style and a creative approach while it enhances <span class="no-wrap"> ones lifestyle within their home. </span>
 
