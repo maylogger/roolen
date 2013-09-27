@@ -8,11 +8,12 @@
   .hand {
     position: absolute;
     top: 5.5%;
-    left: -12px;
+    left: -32px;
     width: 528 / 1045 * 100%;
     opacity: 0;
-    @include transition( opacity .45s, left .75s ease-out);
+    @include transition( opacity .25s, left .25s ease-out);
     .active & {
+      @include transition( opacity 1.25s ease-in, left 1.25s ease-out);
       opacity: 1;
       left: 3px;
     }
