@@ -1,12 +1,13 @@
 .block-container
   .three-way-demo
-    #three-way-demo-mode.high
+    #three-way-demo-mode.auto
       = image_tag "3way_mist_high.png", :class => "water"
       .humidifier= image_tag "3way_humidifier.png"
       ul.pills
+        li.current-alert
         li#low: a href="#" data-toggle="tab" low
-        li#high.active: a href="#" data-toggle="tab" high
-        li#auto: a href="#" data-toggle="tab" auto
+        li#high: a href="#" data-toggle="tab" high
+        li#auto.active: a href="#" data-toggle="tab" auto
 
   .block-content
     h1.block-title 3 Way Touch Variation
