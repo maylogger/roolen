@@ -1,0 +1,10 @@
+.background-line {
+  background: url(/images/dot.jpg) repeat-x 50% 50%;
+  span {
+    background-color: #fcfcfc;
+    padding: 0 .75em;
+    @include at-breakpoint($desktop) {
+      padding: 0 55px;
+    }
+  }
+}
