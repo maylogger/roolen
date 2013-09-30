@@ -76,13 +76,35 @@
 }
 
 .timeline-title {
+  position: relative;
   @include trailer(.25);
   @include adjust-font-size-to(16px, 1);
   font-weight: 600;
   @extend %proxima-nava-6;
+  text-align: center;
   @include at-breakpoint($desktop) {
     @include trailer(.5);
     @include adjust-font-size-to(20px, 1);
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-black;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    background-color: #fcfcfc;
+    padding: 0 1em;
+    @include at-breakpoint($desktop) {
+      padding: 0 20px;
+    }
   }
 }
 

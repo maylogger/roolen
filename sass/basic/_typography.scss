@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial",
+  font-family: Arial,
                sans-serif;
   font-weight: normal;
   -webkit-text-size-adjust: none;
@@ -48,6 +48,8 @@ img {
             "HelveticaNeue-Light",
             "HelveticaNeue",
             "Helvetica",
+            "proxima-nova-n1",
+            "proxima-nova",
             "Arial",
             sans-serif;
   font-weight: 100;
@@ -55,21 +57,21 @@ img {
 
 
 %proxima-nava-6 {
-  font-family: "proxima-nova-n6", "proxima-nova", "HelveticaNeue-Bold", sans-serif;;
+  font-family: "proxima-nova-n6", "proxima-nova", "HelveticaNeue-Bold", Arial, sans-serif;
   font-weight: 600;
 }
 
 %proxima-nava-4 {
-  font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", sans-serif;;
+  font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", Arial, sans-serif;
   font-weight: 400;
 }
 
 %proxima-nava-3 {
-  font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", sans-serif;;
+  font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif;
   font-weight: 300;
 }
 
 %proxima-nava-1 {
-  font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", sans-serif;;
+  font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif;
   font-weight: 100;
 }

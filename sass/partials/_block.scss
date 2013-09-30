@@ -54,14 +54,35 @@
   }
 }
 
-
-
-
 .block-title {
   font-weight: 600;
   @extend %block-title-font;
   @extend %proxima-nava-6;
   margin-bottom: .125em;
+}
+
+.block-title-background-line {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: $color-black;
+  }
+  span {
+    position: relative;
+    z-index: 1;
+    background-color: #fcfcfc;
+    padding: 0 .5em;
+    @include at-breakpoint($desktop) {
+      padding: 0 55px;
+    }
+  }
 }
 
 .block-sub-title {
