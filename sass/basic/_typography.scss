@@ -57,21 +57,37 @@ img {
 
 
 %proxima-nava-6 {
-  font-family: "proxima-nova-n6", "proxima-nova", "HelveticaNeue-Bold", Arial, sans-serif;
+  font-family: "proxima-nova-n6", "proxima-nova";
   font-weight: 600;
+  .wf-inactive & {
+    font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+  }
 }
 
 %proxima-nava-4 {
-  font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", Arial, sans-serif;
+  font-family: "proxima-nova-n4", "proxima-nova";
   font-weight: 400;
+  .wf-inactive & {
+    font-family: "HelveticaNeue", "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+  }
 }
 
 %proxima-nava-3 {
-  font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif;
+  font-family: "proxima-nova-n3", "proxima-nova";
   font-weight: 300;
+  .wf-inactive & {
+    font-family:  "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+  }
 }
 
 %proxima-nava-1 {
-  font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif;
+  font-family: "proxima-nova-n1", "proxima-nova";
   font-weight: 100;
+  .wf-inactive & {
+    font-family: "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+  }
 }
