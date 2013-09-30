@@ -1,4 +1,5 @@
 // scrollspy
+
 $(window).load(function() {
   var windowHeight = $(window).height();
   var scrollOffset = windowHeight / 2;
@@ -6,6 +7,20 @@ $(window).load(function() {
     target: '#scrollspy',
     offset: scrollOffset
   });
+
+  setTimeout(function(){
+
+      $('.home .block').each(function(){
+        var windowScrollTop = $(window).scrollTop();
+        var windowHalf = windowScrollTop + scrollOffset;
+        if ( $(this).offset().top < windowHalf && $(this).offset().top + $(this).height() > windowHalf ) {
+          $(this).addClass("active");
+        }
+      });
+
+  }, 2000);
+
+
 }).resize( function() {
   var windowHeight = $(window).height();
   var scrollOffset = windowHeight / 2;
@@ -41,13 +56,13 @@ jQuery(".item-title").fitText(2, { minFontSize: '14px', maxFontSize: '26px' });
 
 
 // three way pill
-$('.pills > #low').click(function(){
+$('#low').click(function(){
   $('#three-way-demo-mode').removeClass().addClass('low');
 });
-$('.pills > #high').click(function(){
+$('#high').click(function(){
   $('#three-way-demo-mode').removeClass().addClass('high');
 });
-$('.pills > #auto').click(function(){
+$('#auto').click(function(){
   $('#three-way-demo-mode').removeClass().addClass('auto');
 });
 
