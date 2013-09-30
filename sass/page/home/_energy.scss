@@ -27,6 +27,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url(/images/chart/chart_bottom.png);
   }
   .chart-auto {
     left: 155 / 699 * 100%;
@@ -34,6 +35,7 @@
     width: 129 / 699 * 100%;
     height: 37 / 246 * 100%;
     opacity: 0;
+    background-image: url(/images/chart/chart_auto.png);
     background-size: contain;
     @include transition(opacity 1.25s);
     .active & {
@@ -46,6 +48,7 @@
     width: 129 / 699 * 100%;
     height: 37 / 246 * 100%;
     opacity: 0;
+    background-image: url(/images/chart/chart_continually.png);
     background-size: contain;
     @include transition(opacity 1.25s);
     .active & {
@@ -53,23 +56,25 @@
     }
   }
   .chart-blue {
-    left: 63 / 699 * 100%;
-    bottom: 56 / 246 * 100%;
+    left: 64 / 699 * 100%;
+    bottom: 57.5 / 246 * 100%;
     width: 0;
     height: 130 / 246 * 100%;
     opacity: 0;
+    background-image: url(/images/chart/chart_blue.gif);
     @include transition( width 1.25s, opacity 1.25s);
     .active & {
       width: 310 / 699 * 100%;
-      opacity: 1;
+      opacity: .6;
     }
   }
   .chart-gray {
     left: 373 / 699 * 100%;
-    bottom: 56 / 246 * 100%;
+    bottom: 57.5 / 246 * 100%;
     width: 0;
     height: 162 / 246 * 100%;
     opacity: 0;
+    background-image: url(/images/chart/chart_grey.png);
     @include transition( width 1.25s, opacity 1.25s);
     .active & {
       width: 310 / 699 * 100%;
@@ -82,16 +87,32 @@
     z-index: 2;
     width: 0;
     height: 72 / 246 * 100%;
-    opacity: 0;
-    @include transition( width .1s .1s, opacity .1s .1s);
+    opacity: .6;
+    @include transition( width .1s .1s);
+    background-image: url(/images/chart/chart_green.gif);
     .active & {
-      @include transition( width 1.75s ease-in-out 0.75s, opacity 1.75s 0.75s);
+      @include transition( width 1.75s 1.25s);
       width: 619 / 699 * 100%;
-      opacity: 1;
     }
   }
 }
-
+// chart retina
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  .energy-line-chart {
+    .chart-bottom {
+      background-image: url(/images/chart/chart_bottom@2x.png);
+    }
+    .chart-auto {
+      background-image: url(/images/chart/chart_auto@2x.png);
+    }
+    .chart-continually {
+      background-image: url(/images/chart/chart_continually@2x.png);
+    }
+    .chart-green {
+      background-image: url(/images/chart/chart_green@2x.gif);
+    }
+  }
+}
 
 .energy-bar-chart {
   @include pie-clearfix;
