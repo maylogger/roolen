@@ -37,7 +37,7 @@ body {
   margin: 0;
   padding: 0;
   @include transition( background-color 1s );
-  background: #fcfcfc;
+  background: $color-white;
   @include at-breakpoint($container-border) {
     background-color: #eeeeef;
   }
@@ -45,7 +45,7 @@ body {
 
 .container {
   overflow: hidden;
-  background: #fcfcfc;
+  background: $color-white;
   @include container($total-columns, $desktop);
   transition: box-shadow 1s;
   @include at-breakpoint($container-border) {

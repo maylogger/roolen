@@ -29,16 +29,18 @@
   left: 35.5%;
   z-index: 2;
   max-width: 25%;
-  -webkit-animation-name: fan;
-  -webkit-animation-duration: 1.5s;/*动画持续时间*/
-  -webkit-animation-delay: 0s;/*动画延迟时间*/
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-name: fan;
-  animation-duration: 1.5s;/*动画持续时间*/
-  animation-delay: 0s;/*动画延迟时间*/
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  .active & {
+    -webkit-animation-name: fan;
+    -webkit-animation-duration: 1.5s;/*动画持续时间*/
+    -webkit-animation-delay: 0s;/*动画延迟时间*/
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: fan;
+    animation-duration: 1.5s;/*动画持续时间*/
+    animation-delay: 0s;/*动画延迟时间*/
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
 // fan-anime
 @-webkit-keyframes fan {

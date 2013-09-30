@@ -21,7 +21,7 @@
     // box-shadow: 0 7px 7px -5px rgba(black, 0);
     @include set-container-width();
     @include background(
-      linear-gradient( rgba(#fcfcfc,1), rgba(#fcfcfc,.85) )
+      linear-gradient( rgba($color-white,1), rgba($color-white,.85) )
     );
   }
 }

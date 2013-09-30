@@ -85,7 +85,7 @@
     opacity: 0;
     @include transition( width .1s .1s, opacity .1s .1s);
     .active & {
-      @include transition( width 1.75s 0.85s, opacity 1.75s 0.85s);
+      @include transition( width 1.75s ease-in-out 0.75s, opacity 1.75s 0.75s);
       width: 619 / 699 * 100%;
       opacity: 1;
     }
@@ -130,7 +130,7 @@
     z-index: 3;
     float: left;
     width: 6em;
-    background-color: #fcfcfc;
+    background-color: $color-white;
   }
   .date-graph {
     $bar-height: 4px;

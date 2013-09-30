@@ -58,8 +58,8 @@
     display: inline-block;
     @include trailer(1.5);
     text-align: center;
-    border: 2px solid #666;
-    background-color: #666;
+    border: 1px solid #999;
+    background-color: #999;
     @include border-radius(29px);
     @include at-breakpoint($desktop) {
       @include trailer(3.5);
@@ -80,7 +80,7 @@
       padding: 3px 20px;
       color: $color-gray;
       @extend %proxima-nava-4;
-      background-color: white;
+      background-color: $color-white;
       @include at-breakpoint($desktop) {
         padding: 3px 24px;
         @include adjust-font-size-to(32px);

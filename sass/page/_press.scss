@@ -100,7 +100,7 @@
   span {
     position: relative;
     z-index: 1;
-    background-color: #fcfcfc;
+    background-color: $color-white;
     padding: 0 1em;
     @include at-breakpoint($desktop) {
       padding: 0 20px;
