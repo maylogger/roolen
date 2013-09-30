@@ -38,21 +38,23 @@ $auto-mode-color: #fafaff;
     .current-alert {
       position: absolute;
       top: 0;
-      left: 139px;
+      // left: 139px;
       margin-left: -69px;
+      @include transform( translateX(0) );
       z-index: 1;
       border: 1px solid $logo-color;
       @include border-radius(12px);
       opacity: 0;
-      @include transition( left .5s, margin-left .5s, opacity .5s);
+      @include transition( transform .5s, opacity .5s, margin-left .5s);
       @include at-breakpoint($desktop) {
-        left: 278px;
+        // left: 278px;
         margin-left: -139px;
         border: 2px solid $logo-color;
         @include border-radius(30px);
       }
       .active & {
         margin-left: 0;
+        // @include transform( translateX(278px) );
         opacity: 1;
       }
     }
@@ -67,6 +69,9 @@ $auto-mode-color: #fafaff;
   }
 
   .water {
+    // @include transform( scale(0.25) );
+    opacity: 0;
+    @include transition( opacity .3s );
     margin: 0 auto;
     @include trailer(.25);
     width: 10%;
@@ -108,10 +113,11 @@ $auto-mode-color: #fafaff;
   }
 
   // 不同模式下的 water & humidifier
-  .low {
+  .active & .low {
     .water {
       @include transition(.3s);
       @include transform(scale(.5));
+      opacity: 1;
     }
     .humidifier:after {
       background-color: $low-mode-color;
@@ -120,23 +126,27 @@ $auto-mode-color: #fafaff;
       left: 0;
     }
   }
-  .high {
+  .active & .high {
     .water {
       @include transition(.3s);
       @include transform(scale(1));
+      opacity: 1;
     }
     .humidifier:after {
       background-color: $high-mode-color;
     }
     .current-alert {
-      left: 69px;
+      // left: 69px;
+      @include transform( translateX(69px) );
       @include at-breakpoint($desktop) {
-        left: 139px;
+        // left: 139px;
+        @include transform( translateX(139px) );
       }
     }
   }
-  .auto {
+  .active & .auto {
     .water {
+      opacity: 1;
       -webkit-animation-name: autoModeMobile;
       -webkit-animation-duration: 1s;
       -webkit-animation-delay: 0s;
@@ -155,9 +165,11 @@ $auto-mode-color: #fafaff;
       background-color: $auto-mode-color;
     }
     .current-alert {
-      left: 139px;
+      // left: 139px;
+      @include transform( translateX(139px) );
       @include at-breakpoint($desktop) {
-        left: 278px;
+        // left: 278px;
+        @include transform( translateX(278px) );
       }
     }
   }

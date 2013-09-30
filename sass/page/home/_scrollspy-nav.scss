@@ -30,6 +30,7 @@
     height: 8px;
     @include border-radius(50%);
     background-color: rgba(black, 0.25);
+    @include transition( .3s);
   }
   .hover-text {
     position: absolute;

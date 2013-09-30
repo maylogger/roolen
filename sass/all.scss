@@ -45,15 +45,6 @@ $grid-background-baseline-height: $base-line-height;
   }
 }
 
-.open {
-  display: block;
-}
-
-.active {
-  display: block;
-}
-
-
 // 控制文字強制換行工具
 .no-wrap {
   @include at-breakpoint($desktop) {
