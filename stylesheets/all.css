@@ -16,7 +16,7 @@ body { margin: 0; padding: 0; -webkit-transition: background-color 1s; -moz-tran
 .home .content { padding-top: 0px; }
 @media (min-width: 768px) { .home .content { padding-top: 0px; } }
 
-body { font-family: "Arial", sans-serif; font-weight: normal; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { font-family: Arial, sans-serif; font-weight: normal; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-weight: normal; }
 
@@ -35,15 +35,15 @@ p { margin-bottom: 24px; }
 
 img { display: block; max-width: 100%; margin-bottom: 24px; }
 
-.hero-title, .capacity-count { font-family: "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "Arial", sans-serif; font-weight: 100; }
+.hero-title, .capacity-count { font-family: "HelveticaNeue-UltraLight", "HelveticaNeue-Light", "HelveticaNeue", "Helvetica", "proxima-nova-n1", "proxima-nova", "Arial", sans-serif; font-weight: 100; }
 
-.block-title, .resource .title, .contact-roolen .title, .timeline-title { font-family: "proxima-nova-n6", "proxima-nova", "HelveticaNeue-Bold", sans-serif; font-weight: 600; }
+.block-title, .resource .title, .contact-roolen .title, .timeline-title { font-family: "proxima-nova-n6", "proxima-nova", "HelveticaNeue-Bold", Arial, sans-serif; font-weight: 600; }
 
-.main-nav-btn, .main-nav li > a, .block-text, .hero-action .playing-video, .smart .nav-tabs li > a, .spec-list, .scrollspy-nav a, .cooperate-with-us, .resource .text, .contact-roolen .text, .contact-roolen .mail-to, .press-carousel .item-title, .timeline-item { font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", sans-serif; font-weight: 400; }
+.main-nav-btn, .main-nav li > a, .block-text, .hero-action .playing-video, .smart .nav-tabs li > a, .spec-list, .scrollspy-nav a, .cooperate-with-us, .resource .text, .contact-roolen .text, .contact-roolen .mail-to, .press-carousel .item-title, .timeline-item { font-family: "proxima-nova-n4", "proxima-nova", "HelveticaNeue", Arial, sans-serif; font-weight: 400; }
 
-.copyright, .hero-sub-title, .three-way-demo .pills li, .energy-bar-chart .date-state, .press-title { font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", sans-serif; font-weight: 300; }
+.copyright, .hero-sub-title, .three-way-demo .pills li, .energy-bar-chart .date-state, .press-title { font-family: "proxima-nova-n3", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif; font-weight: 300; }
 
-.block-sub-title { font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", sans-serif; font-weight: 100; }
+.block-sub-title { font-family: "proxima-nova-n1", "proxima-nova", "HelveticaNeue-Light", Arial, sans-serif; font-weight: 100; }
 
 .btn { color: #333333; background: #d8d8d8; text-align: center; display: inline-block; padding: 0 0.25em; font-size: 16px; line-height: 24px; border-radius: 3px; box-shadow: 0 2px 0 0 #b5b5b5; cursor: pointer; border: none; }
 .btn:hover { text-decoration: none; }
@@ -139,10 +139,6 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 .split-line { height: 1px; margin: 0 auto; background-image: -webkit-gradient(radial, 100% 100%, 0, 100% 100%, 65, color-stop(50%, rgba(0, 0, 0, 0.125)), color-stop(65%, rgba(0, 0, 0, 0))); background-image: -webkit-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: -moz-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: -o-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); }
 
-.background-line { background: url(/images/dot.jpg) repeat-x 50% 50%; }
-.background-line span { background-color: #fcfcfc; padding: 0 .75em; }
-@media (min-width: 768px) { .background-line span { padding: 0 55px; } }
-
 @media (min-width: 768px) { .header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; width: 100%; } }
 
 .header-container { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 1em; margin: 0 auto; transition: box-shadow 1s; }
@@ -212,6 +208,11 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .block-sub-title { font-size: 38px; line-height: 1.125em; } }
 
 .block-title { font-weight: 600; margin-bottom: .125em; }
+
+.block-title-background-line { position: relative; }
+.block-title-background-line:before { content: ""; display: block; position: absolute; top: 50%; left: 0; margin-top: -1px; width: 100%; height: 2px; background-color: #444444; }
+.block-title-background-line span { position: relative; z-index: 1; background-color: #fcfcfc; padding: 0 .5em; }
+@media (min-width: 768px) { .block-title-background-line span { padding: 0 55px; } }
 
 .block-sub-title { margin-bottom: .8em; }
 @media (min-width: 768px) { .block-sub-title { margin-bottom: 36px; } }
@@ -526,8 +527,11 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .timeline { margin: 0 auto; margin-bottom: 48px; text-align: left; }
 @media (min-width: 768px) { .timeline { max-width: 800px; } }
 
-.timeline-title { margin-bottom: 6px; font-size: 16px; line-height: 24px; font-weight: 600; }
+.timeline-title { position: relative; margin-bottom: 6px; font-size: 16px; line-height: 24px; font-weight: 600; text-align: center; }
 @media (min-width: 768px) { .timeline-title { margin-bottom: 12px; font-size: 20px; line-height: 24px; } }
+.timeline-title:before { content: ""; display: block; position: absolute; top: 50%; left: 0; margin-top: -1px; width: 100%; height: 1px; background-color: #444444; }
+.timeline-title span { position: relative; z-index: 1; background-color: #fcfcfc; padding: 0 1em; }
+@media (min-width: 768px) { .timeline-title span { padding: 0 20px; } }
 
 .timeline-item { margin-bottom: 18px; font-size: 14px; line-height: 18px; }
 @media (min-width: 768px) { .timeline-item { margin-bottom: 24px; font-size: 16px; line-height: 24px; } }
