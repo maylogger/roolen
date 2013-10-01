@@ -52,7 +52,6 @@ $('.carousel').carousel({
 jQuery(".block-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
 jQuery(".block-sub-title").fitText(2, { minFontSize: '20px', maxFontSize: '50px' });
 jQuery(".press-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' });
-jQuery(".item-title").fitText(2, { minFontSize: '14px', maxFontSize: '26px' });
 
 
 // three way pill
@@ -78,7 +77,7 @@ var flow_angle_anime;
 function mistAnime(){
   var target_height = (100/(15-1));
   var target_background_potition = (target_height * pic_num)+'%';
-  $('.mist').css("background-position", "50% "+target_background_potition);
+  $('.mist').css("background-position", target_background_potition+" 50%");
   pic_num++;
   if (pic_num >= 15) pic_num = 0;
   mist_anime = setTimeout("mistAnime()",67);
@@ -125,11 +124,25 @@ $('.three-way-scrollspy').on('activate.bs.scrollspy', function () {
 });
 
 // capacity-count
-$('#stepper').zero();
+// $('#stepper').zero();
+var count = 0;
+var capacity_count = $("#stepper");
+// capacity_count.text("0.00");
 $('.capacity-scrollspy').on('activate.bs.scrollspy', function () {
   $(".capacity").addClass("active");
-  $('#stepper').play();
+  // $('#stepper').play();
+  countUp();
 });
+
+function countUp() {
+  capacity_count.text(count.toFixed(2));
+  count = count + 0.04;
+  if (count > 3) {
+    capacity_count.text(3.15);
+    return false;
+  }
+  setTimeout(countUp, 15);
+}
 
 
 // energy-chart-anime

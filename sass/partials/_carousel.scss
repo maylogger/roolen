@@ -92,6 +92,7 @@
   @include at-breakpoint($desktop) {
   }
   img {
+    border: none;
     margin: 0 auto;
   }
   &:hover {

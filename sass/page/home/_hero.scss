@@ -69,6 +69,7 @@
       opacity: .85;
     }
     img {
+      border: none;
       max-width: 60px;
       @include trailer(.25);
       @include at-breakpoint($desktop) {

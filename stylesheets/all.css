@@ -187,7 +187,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .social-link-group { position: absolute; top: 50%; right: 4em; margin-top: -36px; } }
 .social-link-group li { display: inline-block; margin: 0 .25em; width: 48px; }
 @media (min-width: 768px) { .social-link-group li { margin: 0 .25em; width: auto; } }
-.social-link-group img { margin: 0 auto; }
+.social-link-group img { border: none; margin: 0 auto; }
 
 .copyright { font-size: 14px; line-height: 24px; color: #999; }
 
@@ -247,7 +247,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .carousel-indicators li.active { background-color: #6baec9; }
 
 .carousel-control { position: absolute; top: 37.5%; z-index: 2; width: 7.5%; color: #6a6a6a; }
-.carousel-control img { margin: 0 auto; }
+.carousel-control img { border: none; margin: 0 auto; }
 .carousel-control:hover { text-decoration: none; }
 .carousel-control.left { left: 0; }
 .carousel-control.right { right: 0; }
@@ -272,14 +272,14 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .hero-action .playing-video { font-size: 32px; line-height: 48px; } }
 .wf-active .hero-action .playing-video { letter-spacing: -1px; }
 .hero-action .playing-video:hover { text-decoration: none; opacity: .85; }
-.hero-action .playing-video img { max-width: 60px; margin-bottom: 6px; }
+.hero-action .playing-video img { border: none; max-width: 60px; margin-bottom: 6px; }
 @media (min-width: 768px) { .hero-action .playing-video img { max-width: none; margin-bottom: 12px; } }
 
 .smart { padding-top: 0; }
 .smart .smart-demo { position: relative; text-align: center; }
 .smart .tab-content { position: relative; overflow: hidden; margin-bottom: 36px; padding-top: 52%; background-image: url("/images/smart_bg.jpg"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-color: #bababa; background-position: center top; background-repeat: no-repeat; }
 @media (min-width: 768px) { .smart .tab-content { margin-bottom: 72px; } }
-.smart .mist { overflow: hidden; position: absolute; top: 0; left: 50%; z-index: 3; margin-left: -14%; padding-top: 39.2%; width: 28%; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; background-position-x: 50%; }
+.smart .mist { overflow: hidden; position: absolute; top: 0; left: 50%; z-index: 3; margin-left: -15%; padding-top: 39.19565%; width: 30%; -webkit-background-size: auto 100%; -moz-background-size: auto 100%; -o-background-size: auto 100%; background-size: auto 100%; background-position: 0 50%; }
 .smart .humidifier { display: block; position: absolute; left: 50%; bottom: 0; z-index: 2; margin-left: -14%; width: 28%; }
 .smart .humidifier#black-humidifier { opacity: 0; -webkit-transition: opacity 1s ease-out; -moz-transition: opacity 1s ease-out; -o-transition: opacity 1s ease-out; transition: opacity 1s ease-out; }
 .smart .humidifier img { margin: 0 auto; width: 100%; height: auto; }
