@@ -55,6 +55,7 @@
     @extend %support-title;
   }
   img {
+    border: none;
     @include trailer(0.5);
   }
   .text {

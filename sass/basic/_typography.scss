@@ -37,6 +37,7 @@ p {
 }
 
 img {
+  border: none;
   display: block;
   max-width: 100%;
   @include trailer(1);
