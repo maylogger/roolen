@@ -57,9 +57,13 @@
 .flow-side-fancover {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 4;
   opacity: 0.9;
 }
+
 .flow-side-anime {
   position: absolute;
   width: 100%;
@@ -67,6 +71,10 @@
   overflow: hidden;
   z-index: 3;
   background-size: 100% auto;
+  background-image: url(/images/flow/flow_side.png);
+  .active & {
+    background-image: url(/images/flow/flow_side_merge.png);
+  }
 }
 
 .flow-angle {
@@ -75,14 +83,20 @@
   width: 42%;
   float: right;
 }
+
 .flow-angle-anime {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 3;
   overflow: hidden;
+  background-image: none;
   background-size: 100% auto;
+  .active & {
+    background-image: url(/images/flow/flow_angle_merge.png);
+  }
 }
+
 .flow_angle_cap {
   position: absolute;
   top: 0;

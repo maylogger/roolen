@@ -75,10 +75,13 @@ $auto-mode-color: #fafaff;
     margin: 0 auto;
     @include trailer(.25);
     width: 10%;
+    height: auto;
     @include transform-origin( 50%, 100% );
     @include at-breakpoint($desktop) {
       @include trailer(.5);
+      max-width: 96px;
       width: auto;
+      height: auto;
     }
   }
 
@@ -87,10 +90,12 @@ $auto-mode-color: #fafaff;
     position: relative;
     margin: 0 auto;
     width: 14%;
+    height: auto;
     @include trailer(.5);
     @include at-breakpoint($desktop) {
       @include trailer(2);
       width: auto;
+      height: auto;
     }
     &:after {
       @include transition(background-color .5s);
@@ -98,7 +103,7 @@ $auto-mode-color: #fafaff;
       position: absolute;
       top: 77.5%;
       left: 50%;
-      margin-left: - $radius;
+      margin-left: - $radius / 2;
       width: $radius;
       height: $radius;
       @include border-radius($radius);
