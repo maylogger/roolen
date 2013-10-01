@@ -55,16 +55,12 @@ jQuery(".press-title").fitText(1.5, { minFontSize: '24px', maxFontSize: '50px' }
 
 
 // three way pill
-$('#low').click(function(){
-  $('#three-way-demo-mode').removeClass().addClass('low');
+$('.three-way-btn a').each(function(){
+  $(this).on("click", function(){
+    var className = $(this).attr("data-class");
+    $("#three-way-demo-mode").removeClass().addClass(className);
+  });
 });
-$('#high').click(function(){
-  $('#three-way-demo-mode').removeClass().addClass('high');
-});
-$('#auto').click(function(){
-  $('#three-way-demo-mode').removeClass().addClass('auto');
-});
-
 
 //mist & flow anime
 var pic_num = 0;
@@ -102,17 +98,33 @@ function flowAngleAnime(){
 }
 
 
+// capacity counter
+var count;
+var capacity_count = $("#stepper");
+function countUp() {
+  capacity_count.text(count.toFixed(2));
+  count = count + 0.04;
+  if (count > 3) {
+    capacity_count.text(3.15);
+    return false;
+  }
+  setTimeout(countUp, 15);
+}
+
+
 // remove-scrollspy-active
 $('.scrollspy-nav li').on('activate.bs.scrollspy', function () {
   $(".block").removeClass("active");
   clearTimeout(mist_anime);
   clearTimeout(flow_side_anime);
   clearTimeout(flow_angle_anime);
+  capacity_count.text("0.00");
 });
 
 
 // mist-animation
 $('.smart-scrollspy').on('activate.bs.scrollspy', function () {
+  $(".smart").addClass("active");
   mistAnime();
 });
 
@@ -125,25 +137,12 @@ $('.three-way-scrollspy').on('activate.bs.scrollspy', function () {
 
 // capacity-count
 // $('#stepper').zero();
-var count = 0;
-var capacity_count = $("#stepper");
-// capacity_count.text("0.00");
 $('.capacity-scrollspy').on('activate.bs.scrollspy', function () {
   $(".capacity").addClass("active");
   // $('#stepper').play();
+  count = 0;
   countUp();
 });
-
-function countUp() {
-  capacity_count.text(count.toFixed(2));
-  count = count + 0.04;
-  if (count > 3) {
-    capacity_count.text(3.15);
-    return false;
-  }
-  setTimeout(countUp, 15);
-}
-
 
 // energy-chart-anime
 $('.energy-scroollspy').on('activate.bs.scrollspy', function () {
