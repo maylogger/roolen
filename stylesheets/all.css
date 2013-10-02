@@ -260,7 +260,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 .hero-title { margin: 0 auto; width: 60%; max-width: 100%; margin-bottom: 7%; }
 @media (min-width: 768px) { .hero-title { width: 100%; } }
-.hero-title h1 { margin: 0 auto; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/breath-logo.png?1380706916'); background-repeat: no-repeat; background-position: 50% 50%; background-image: none, url('/images/breath-logo.svg?1380710116'); background-repeat: no-repeat; background-position: center top; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 36.36364%; }
+.hero-title h1 { margin: 0 auto; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/breath-logo.png?1380721821'); background-repeat: no-repeat; background-position: 50% 50%; background-image: none, url('/images/breath-logo.svg?1380721821'); background-repeat: no-repeat; background-position: center top; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 36.36364%; }
 @media (min-width: 768px) { .hero-title h1 { padding-top: 0; width: 440px; height: 160px; } }
 
 .hero-photo img { margin: 0 auto; width: 100%; max-width: 75%; position: relative; left: -1%; }
@@ -329,7 +329,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .active .three-way-demo .high .humidifier:after { background-color: #29fd2e; }
 .active .three-way-demo .high .current-alert { -webkit-transform: translateX(69px); -moz-transform: translateX(69px); -ms-transform: translateX(69px); -o-transform: translateX(69px); transform: translateX(69px); }
 @media (min-width: 768px) { .active .three-way-demo .high .current-alert { -webkit-transform: translateX(139px); -moz-transform: translateX(139px); -ms-transform: translateX(139px); -o-transform: translateX(139px); transform: translateX(139px); } }
-.active .three-way-demo .auto .water { opacity: 1; -webkit-animation-name: autoModeMobile; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s; -webkit-animation-iteration-count: infinite; animation-name: autoModeMobile; animation-duration: 1s; animation-delay: 0s; animation-iteration-count: infinite; }
+.active .three-way-demo .auto .water { opacity: .95; -webkit-animation-name: autoModeMobile; -webkit-animation-duration: 1s; -webkit-animation-delay: 0s; -webkit-animation-iteration-count: infinite; animation-name: autoModeMobile; animation-duration: 1s; animation-delay: 0s; animation-iteration-count: infinite; }
 @media (min-width: 768px) { .active .three-way-demo .auto .water { -webkit-animation-name: autoMode; animation-name: autoMode; } }
 .active .three-way-demo .auto .humidifier:after { background-color: #fafaff; }
 .active .three-way-demo .auto .current-alert { -webkit-transform: translateX(139px); -moz-transform: translateX(139px); -ms-transform: translateX(139px); -o-transform: translateX(139px); transform: translateX(139px); }

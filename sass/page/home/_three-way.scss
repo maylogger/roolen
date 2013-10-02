@@ -151,7 +151,7 @@ $auto-mode-color: #fafaff;
   }
   .active & .auto {
     .water {
-      opacity: 1;
+      opacity: .95;
       -webkit-animation-name: autoModeMobile;
       -webkit-animation-duration: 1s;
       -webkit-animation-delay: 0s;
