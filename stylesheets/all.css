@@ -173,7 +173,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 @media (min-width: 768px) { .header.affix .header-container { box-shadow: 0 7px 7px -5px rgba(0, 0, 0, 0.05); -webkit-transition: box-shadow 1s; -webkit-transition-delay: 0.35s; -moz-transition: box-shadow 1s 0.35s; -o-transition: box-shadow 1s 0.35s; transition: box-shadow 1s 0.35s; }
   .header.affix h1.logo { font-size: 12px; line-height: 24px; }
-  .header.affix h1.logo a { width: 93.5px; height: 26.5px; margin: 12px 0 12px -20px; }
+  .header.affix h1.logo a { width: 93.5px; height: 26.5px; margin: 12px 0 12px -20px; text-indent: 150%; }
   .header.affix .main-nav li > a { margin-top: 16px; } }
 .footer { position: relative; text-align: center; }
 
