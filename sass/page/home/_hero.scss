@@ -7,16 +7,6 @@
     @include padding-trailer(5);
   }
 
-  img {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 320px;
-    @include at-breakpoint($desktop) {
-      max-width: 100%;
-      width: auto;
-    }
-  }
-
 }
 
 .hero-container {
@@ -28,31 +18,51 @@
 }
 
 .hero-title {
-  @include adjust-font-size-to(48px, 2);
-  @extend %helvetica-ultralight;
+  margin: 0 auto;
+  width: 60%;
   @include at-breakpoint($desktop) {
-    @include adjust-font-size-to(110px, 5);
+    width: 100%;
   }
-}
-.hero-sub-title {
-  @include trailer(.5);
-  @include adjust-font-size-to(16px);
-  color: #838383;
-  @extend %proxima-nava-3;
-  @include at-breakpoint($desktop) {
-    @include trailer(1.5);
-    @include adjust-font-size-to(36px, 1.5);
-  }
+  max-width: 100%;
+  margin-bottom: 7%;
+  h1 {
+    margin: 0 auto;
+    $breath-logo: "breath-logo.png";
+    @include replace-text($breath-logo);
+    background-image: none, image-url("breath-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    @include background-size(contain);
+    width: 100%;
+    height: 0;
+    padding-top: image-height($breath-logo) / image-width($breath-logo) * 100%;
+
+    @include at-breakpoint($desktop) {
+      padding-top: 0;
+      width: image-width($breath-logo);
+      height: image-height($breath-logo);
+    }
+  } // h1 end
 }
 
 .hero-photo {
-  @include at-breakpoint($desktop) {
-    @include trailer(2);
-  }
+
+  img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 75%;
+    position: relative;
+    left: -1%;
+    @include at-breakpoint($desktop) {
+      max-width: 100%;
+      width: auto;
+      @include trailer(2);
+      // left: -10px;
+    }
+  } // img end
 }
 
 .hero-action {
-
   .playing-video {
     display: inline-block;
     @include adjust-font-size-to(18px);
@@ -69,6 +79,7 @@
       opacity: .85;
     }
     img {
+      margin: 0 auto;
       border: none;
       max-width: 60px;
       @include trailer(.25);

@@ -51,7 +51,7 @@
     line-height: 1em;
     @include at-breakpoint($desktop) {
       @include leader(1);
-      @include adjust-font-size-to(20px, 1);
+      @include adjust-font-size-to(30px, 1);
       line-height: 1em;
     }
   }
