@@ -5,28 +5,30 @@
     .carousel-slide
       .carousel-inner
         a.item.press-carousel-lightbox.active href="/images/press/press_0913jp.png"
-          h3.item-title Breath humidifier launch in japan
           = image_tag "press/20130913press_jp.png", :class => "press_jp"
+          .split-line
+          h3.item-title Breath humidifier launch in japan
         a.item.press-carousel-lightbox href="/images/press/press_0913jp.png"
-          h3.item-title Breath humidifier launch in japan
           = image_tag "press/20130913press_jp.png", :class => "press_jp"
+          .split-line
+          h3.item-title= lorem_sentences(2)
       a.carousel-control.left href="#press-carousel" data-slide="prev"= image_tag "arrow_left.png"
       a.carousel-control.right href="#press-carousel" data-slide="next"= image_tag "arrow_right.png"
-    .split-line
+
 
   .press-releases
     h2.press-title Press Releases
     ul.timeline
       li.timeline-title
         span 2013 September
-      li.timeline-item
+      li.timeline-item: a href="#"
         .date 09/13/2013
         .event Breath humidifier launch japan press release.
 
       li.timeline-title
         span 2013 August
       - 5.times do
-        li.timeline-item
+        li.timeline-item: a href="#"
           .date= lorem_date("%m/%d/%Y")
           .event= lorem_sentences(2)
 

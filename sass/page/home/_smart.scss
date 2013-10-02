@@ -29,9 +29,6 @@
     width: 30%;
     @include background-size( auto 100% );
     background-position: 0 50%;
-    background-image: url(/images/mist.png);
-  }
-  &.active .mist {
     background-image: url(/images/mist_merge_horizon.png);
   }
   .humidifier {

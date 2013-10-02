@@ -17,6 +17,9 @@
   @include at-breakpoint($desktop) {
     @include trailer(3);
   }
+  .carousel-control {
+    top: 130px;
+  }
   .press-title {
     @include trailer(.5);
     @include at-breakpoint($desktop) {
@@ -39,16 +42,16 @@
     }
   }
   .item-title {
-    @include trailer(.25);
+    @include leader(.5);
     text-align: center;
-    color: $color-gray;
-    font-weight: 300;
-    @extend %proxima-nava-4;
-    @include adjust-font-size-to(16px);
+    color: black;
+    @include adjust-font-size-to(16px, 1);
+    font-weight: 600;
+    @extend %proxima-nava-6;
     line-height: 1em;
     @include at-breakpoint($desktop) {
-      @include trailer(.5);
-      @include adjust-font-size-to(26px, 1);
+      @include leader(1);
+      @include adjust-font-size-to(20px, 1);
       line-height: 1em;
     }
   }
@@ -116,6 +119,14 @@
   @include at-breakpoint($desktop) {
     @include trailer(1);
     @include adjust-font-size-to(16px, 1);
+  }
+  a {
+    display: block;
+    color: $color-black;
+    &:hover {
+      text-decoration: none;
+      color: $color-gray;
+    }
   }
   .date {
     color: $color-light-gray;
