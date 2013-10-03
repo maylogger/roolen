@@ -135,10 +135,10 @@
       @include transition( box-shadow 1s .35s );
     }
     // 讓logo小一半
-    h1.logo {
+    .logo {
       @include adjust-font-size-to(12px);
     }
-    h1.logo a {
+    .logo a {
       width: 187 / 2 * 1px;
       height: 53 / 2 * 1px;
       margin: 12px 0 12px -20px;
