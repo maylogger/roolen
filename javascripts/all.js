@@ -28,9 +28,6 @@ $(window).load(function() {
     target: '#scrollspy',
     offset: scrollOffset
   });
-  // 檢查用
-  // console.log( $("body").data("bs.scrollspy").options);
-  // console.log( $("body").data("bs.scrollspy").offsets);
 });
 
 
