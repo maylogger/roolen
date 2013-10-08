@@ -33,6 +33,10 @@ $grid-background-baseline-height: $base-line-height;
 
 
 // 隱藏/開啓工具
+.hide {
+  display: none;
+}
+
 .hide-mobile {
   display: none;
 }

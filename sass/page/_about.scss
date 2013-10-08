@@ -1,4 +1,7 @@
 .about {
+  .block {
+    @include padding-leader(2);
+  }
   .block-container {
     @include trailer(1);
   }

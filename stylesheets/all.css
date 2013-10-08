@@ -68,7 +68,7 @@ img { border: none; display: block; max-width: 100%; margin-bottom: 24px; }
 .pagination li .more { padding: 0.25em 0.5em; }
 .pagination li .active { background-color: #69c; }
 
-/* alert */
+/*! alert */
 .alert, .alert-success, .alert-wran, .alert-wrong { width: 100%; }
 .alert .alert-message, .alert-success .alert-message, .alert-wran .alert-message, .alert-wrong .alert-message { float: left; font-size: 14px; line-height: 24px; }
 .alert .alert-message i, .alert-success .alert-message i, .alert-wran .alert-message i, .alert-wrong .alert-message i { margin-right: 6px; }
@@ -150,10 +150,10 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 @media (min-width: 768px) { .header-container { padding: 0 4em; max-width: 99em; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(100%, rgba(252, 252, 252, 0.85))); background: -webkit-linear-gradient(#fcfcfc, rgba(252, 252, 252, 0.85)); background: -moz-linear-gradient(#fcfcfc, rgba(252, 252, 252, 0.85)); background: -o-linear-gradient(#fcfcfc, rgba(252, 252, 252, 0.85)); background: linear-gradient(#fcfcfc, rgba(252, 252, 252, 0.85)); } }
 
 .logo { float: left; }
-.logo a { display: block; margin: 8px auto; color: #444444; color: inherit; text-decoration: inherit; cursor: inherit; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1378783356'); background-repeat: no-repeat; background-position: 50% 50%; width: 110px; height: 32px; background-image: none, url('/images/logo.svg?1378783360'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.logo a { display: block; margin: 8px auto; color: #444444; color: inherit; text-decoration: inherit; cursor: inherit; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo.png?1378472338'); background-repeat: no-repeat; background-position: 50% 50%; width: 110px; height: 32px; background-image: none, url('/images/logo.svg?1381216517'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .logo a:hover { color: rgba(0, 0, 0, 0.75); }
 .logo a:active, .logo a:focus { outline: none; }
-@media (min-width: 768px) { .logo a { margin: 21.5px auto; color: #aaa; background: none; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo_big.png?1378889718'); background-repeat: no-repeat; background-position: 50% 50%; width: 187px; height: 53px; background-image: none, url('/images/logo_big.svg?1378890059'); -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; -webkit-transition: width 0.35s, height 0.35s, margin 0.35s; -moz-transition: width 0.35s, height 0.35s, margin 0.35s; -o-transition: width 0.35s, height 0.35s, margin 0.35s; transition: width 0.35s, height 0.35s, margin 0.35s; } }
+@media (min-width: 768px) { .logo a { margin: 21.5px auto; color: #aaa; background: none; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/logo_big.png?1379058739'); background-repeat: no-repeat; background-position: 50% 50%; width: 187px; height: 53px; background-image: none, url('/images/logo_big.svg?1379058739'); -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; -webkit-transition: width 0.35s, height 0.35s, margin 0.35s; -moz-transition: width 0.35s, height 0.35s, margin 0.35s; -o-transition: width 0.35s, height 0.35s, margin 0.35s; transition: width 0.35s, height 0.35s, margin 0.35s; } }
 @media (min-width: 768px) { .logo { margin-left: -10px; } }
 
 .main-nav-btn { display: block; float: right; margin: 0; padding: 0; border: 0; background-color: transparent; font-size: 16px; line-height: 48px; font-weight: 300; color: #999999; cursor: pointer; outline: none; }
@@ -179,7 +179,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 .footer-container { padding: 3em 1em; background-color: #f2f2f2; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(68, 68, 68, 0.1)), color-stop(100%, rgba(68, 68, 68, 0))); background-image: -webkit-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: -moz-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: -o-linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); background-image: linear-gradient(rgba(68, 68, 68, 0.1), rgba(68, 68, 68, 0)); }
 
-.home-link { display: block; margin: 0 auto; margin-bottom: 18px; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/footer/bottom_logo.png?1380780321'); background-repeat: no-repeat; background-position: 50% 50%; width: 82px; height: 24px; background-image: none, url('/images/footer/bottom_logo.svg?1379323852'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.home-link { display: block; margin: 0 auto; margin-bottom: 18px; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/footer/bottom_logo.png?1381216534'); background-repeat: no-repeat; background-position: 50% 50%; width: 82px; height: 24px; background-image: none, url('/images/footer/bottom_logo.svg?1379335034'); background-repeat: no-repeat; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 @media (min-width: 768px) { .home-link { margin-bottom: 12px; } }
 .home-link img { margin: 0 auto; }
 
@@ -260,7 +260,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 
 .hero-title { margin: 0 auto; width: 60%; max-width: 100%; margin-bottom: 7%; }
 @media (min-width: 768px) { .hero-title { width: 100%; } }
-.hero-title h1 { margin: 0 auto; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/breath-logo.png?1380784072'); background-repeat: no-repeat; background-position: 50% 50%; background-image: none, url('/images/breath-logo.svg?1380784072'); background-repeat: no-repeat; background-position: center top; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 36.36364%; }
+.hero-title h1 { margin: 0 auto; text-indent: 110%; white-space: nowrap; overflow: hidden; background-image: url('/images/breath-logo.png?1381216534'); background-repeat: no-repeat; background-position: 50% 50%; background-image: none, url('/images/breath-logo.svg?1381216534'); background-repeat: no-repeat; background-position: center top; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 36.36364%; }
 @media (min-width: 768px) { .hero-title h1 { padding-top: 0; width: 440px; height: 160px; } }
 
 .hero-photo img { margin: 0 auto; width: 100%; max-width: 75%; position: relative; left: -1%; }
@@ -458,6 +458,7 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .scrollspy-nav a:hover .hover-text { right: 125%; opacity: 1; }
 .scrollspy-nav .active a .dot { margin: -6px 0 0 -6px; width: 12px; height: 12px; background-color: #6baec9; }
 
+.about .block { padding-top: 48px; }
 .about .block-container { margin-bottom: 24px; }
 .about .row:after { content: ""; display: table; clear: both; }
 @media (min-width: 768px) { .about .row { margin: 0 auto; margin-bottom: 48px; max-width: 1275px; } }
@@ -550,6 +551,8 @@ select { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing
 .timeline-item .date { color: #bbbbbb; float: left; width: 8em; }
 .timeline-item .date:after { content: "—"; display: block; float: right; margin: 0 1em 0 0; color: #444444; }
 .timeline-item .event { overflow: hidden; }
+
+.hide { display: none; }
 
 .hide-mobile { display: none; }
 
