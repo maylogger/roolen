@@ -92,6 +92,7 @@
   @include at-breakpoint($desktop) {
   }
   img {
+    height: auto;
     border: none;
     margin: 0 auto;
   }

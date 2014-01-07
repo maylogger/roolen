@@ -90,8 +90,12 @@ $auto-mode-color: #fafaff;
     position: relative;
     margin: 0 auto;
     width: 14%;
-    height: auto;
     @include trailer(.5);
+    img {
+      max-width: 135px;
+      width: 100%;
+      height: auto;
+    }
     @include at-breakpoint($desktop) {
       @include trailer(2);
       width: auto;

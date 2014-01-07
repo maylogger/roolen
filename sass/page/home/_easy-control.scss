@@ -12,6 +12,10 @@
     width: 528 / 1045 * 100%;
     opacity: 0;
     @include transition( opacity .25s, left .25s ease-out);
+    img {
+      width: 100%;
+      height: auto;
+    }
     .active & {
       @include transition( opacity 1.25s ease-in, left 1.25s ease-out);
       opacity: 1;
@@ -22,6 +26,10 @@
     margin: 0 auto;
     @include trailer(.5);
     width: 477 / 1045 * 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
     @include at-breakpoint($desktop) {
       @include trailer(2);
     }

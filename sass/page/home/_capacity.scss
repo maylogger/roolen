@@ -1,9 +1,11 @@
 .capacity {
   img {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 374px;
+    width: 50%;
+    height: auto;
     @include at-breakpoint($desktop) {
-      max-width: none;
+      width: 100%;
       margin-bottom: -20px;
     }
   }

@@ -6,6 +6,9 @@
   .tech_humidifier {
     @include leader(1);
     @include trailer(1);
+    max-width: 474px;
+    width: 100%;
+    height: auto;
     @include at-breakpoint($desktop) {
       @include leader(2.5);
       @include trailer(2.5);
