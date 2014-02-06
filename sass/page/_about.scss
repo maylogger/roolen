@@ -34,6 +34,7 @@
 }
 
 .about_family-img {
+  height: auto;
   @include trailer(2);
   @include at-breakpoint($desktop) {
     @include leader(2);
@@ -42,6 +43,7 @@
 }
 
 .about-office-img {
+  height: auto;
   @include at-breakpoint($desktop) {
     width: 100%;
   }
@@ -49,6 +51,10 @@
     width: auto;
     max-width: 100%;
   }
+}
+
+.about-img {
+  height: auto;
 }
 
 
